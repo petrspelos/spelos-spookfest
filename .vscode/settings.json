@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.hps" : "cpp",
+        "*.ihps" : "cpp",
+        "*.shps" : "cpp",
+        "*.dae" : "xml",
+        "*.lang" : "xml",
+        "*.csg" : "xml"
+    }
+}
