@@ -1,3 +1,4 @@
 *.map_cache
 *.hps
 tasks.json
+c_cpp_properties.json
