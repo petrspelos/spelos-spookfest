@@ -1,0 +1,600 @@
+#include "AmnesiaSignatures.cpp"
+
+const string gAmbSoundFile = "CavernOfLostSouls.snt";
+
+void Preload()
+{
+    PreloadSound(gAmbSoundFile);
+    PreloadSound("ui_lantern_off.snt");
+    PreloadSound("scare_wings.snt");
+    PreloadSound("29_rotating_rock_single.snt");
+    PreloadSound("explosion_rock_large.snt");
+    PreloadSound("player_cough.snt");
+    PreloadSound("move_gate.snt");
+    PreloadSound("door_sewer_unlock.snt.snt");
+    PreloadSound("step_sneak_female_rock.snt");
+    PreloadSound("puzzle_place_jar.snt");
+
+    PreloadParticleSystem("ps_dust_elevator_crash.ps");
+}
+
+void OnStart()
+{
+    CandleBaitSetup();
+    LanternBaitSetup();
+    SlowDownAreasSetup();
+    MorgueUnlockingSetup();
+    PuzzleRoomSetup();
+    HighHeelsPuzzleSetup();
+    SetPlayerLampOil(0.0f);
+}
+
+void OnEnter()
+{
+    PlaySoundAtEntity(
+        "ambience",    /* Name */
+        gAmbSoundFile, /* File */
+        "Player",      /* Entity */
+        0.5f,          /* Fade */
+        false          /* Save */
+    );
+
+    SetSanityDrainDisabled(true);
+    SetMapDisplayNameEntry("00_introduction");
+}
+
+// -----------------------------------------------------------------------------
+// Candle Bait
+// -----------------------------------------------------------------------------
+void CandleBaitSetup()
+{
+    AddEntityCollideCallback(
+        "Player",              /* Parent */
+        "CandleBait_Area",     /* Child */
+        "OnCandleBaitCollide", /* Callback */
+        true,                  /* Delete after collide */
+        CollisionState::any    /* State */
+    );
+}
+
+void OnCandleBaitCollide(string a, string b, int state)
+{
+    SetLampLit("CandleBait_Wall", false, true);
+    AddTimer("CandleBait_Floor", 1.0f, "SetLampLitOn");
+}
+
+// -----------------------------------------------------------------------------
+// Lantern Bait
+// -----------------------------------------------------------------------------
+void LanternBaitSetup()
+{
+    AddEntityCollideCallback(
+        "Player",               /* Parent */
+        "LanternBait_Area",     /* Child */
+        "OnLanternBaitCollide", /* Callback */
+        true,                   /* Delete after collide */
+        CollisionState::any     /* State */
+    );
+}
+
+void OnLanternBaitCollide(string a, string b, int state)
+{
+    PlaySoundAtEntity(
+        "",                    /* Name */
+        "ui_lantern_off.snt",  /* File */
+        "LanternBait_Lantern", /* Entity */
+        0.0f,                  /* Fade */
+        false                  /* Save */
+    );
+
+    FadeLightTo(
+        "LanternBait_Light", /* Light name */
+        0.0f,  /* red */
+        0.0f,  /* green */
+        0.0f,  /* blue */
+        1.0f,  /* alpha */
+        -1.0f, /* radius -1 = no change */
+        0.3f   /* fade length (sec) */
+    );
+
+    AddTimer("LanternBait_Lantern", 0.2f, "SetInactiveAndFadeQuick");
+    AddTimer("", 1.2f, "LanternBaitWingSound");
+    SetLampLit("CandleBait_Floor", false, true);
+}
+
+void LanternBaitWingSound(string timer)
+{
+    PlaySoundAtEntity(
+        "",                  /* Name */
+        "scare_wings.snt",   /* File */
+        "LanternBait_Sound", /* Entity */
+        0.0f,                /* Fade */
+        false                /* Save */
+    );
+}
+
+// -----------------------------------------------------------------------------
+// Gate Interactions
+// -----------------------------------------------------------------------------
+void OnGateInteract(string entity)
+{
+    // Don't interact if the gate is open.
+    if(GetLeverState("GateLever") == 1) return;
+
+    // Don't continue if the player is currently
+    // trying to lift the gate. (spam protect)
+    if(GetTimerTimeLeft("LiftGateTimer") != 0) return;
+
+    AddQuestIfNotAdded("OpenFirstGate");
+
+    SetMoveObjectState("Gate", 0.05f);
+
+    AddTimer("LiftGateTimer", 0.5f, "CloseGate");
+}
+
+void CloseGate(string t)
+{
+    SetMessage("Messages", "HeavyGate_" + RandInt(0, 3), 0.0f);
+    SetMoveObjectState("Gate", 0.0f);
+}
+
+// -----------------------------------------------------------------------------
+// Gate Opening
+// -----------------------------------------------------------------------------
+void GateLeverPulled(string entity, int state)
+{
+    if(state == 1)
+    {
+        SetLeverStuckState("GateLever", state, true);
+        SetMoveObjectState("Gate", 1.0f);
+        PlaySoundAtEntityForSeconds("move_gate.snt", "LanternBait_Sound", 3.0f);
+
+        CompleteQuestIfAdded("OpenFirstGate");
+        GiveSanityBoostSmall();
+
+        StartScreenShake(
+            0.005f, /* Amount */
+            3.0f, /* Duration (sec.) */
+            0.5f, /* FadeIn time (sec.) */
+            0.5f  /* FadeOut time (sec.) */
+        );
+
+        AddTimer("", 0.2f, "StartCaveIn");
+        BacktrackCaveInSetup();
+    }
+}
+
+void StartCaveIn(string t)
+{
+    CheckPoint (
+        "CaveInCheckPoint",  /* Name */
+        "PlayerStartArea_2", /* Start position */
+        "",                  /* Callback */
+        "DeathHints",        /* Hint Category */
+        "Careful"            /* Hint Entry */
+    );
+
+    CreateEntityAtArea("CaveIn", "cave_in.ent", "CaveInSpawn", true);
+    PlayRockSoundAtEntity("CaveIn");
+    PlayRockSoundAtEntity("LeverSoundArea");
+}
+
+void PlayRockSoundAtEntity(string entity)
+{
+    PlaySoundAtEntity(
+        "",                            /* Name */
+        "29_rotating_rock_single.snt", /* File */
+        entity,                        /* Entity */
+        0.0f,                          /* Fade */
+        false                          /* Save */
+    );
+}
+
+// -----------------------------------------------------------------------------
+// Backtrack CaveIn
+// -----------------------------------------------------------------------------
+void BacktrackCaveInSetup()
+{
+    AddEntityCollideCallback(
+        "Player",                 /* Parent */
+        "LanternBait_Area",       /* Child */
+        "OnCaveInEffectsCollide", /* Callback */
+        true,                     /* Delete after collide */
+        CollisionState::any       /* State */
+    );
+
+    AddEntityCollideCallback(
+        "Player",                 /* Parent */
+        "CaveInCoughArea",        /* Child */
+        "OnCaveInDustEnter",      /* Callback */
+        true,                     /* Delete after collide */
+        CollisionState::onlyEnter /* State */
+    );
+}
+
+void OnCaveInEffectsCollide(string a, string b, int state)
+{
+    PlayRockSoundAtEntity("CaveIn");
+
+    CreateParticleSystemAtEntity(
+        "",                          /* Name */
+        "ps_dust_elevator_crash.ps", /* File */
+        "CaveInPSArea",              /* Entity */
+        false                        /* Save */
+    );
+
+    AddTimer("", 0.5f, "PlayCaveInEffects");
+}
+
+void PlayCaveInEffects(string t)
+{
+    PlaySoundAtEntity(
+        "",                         /* Name */
+        "explosion_rock_large.snt", /* File */
+        "CaveIn",                   /* Entity */
+        0.0f,                       /* Fade */
+        false                       /* Save */
+    );
+
+    StartScreenShake(
+            0.2f, /* Amount */
+            1.2f, /* Duration (sec.) */
+            0.1f, /* FadeIn time (sec.) */
+            0.7f  /* FadeOut time (sec.) */
+        );
+
+    GiveSanityDamage(10.0f, true);
+
+    PlayMusic("05_event_steps.ogg", false, 1.0f, 0.0f, 1, false);
+}
+
+void OnCaveInDustEnter(string a, string b, int state)
+{
+    PlaySoundAtEntity(
+        "",                 /* Name */
+        "player_cough.snt", /* File */
+        "Player",           /* Entity */
+        0.0f,               /* Fade */
+        false               /* Save */
+    );
+}
+
+// -----------------------------------------------------------------------------
+// Polaroid Pickup
+// -----------------------------------------------------------------------------
+void FirstPolaroidPickup(string e)
+{
+    PlayMusic("27_event_bang.ogg", false, 1.0f, 0.0f, 1, false);
+
+    AddTimer("", 1.0f, "PlayFemaleSneakSound");
+}
+
+void PlayFemaleSneakSound(string t)
+{
+    PlaySoundAtEntity(
+        "",                           /* Name */
+        "step_sneak_female_rock.snt", /* File */
+        "FemaleSneakSoundArea",       /* Entity */
+        0.0f,                         /* Fade */
+        false                         /* Save */
+    );
+}
+
+// -----------------------------------------------------------------------------
+// Slowdown Areas
+// -----------------------------------------------------------------------------
+void SlowDownAreasSetup()
+{
+    AddSlowDownAreaCallback("SlowDownArea");
+}
+
+void AddSlowDownAreaCallback(string name)
+{
+    AddEntityCollideCallback(
+        "Player",                /* Parent */
+        name,                    /* Child */
+        "OnSlowdownAreaCollide", /* Callback */
+        false,                   /* Delete after collide */
+        CollisionState::any      /* State */
+    );
+}
+
+void OnSlowdownAreaCollide(string a, string b, int state)
+{
+    if(state == CollisionState::onlyEnter)
+    {
+        SetPlayerJumpDisabled(true);
+        SetPlayerRunSpeedMul(0.2f);
+        SetPlayerMoveSpeedMul(0.4f);
+    }
+    else if(state == CollisionState::onlyLeave)
+    {
+        SetPlayerJumpDisabled(false);
+        SetPlayerRunSpeedMul(1.0f);
+        SetPlayerMoveSpeedMul(1.0f);
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Morgue Unlocking
+// -----------------------------------------------------------------------------
+void OnMorgueDoorInteract(string entity)
+{
+    // Return if the door is unlocked.
+    if(!GetSwingDoorLocked(entity)) return;
+
+    AddQuestIfNotAdded("LockedMorgue");
+
+    SetMessage("Messages", "MorgueDoorLockedInspect_" + RandInt(0, 2), 0.0f);
+}
+
+void OnMorguePadlockInteract(string entity)
+{
+    // Return if the door is unlocked.
+    if(!GetSwingDoorLocked(entity)) return;
+
+    AddQuestIfNotAdded("LockedMorgue");
+
+    SetMessage("Messages", "MorguePadlockInspect_" + RandInt(0, 2), 0.0f);
+}
+
+void MorgueUnlockingSetup()
+{
+    AddUseItemCallback(
+        "",                      /* Name */
+        "PadlockKey",            /* Item */
+        "MorguePadlockDoor",     /* Entity */
+        "OnMorguePadlockUnlock", /* Callback */
+        true                     /* Auto-Destroy */
+    );
+
+    AddUseItemCallback(
+        "",                      /* Name */
+        "PadlockKey",            /* Item */
+        "MorguePadlock",         /* Entity */
+        "OnMorguePadlockUnlock", /* Callback */
+        true                     /* Auto-Destroy */
+    );
+}
+
+void OnMorguePadlockUnlock(string item, string entity)
+{
+    CompleteQuestIfAdded("LockedMorgue");
+
+    RemoveItem(item);
+    SetSwingDoorLocked("MorguePadlockDoor", false, false);
+
+    ReplaceEntity(
+        "MorguePadlock",       /* Entity Name */
+        "",                    /* Body */
+        "MorguePadlockBroken", /* New Entity Name */
+        "padlock_broken.ent",  /* New Entity File */
+        true                   /* Full game save */
+    );
+
+    PlaySoundAtEntity(
+        "",                      /* Name */
+        "door_sewer_unlock.snt", /* File */
+        "MorguePadlockDoor",     /* Entity */
+        0.0f,                    /* Fade */
+        false                    /* Save */
+    );
+}
+
+// -----------------------------------------------------------------------------
+// Backtrack candle blow out
+// -----------------------------------------------------------------------------
+void PuzzleRoomSetup()
+{
+    AddEntityCollideCallback(
+        "Player",            /* Parent */
+        "PuzzleRoomArea",    /* Child */
+        "OnPuzzleRoomEnter", /* Callback */
+        true,                /* Delete after collide */
+        CollisionState::any  /* State */
+    );
+}
+
+void OnPuzzleRoomEnter(string a, string b, int state)
+{
+    AddTimer("CorridorCandles", 1.0f, "SetLampLitOff");
+}
+
+// -----------------------------------------------------------------------------
+// High Heels puzzle
+// -----------------------------------------------------------------------------
+void HighHeelsPuzzleSetup()
+{
+    AddUseItemCallback(
+        "",                        /* Name */
+        "HighHeel",                /* Item */
+        "HeelPedistalArea",        /* Entity */
+        "PlaceHighHeelOnPedestal", /* Callback */
+        true                       /* Auto-Destroy */
+    );
+}
+
+void OnPadlockKeyPickup(string entity)
+{
+    AddQuestIfNotAdded("HeelsPuzzle");
+    SetEntityActive("HeelPedistalArea", true);
+}
+
+void OnPedistalAreaInteract(string entity)
+{
+    if(GetLocalVarInt("HighHeelGateOpen") == 1)
+    {
+        SetMessage("Messages", "HeelPedestalInspectSolved_" + RandInt(0, 1), 0.0f);
+        return;
+    }
+
+    SetMessage("Messages", "HeelPedestalInspect_" + RandInt(0, 2), 0.0f);
+}
+
+void OnStaticPedestalInteract(string entity)
+{
+    SetMessage("Messages", "StaticHeelPedestalInspect_" + RandInt(0, 2), 0.0f);
+}
+
+void PlaceHighHeelOnPedestal(string item, string entity)
+{
+    CompleteQuestIfAdded("HeelsPuzzle");
+    RemoveItem(item);
+    SetEntityActive("HighHeelStatic", true);
+    SetLocalVarInt("HighHeelGateOpen", 1);
+    GiveSanityBoostSmall();
+
+    PlayMusic(
+        "27_puzzle_passage.ogg", /* File */
+        false,                   /* Loop */
+        1.0f,                    /* Volume */
+        0.0f,                    /* Fade time */
+        1,                       /* Priority */
+        false                    /* Resume */
+    );
+
+    PlaySoundAtEntity(
+        "",                     /* Name */
+        "puzzle_place_jar.snt", /* File */
+        "HeelPedistalArea",     /* Entity */
+        0.0f,                   /* Fade */
+        false                   /* Save */
+    );
+
+    AddTimer("", 0.5f, "PlayPedestalRockSounds");
+    AddTimer("HighHeelsGate", 1.5f, "OpenMoveObject");
+}
+
+void PlayPedestalRockSounds(string t)
+{
+    PlaySoundAtEntity(
+        "",                            /* Name */
+        "29_rotating_rock_single.snt", /* File */
+        "HeelPedistalArea",            /* Entity */
+        0.0f,                          /* Fade */
+        false                          /* Save */
+    );
+}
+
+// -----------------------------------------------------------------------------
+// Pedestal Gate interactions
+// -----------------------------------------------------------------------------
+void OnPedestalGateInteract(string entity)
+{
+    // Don't interact if the gate is open.
+    if(GetLocalVarInt("HighHeelGateOpen") == 1) return;
+
+    // Don't continue if the player is currently
+    // trying to lift the gate. (spam protect)
+    if(GetTimerTimeLeft("LiftPedestalGateTimer") != 0) return;
+
+    SetMoveObjectState("HighHeelsGate", 0.05f);
+
+    AddTimer("LiftPedestalGateTimer", 0.5f, "ClosePedestalGate");
+}
+
+void ClosePedestalGate(string t)
+{
+    SetMessage("Messages", "HeavyGate_" + RandInt(0, 3), 0.0f);
+    SetMoveObjectState("HighHeelsGate", 0.0f);
+}
+
+// -----------------------------------------------------------------------------
+// Minor Events
+// -----------------------------------------------------------------------------
+void OnHeelPickup(string entity)
+{
+    SetEntityActive("CreepyChair", true);
+    SetEntityActive("CreepyCandle", true);
+
+    AddEntityCollideCallback(
+        "Player",              /* Parent */
+        "CreepyChairMoveArea", /* Child */
+        "OnCreepyChairMove",   /* Callback */
+        true,                  /* Delete after collide */
+        CollisionState::any    /* State */
+    );
+}
+
+void OnCreepyChairMove(string a, string b, int state)
+{
+    AddDebugMessage("Moved", false);
+    SetLampLit("CreepyCandle", false, true);
+
+    AddPropForce(
+        "CreepyChair", /* entity */
+        -400.0f,       /* X */
+        0.0f,          /* Y */
+        -750.0f,       /* Z */
+        "world"        /* Coord system */
+    );
+}
+
+// ----------------------------------------------------------------------------
+// Quest abstractions
+//
+// Summary:
+// A set of functions to abstract the quest system.
+// ----------------------------------------------------------------------------
+void AddQuestIfNotAdded(string quest)
+{
+    if(QuestIsAdded(quest)) return;
+    AddQuest(quest, quest);
+}
+
+void CompleteQuestIfAdded(string quest)
+{
+    if(!QuestIsAdded(quest)) return;
+    CompleteQuest(quest, quest);
+}
+
+// ----------------------------------------------------------------------------
+// Play Looping Sound For Seconds
+//
+// Summary:
+// Abstracts the task of having to play a looping sound at an entity only to
+// create a function that stops it after a few seconds.
+// ----------------------------------------------------------------------------
+void PlaySoundAtEntityForSeconds(string soundFile, string entity, float seconds)
+{
+    string soundName = soundFile;
+
+    PlaySoundAtEntity(
+        soundName, /* Name */
+        soundFile, /* File */
+        entity,    /* Entity */
+        0.5f,      /* Fade */
+        false      /* Save */
+    );
+
+    AddTimer(soundName, seconds, "StopSoundTimer");
+}
+
+// ----------------------------------------------------------------------------
+// Timer Wraps
+//
+// Summary:
+// Timers wrapping a single function to allow for delayed calls.
+// ----------------------------------------------------------------------------
+void SetLampLitOn(string l) { SetLampLit(l, true, true); }
+
+void SetLampLitOff(string l) { SetLampLit(l, false, true); }
+
+void SetInactiveAndFadeQuick(string e) { SetPropActiveAndFade(e, false, 0.5f); }
+
+void StopSoundTimer(string s) { StopSound(s, 0.5f); }
+
+void OpenMoveObject(string o) { SetMoveObjectState(o, 1.0f); }
+
+// ----------------------------------------------------------------------------
+// COLLISION STATES
+//
+// Summary:
+// An enum abstracting the Amnesia API magic ints in SetEntityCollideCallback.
+// ----------------------------------------------------------------------------
+enum CollisionState
+{
+    onlyEnter = 1,
+    onlyLeave = -1,
+    any = 0
+}

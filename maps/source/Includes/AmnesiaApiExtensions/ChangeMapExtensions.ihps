@@ -1,0 +1,8 @@
+// ============================================================================
+// Amnesia API Overload methods to make the API cleaner
+// ============================================================================
+
+void ChangeMap(string map)
+{
+    ChangeMap(map, "PlayerStartArea_1", "", "");
+}

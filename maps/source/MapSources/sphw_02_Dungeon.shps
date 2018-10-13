@@ -1,0 +1,155 @@
+// Intellisense Help
+#include "AmnesiaSignatures.cpp"
+
+// Custom Includes
+#include "EntityCollideCallbackExtensions.ihps"
+#include "PlaySoundAtEntityExtensions.ihps"
+#include "02_Dungeon_Intro.ihps"
+#include "Interactions.ihps"
+
+void Preload()
+{
+    PreloadSound("15_rock_break.snt");
+    PreloadSound("15_intro.snt");
+    PreloadSound("13_amb.snt");
+    PreloadSound("react_breath_slow.snt");
+    PreloadSound("react_breath.snt");
+    PreloadSound("react_sigh.snt");
+    PreloadSound("react_pant.snt");
+    PreloadSound("15_man02_whimp.snt");
+    PreloadSound("scare_scratch");
+    PreloadParticleSystem("ps_rose_petals_loop.ps");
+}
+
+void OnStart()
+{
+    PlayIntroOrStartDebug();
+}
+
+void OnEnter()
+{
+    Preload();
+    SetInDarknessEffectsActive(false);
+    SetSanityDrainDisabled(true);
+
+    SetPlayerEntersEventOnce("StartInDarkness");
+    SetPlayerEntersEventOnce("DoorSound01");
+    SetPlayerEntersEventOnce("StopMusic");
+    SetPlayerEntersEventOnce("StairsEvent");
+    SetPlayerEntersEventOnce("BruteWalkPast");
+    SetPlayerEntersEventOnce("BruteCorridorEvent");
+}
+
+void StartInDarknessCallback(string a, string b, int s)
+{
+    SetInDarknessEffectsActive(true);
+    MakeSmallRocksFall("");
+}
+
+void DoorSound01Callback(string a, string b, int s)
+{
+    PlaySoundAtEntity("scare_scratch.snt", "DoorSound01SoundArea");
+}
+
+void StopMusicCallback(string a, string b, int s)
+{
+    StopMusic(2.0f, 1);
+}
+
+void StairsEventCallback(string parent, string child, int state)
+{
+    PlayMusic("10_paper_daniel02.ogg", false, 1.0f, 0.0f, 1, false);
+    StartPlayerLookAt("StairsWellArea", 0.5f, 1.0f, "");
+    CreateParticleSystemAtEntity("rose", "ps_rose_petals_loop.ps", "StairsWellParticlesSpawn", false);
+    AddTimer("", 5.0f, "StopRose");
+}
+
+void BruteWalkPastCallback(string a, string b, int s)
+{
+    PlayMusic("04_event_stairs.ogg", false, 1.0f, 0.0f, 1, false);
+    SetEntityActive("BruteWalkPast", true);
+    AddEnemyPatrolNode("BruteWalkPast", "BruteWalkPastTarget", 5.0f, "");
+    AddTimer("", 10.0f, "PoofBruteWalkPast");
+    CheckPoint("respawn", "StairsRespawn", "OnStairsRespawn", "DeathHints", "Hint01");
+}
+
+void BruteCorridorEventCallback(string a, string b, int s)
+{
+    SetEntityActive("BruteCorridor", true);
+    AddEnemyPatrolNode("BruteCorridor", "PathNodeArea_19", 0.001f, "");
+    AddEnemyPatrolNode("BruteCorridor", "PathNodeArea_9", 0.001f, "");
+    AddEntityCollideCallback("BruteCorridor", "CorridorBruteDespawnArea", "DespawnCorridorBrute", true, 1);
+}
+
+void PlayIntroOrStartDebug()
+{
+    if (ScriptDebugOn())
+    {
+        GiveItemFromFile("Lantern", "lantern.ent");
+        PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
+        FadeRadialBlurTo(0.01f, 0.5f);
+        SetInDarknessEffectsActive(true);
+    }
+    else
+    {
+        SetPlayerLampOil(0.0f);
+        PlayIntro("");
+    }
+}
+
+void OnHoleExamine(string entity)
+{
+    AddQuest("LitEscape", "LitEscape");
+}
+
+void MakeSmallRocksFall(string t)
+{
+    PlaySoundAtEntity("", "15_rock_break.snt", "IntroHoleArea", 0.0f, false);
+    for (int i = 1; i < 4; i++)
+        SetEntityActive("FallRock_" + i, true);
+}
+
+void MonsterTouchDoorEvent(string entity)
+{
+    PlaySoundAtEntity("", "scare_scratch", "DoorSound01SoundArea", 0.0f, false);
+}
+
+void Padlock01Callback(string entity, string type)
+{
+    if (type == "Break")
+    {
+        SetSwingDoorLocked("prison_section_1", false, true);
+    }
+}
+
+void Padlock02Callback(string entity, string type)
+{
+    if (type == "Break")
+    {
+        SetSwingDoorLocked("prison_section_2", false, true);
+    }
+}
+
+void OnStairsRespawn(string name, int count)
+{
+    StopMusic(0.0, 1);
+    PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
+}
+
+void PoofBruteWalkPast(string t)
+{
+    FadeEnemyToSmoke("BruteWalkPast", false);
+    PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
+    AddQuest("Enemy", "Enemy");
+}
+
+void StopRose(string t)
+{
+    DestroyParticleSystem("rose");
+    StopPlayerLookAt();
+}
+
+void CorridorBruteDespawnArea(string parent, string child, int state)
+{
+    FadeEnemyToSmoke("BruteCorridor", false);
+}

@@ -1,0 +1,60 @@
+#include "AmnesiaSignatures.cpp"
+
+void OnStart()
+{
+    PreloadSound("elevator_move_fall_quieter.snt");
+    PreloadSound("FallingAmb.snt");
+    PreloadSound("SkeletonRidePanic.snt");
+    PreloadSound("explosion_rock_large.snt");
+
+    PlayMusic("TrippingWithSpelos.ogg", false, 1.0f, 0.0f, 1, false);
+    SetLightVisible("SpotLight_1", false);
+
+    SetPlayerActive(false);
+
+    FadeOut(0.0f);
+
+    PlaySoundAtEntity("", "SkeletonRidePanic.snt", "Player", 0.5f, false);
+    PlaySoundAtEntity("elevator", "elevator_move_fall_quieter.snt", "Player", 0.5f, false);
+    PlaySoundAtEntity("wind", "FallingAmb.snt", "Player", 0.5f, false);
+
+    AddTimer("", 11.5f, "StartTrip");
+    AddTimer("", 59.0f, "EndTrip");
+    AddTimer("", 65.0f, "Explode");
+}
+
+void StartTrip(string t)
+{
+    FadeIn(0.2f);
+    AddTimer("", 0.5f, "SanityBeat");
+    SetLightVisible("SpotLight_1", true);
+    StartScreenShake(0.03f, 60.0f, 0.0f, 0.0f);
+    FadeRadialBlurTo(0.02f, 0.05f);
+    PlayPropAnimation("Ride", "Ride", 0.0f, true, "");
+    FadePlayerFOVMulTo(1.2f, 1.0f);
+    SetSanityDrainDisabled(true);
+}
+
+void EndTrip(string t)
+{
+    FadeOut(1.5f);
+    StopSound("elevator", 1.0f);
+}
+
+void SanityBeat(string t)
+{
+    FadePlayerFOVMulTo(0.8f, 10.0f);
+    AddTimer("", 0.3f, "CorrectFOV");
+    AddTimer("", 0.75f, "SanityBeat");
+}
+
+void CorrectFOV(string t)
+{
+    FadePlayerFOVMulTo(1.3f, 0.5f);
+}
+
+void Explode(string t)
+{
+    PlaySoundAtEntity("", "explosion_rock_large.snt", "Player", 0.0f, false);
+    StopSound("wind", 0.5f);
+}

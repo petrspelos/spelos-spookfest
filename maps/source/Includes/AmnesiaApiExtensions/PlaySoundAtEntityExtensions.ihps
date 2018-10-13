@@ -1,0 +1,8 @@
+// ============================================================================
+// Amnesia API Overload methods to make the API cleaner
+// ============================================================================
+
+void PlaySoundAtEntity(string sound, string entity)
+{
+    PlaySoundAtEntity("", sound, entity, 0.0f, false);
+}

@@ -1,0 +1,403 @@
+// Intellisense Help
+#include "AmnesiaSignatures.cpp"
+
+const int reflectorCount = 14;
+
+//SkeletonsEquinoxEurobeat.ogg
+
+void OnStart()
+{
+    PreloadSound("20_pipe_stuck.snt");
+    PreloadSound("break_wood_metal.snt");
+    PreloadSound("sphw_poof.snt");
+
+    PreloadParticleSystem("ps_cloud_thing01.ps");
+    PreloadParticleSystem("ps_elevator_slow.ps");
+
+    //SetLightVisible("LeverHintLight", false);
+    FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f);
+
+    //SetInDarknessEffectsActive(false);
+    SetSanityDrainDisabled(true);
+    SetMoveObjectState("HorisontalGate", 7.0f);
+    GiveItemFromFile("Lantern", "lantern.ent");
+    
+    AddTimer("", 2.0f, "StartShow");
+    FocusReflectors("");
+    ReflectorsOff("");
+}
+
+void StartShow(string t)
+{
+    //ReflectorOddHalloweenScheme("");
+    //AddTimer("", 5.0f, "CoffinComeUp");
+    //AddTimer("", 8.5f, "FocusReflectors");
+    //ReflectorsColorChange("");
+
+    //SpinReflectors("");
+
+    PlayMusic("SkeletonsEquinoxEurobeat.ogg", false, 1.0f, 0.0f, 1, true);
+
+    for(int i = 1; i <= reflectorCount; i++)
+    {
+        FadeLightTo(
+            "Reflector_" + i + "_SpotLight_1", 
+            1.0f, 
+            1.0f, 
+            1.0f, 
+            1.0f, 
+            -1.0f, 
+            1.5f
+        );
+    }
+
+    AddTimer("", 1.5f, "ReflectorOddHalloweenScheme");
+    AddTimer("", 1.5f, "SpinReflectors");
+    AddTimer("", 14.0f, "FastHalloweenSheme");
+    AddTimer("", 19.0f, "FocusReflectorsSmooth");
+    AddTimer("", 22.0f, "CoffinComeUpStuck");
+    AddTimer("", 25.0f, "ShowStopper");
+}
+
+void ShowStopper(string t)
+{
+    StopMusic(0.2f, 1);
+    SetLocalVarInt("StopColorScheme", 1);
+    PlaySoundAtEntity("", "20_pipe_stuck.snt", "StuckSoundArea", 0.0f, false);
+    CreateParticleSystemAtEntity("Sparks", "ps_elevator_slow.ps", "SparksArea", false);
+    AddTimer("", 0.6f, "StopSparks");
+    AddTimer("", 2.5f, "StoppedSkeletalk");
+}
+
+void StopSparks(string t)
+{
+    DestroyParticleSystem("Sparks");
+}
+
+void StoppedSkeletalk(string t)
+{
+    for(int i = 1; i <= 8; i++)
+    {
+        if(i == 8)
+        {
+            SetEffectVoiceOverCallback("StuckTalkDone");
+        }
+        AddEffectVoice("Stuck_0" + i + ".ogg", "", "Subtitles", "Stuck_0" + i + "", true, "StuckSoundArea", 0.0f, 20.0f);
+    }
+}
+
+void StuckTalkDone()
+{
+    SetLeverStuckState("FixLever", 0, true);
+    //SetLightVisible("LeverHintLight", true);
+    FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f);
+    SetLocalVarInt("FixLeverEnabled", 1);
+    CreateParticleSystemAtEntity("Sparks", "ps_elevator_slow.ps", "SparksArea", false);
+}
+
+void OnFixLeverMoved(string e, int state)
+{
+    if(GetLocalVarInt("FixLeverEnabled") != 1) return;
+
+    if(state == 1)
+    {
+        SetLeverStuckState("FixLever", 1, true);
+        ContinueShow();
+        FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.5f);
+        StopSparks("");
+    }
+}
+
+void ContinueShow()
+{
+    PlayMusic("SkeletonsEquinoxEurobeat.ogg", false, 1.0f, 0.0f, 1, true);
+    SetLocalVarInt("StopColorScheme", 0);
+    ReflectorsColorChange("");
+    AddTimer("", 0.5f, "CoffinComeUp");
+    AddTimer("", 6.0f, "ReplaceTopWithMovables");
+}
+
+void ReplaceTopWithMovables(string t)
+{
+    SetEntityActive("SpelosCoffinUp", true);
+    SetEntityActive("SkeletonSpelos", true);
+    PlayPropAnimation("SkeletonSpelos", "CoffinIdle", 0.0f, true, "");
+    SetPropStaticPhysics("SpelosLidUp", true);
+    SetEntityActive("SpelosLidUp", true);
+    SetEntityActive("SpelosCoffin", false);
+
+    StopMusic(2.0f, 1);
+
+    AddTimer("", 4.0f, "OpenCoffin");
+}
+
+void OpenCoffin(string t)
+{
+    SetPropStaticPhysics("SpelosLidUp", false);
+    AddTimer("", 0.1f, "ExplodeLid");
+}
+
+void ExplodeLid(string t)
+{
+    AddPropForce("SpelosLidUp", 650.0f * 4.0f, 1000.0f * 5.0f, 1250.0f * 3.0f, "World");
+    PlaySoundAtEntity("", "break_wood_metal.snt", "StuckSoundArea", 0.0f, false);
+    AddTimer("", 2.5f, "SpelosJumpOut");
+}
+
+void SpelosJumpOut(string t)
+{
+    AddEffectVoice("Entrance_01.ogg", "", "Subtitles", "Entrance_01", true, "SkeletonSpelos", 0.0f, 20.0f);
+    SetEffectVoiceOverCallback("AfterMusicalEntrance");
+    PlayPropAnimation("SkeletonSpelos", "CoffinJumpOut", 0.0f, false, "");
+}
+
+void AfterMusicalEntrance()
+{
+    PlayMusic("myuuSkeletonsPiano.ogg", false, 0.2f, 0.0f, 1, false);
+    PlaySoundAtEntity("", "sphw_poof.snt", "SkeletonSpelos", 0.0f, false);
+    CreateParticleSystemAtEntity("", "ps_cloud_thing01.ps", "CloseToPlayer", false);
+
+    AddTimer("", 1.5f, "MoveSpelosAndContinue");
+}
+
+void MoveSpelosAndContinue(string t)
+{
+    PlayPropAnimation("SkeletonSpelos", "Idle", 0.0f, true, "");
+    SetEntityPos("SkeletonSpelos", GetEntityPosX("CloseToPlayer"), GetEntityPosY("SkeletonSpelos"), GetEntityPosZ("CloseToPlayer") - 0.5f);
+    PlayPropAnimation("SkeletonSpelos", "Talk", 0.0f, true, "");
+    for(int i = 2; i <= 4; i++)
+    {
+        AddEffectVoice("Entrance_0" + i + ".ogg", "", "Subtitles", "Entrance_0" + i + "", true, "SkeletonSpelos", 0.0f, 20.0f);
+        SetEffectVoiceOverCallback("BeforeListening");
+    }
+}
+
+void BeforeListening()
+{
+    AddEffectVoice("Entrance_05.ogg", "", "Subtitles", "Entrance_05", true, "SkeletonSpelos", 0.0f, 20.0f);
+    PlayPropAnimation("SkeletonSpelos", "Idle", 0.5f, true, "");
+    SetEffectVoiceOverCallback("Talk");
+}
+
+void Talk()
+{
+    AddEffectVoice("Entrance_06.ogg", "", "Subtitles", "Entrance_06", true, "SkeletonSpelos", 0.0f, 20.0f);
+    SetEffectVoiceOverCallback("EndScene");
+    PlayPropAnimation("SkeletonSpelos", "Talk", 0.0f, true, "");
+}
+
+void EndScene()
+{
+    PlayPropAnimation("SkeletonSpelos", "Idle", 0.5f, true, "");
+    FadeOut(2.0f);
+    AddTimer("", 1.5f, "StartLastChristmasScene");
+}
+
+void FastHalloweenSheme(string t)
+{
+    halloweenSchemeRepeat = 0.2f;
+    SetLocalVarInt("StopHalloweenScheme", 1);
+    ReflectorsColorChange("");
+}
+
+void CoffinComeUp(string t)
+{
+    SetMoveObjectState("SpelosCoffin", 1.1f);
+}
+
+void CoffinComeUpStuck(string t)
+{
+    SetMoveObjectState("SpelosCoffin", 0.5f);
+}
+
+void FocusReflectors(string t)
+{
+    for(int i = 1; i <= reflectorCount; i++)
+        PlayPropAnimation("Reflector_" + i, "Focus", 0.5f, false, "");
+}
+
+void FocusReflectorsSmooth(string t)
+{
+    for(int i = 1; i <= reflectorCount; i++)
+        PlayPropAnimation("Reflector_" + i, "Focus", 0.5f, false, "");
+}
+
+void SpinReflectors(string t)
+{
+    for(int i = 1; i <= reflectorCount; i++)
+        PlayPropAnimation("Reflector_" + i, "Spin", 0.5f, true, "");
+}
+
+void ReflectorsColorChange(string t)
+{
+    float r;
+    float g;
+    float b;
+
+    for(int i = 1; i <= reflectorCount; i++)
+    {
+        r = RandFloat(0.1f, 1.0f);
+        g = RandFloat(0.1f, 1.0f);
+        b = RandFloat(0.1f, 1.0f);
+
+        FadeLightTo(
+            "Reflector_" + i + "_SpotLight_1", 
+            r, 
+            g, 
+            b, 
+            1.0f, 
+            -1.0f, 
+            RandFloat(0.2f, halloweenSchemeRepeat)
+        );
+    }
+
+    if(GetLocalVarInt("StopColorScheme") == 1) return;
+
+    AddTimer("", halloweenSchemeRepeat, "ReflectorsColorChange");
+}
+
+void ReflectorsOff(string t)
+{
+    for(int i = 1; i <= reflectorCount; i++)
+    {
+        FadeLightTo(
+            "Reflector_" + i + "_SpotLight_1", 
+            0.0f, 
+            0.0f, 
+            0.0f, 
+            0.0f, 
+            -1.0f, 
+            0.0f
+        );
+    }
+}
+
+
+float halloweenSchemeRepeat = 0.5f;
+
+void ReflectorOddHalloweenScheme(string t)
+{
+    float r1 = 0.68f;
+    float g1 = 0.224f;
+    float b1 = 1.0f;
+
+    float r2 = 0.31f;
+    float g2 = 1.0f;
+    float b2 = 0.121f;
+
+    for(int i = 1; i <= reflectorCount; i++)
+    {
+        if(i % 2 == GetLocalVarInt("ReflectorHalloweenSwitch"))
+        {
+            FadeLightTo(
+                "Reflector_" + i + "_SpotLight_1", 
+                r1, 
+                g1, 
+                b1, 
+                RandFloat(0.0f, 1.0f), 
+                -1.0f, 
+                RandFloat(0.1f, halloweenSchemeRepeat)
+            );
+        }
+        else
+        {
+            FadeLightTo(
+                "Reflector_" + i + "_SpotLight_1", 
+                r2, 
+                g2, 
+                b2, 
+                RandFloat(0.0f, 1.0f), 
+                -1.0f, 
+                RandFloat(0.1f, halloweenSchemeRepeat)
+            );
+        }
+    }
+
+    if(GetLocalVarInt("ReflectorHalloweenSwitch") == 0)
+    {
+        SetLocalVarInt("ReflectorHalloweenSwitch", 1);
+    }
+    else
+    {
+        SetLocalVarInt("ReflectorHalloweenSwitch", 0);
+    }
+
+    if(GetLocalVarInt("StopHalloweenScheme") == 1) return;
+
+    AddTimer("", halloweenSchemeRepeat, "ReflectorOddHalloweenScheme");
+}
+
+// =======================================
+// Last Christmas Scene
+// =======================================
+void StartLastChristmasScene(string t)
+{
+    FadeIn(0.2f);
+    for(int i = 1; i < 16; i++)
+    {
+        AddEffectVoice("", "01-last-christmas-" + IntToDoubleDigit(i) + ".ogg", "Category?", "Entry?", true, "SkeletonSpelos", 0.0f, 10.0f);
+    }
+    SetEffectVoiceOverCallback("OnLastChristmasSceneEnd");
+}
+
+string IntToDoubleDigit(int i)
+{
+    if(i <= 9) return "0" + i;
+    return "" + i;
+}
+
+void OnLastChristmasSceneEnd()
+{
+    StopMusic(0.5f, 1);
+    PlayMusic("PlayWithMe.ogg", true, 0.4f, 0.0f, 1, false);
+    AddTimer("", 0.5f, "SpelosFlyLoop");
+    SetEntityPos("SkeletonSpelos", GetEntityPosX("SpelosTrolleyArea"), GetEntityPosY("SkeletonSpelos"), GetEntityPosZ("SpelosTrolleyArea") - 0.5f);
+    AddEntityCollideCallback("Player", "TrolleyEventArea", "StartTrolleyEvent", true, 1);
+}
+
+void SpelosFlyLoop(string t)
+{
+    int stage = GetLocalVarInt("SpelosFlyLoop");
+    AddLocalVarInt("SpelosFlyLoop", 1);
+
+    if(stage >= 20)
+    {
+        // TODO: Continue
+        return;
+    }
+
+    //ps_cloud_thing01.ps
+    if(stage == 16)
+    {
+        SetSwingDoorLocked("mansion_1", false, false);
+        SetPropHealth("mansion_1", 0.0f);
+    }
+
+    CreateParticleSystemAtEntity("", "ps_cloud_thing01.ps", "SpelosTrailArea_" + stage, false);
+    AddTimer("", 0.5f, "SpelosFlyLoop");
+}
+
+void StartTrolleyEvent(string parent, string child, int state)
+{
+    for(int i = 1; i < 19; i++)
+    {
+        AddEffectVoice("", "02-trolley-broken-" + IntToDoubleDigit(i) + ".ogg", "Category?", "Entry?", true, "SkeletonSpelos", 0.0f, 20.0f);
+    }
+    SetEffectVoiceOverCallback("SetupJumpscare");
+}
+
+void SetupJumpscare()
+{
+    AddEntityCollideCallback("Player", "JumpScareSpelosArea", "JumpScareSpelosEvent", true, 1);
+}
+
+void JumpScareSpelosEvent(string parent, string child, int state)
+{
+    SetEntityActive("SkeletonSpelos", false);
+    SetEntityActive("JumpScareSpelos", true);
+    for(int i = 1; i < 7; i++)
+    {
+        AddEffectVoice("", "003btl-" + IntToDoubleDigit(i) + ".ogg", "Category?", "Entry?", true, "JumpScareSpelos", 0.0f, 20.0f);
+    }
+    //SetEffectVoiceOverCallback("");
+}

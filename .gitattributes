@@ -14,3 +14,4 @@
 *.png filter=lfs diff=lfs merge=lfs -image
 *.blend filter=lfs diff=lfs merge=lfs -text
 *.xcf filter=lfs diff=lfs merge=lfs -text
+*.anm filter=lfs diff=lfs merge=lfs -text

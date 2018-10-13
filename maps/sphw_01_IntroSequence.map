@@ -1,0 +1,68 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-8.21195 3.62495 -1.49327" CameraTarget="0.0849831 1.73923 4.66863" CameraZoom="1.56013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="0 0 0 1" SkyBoxTexture="../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="1">
+                <File Id="0" Path="static_objects/technical/plane_black/plane_black.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="1">
+                <File Id="0" Path="entities/SPHW_Other/Intro/LogoWindow.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="3" Name="plane_black_plane_black_1" Rotation="-1.57079 0 0" Scale="1 1 0.25" Tag="" WorldPos="0 0 4" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="4" Name="plane_black_plane_black_2" Rotation="-1.57079 0 0" Scale="1 1 0.25" Tag="" WorldPos="0 3 4" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="5" Name="plane_black_plane_black_3" Rotation="-1.57079 0 0" Scale="1 1 1" Tag="" WorldPos="4 1.5 4" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="6" Name="plane_black_plane_black_4" Rotation="-1.57079 0 0" Scale="1 1 1" Tag="" WorldPos="-4 1.5 4" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="26" Name="plane_black_plane_black_5" Rotation="-1.57079 0 0" Scale="3 1 1" Tag="" WorldPos="0 5.5 4" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="27" Name="plane_black_plane_black_6" Rotation="-1.57079 0 0" Scale="3 1 1" Tag="" WorldPos="0 9.5 4" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="28" Name="plane_black_plane_black_7" Rotation="-1.57079 0 0" Scale="3 1 1" Tag="" WorldPos="0 -2.5 4" />
+            </StaticObjects>
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 2.5" Corner2UV="0 0" Corner3UV="2.5 0" Corner4UV="2.5 2.5" EndCorner="2.5 0 2.5" Group="0" ID="0" Material="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/technical/plane_black/plane_black.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-1.25 0 -1.25" />
+            </Primitives>
+            <Decals />
+            <Entities>
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="1" Mesh="" Name="PlayerStartArea_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 0 0">
+                    <UserVariables />
+                </Area>
+                <Entity Active="true" FileIndex="0" Group="0" ID="2" Name="LogoWindow_1" Rotation="-1.57079 0 0" Scale="1 1 1" Tag="" WorldPos="0 1.5 4">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+                <Billboard Active="true" BillboardColor="1 0.516 0.086 1" BillboardOffset="0" BillboardSize="9.5 6" BillboardType="FixedAxis" ConnectLight="TitleLight" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="8" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 -0 0" Tag="" WorldPos="0 1.5 4.35384" />
+                <PointLight Active="true" CastShadows="false" DiffuseColor="1 0.431 0.172 1" FalloffMap="" FlickerActive="true" FlickerFade="true" FlickerOffColor="0.637 0.38 1 1" FlickerOffFadeMaxLength="1.5" FlickerOffFadeMinLength="0.5" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="7.646" FlickerOffSound="" FlickerOnFadeMaxLength="3" FlickerOnFadeMinLength="2" FlickerOnMaxLength="1.5" FlickerOnMinLength="0.5" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="13" Name="TitleLight" Radius="7.646" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0 1.554 5.139" />
+                <Billboard Active="true" BillboardColor="0.173 0 0.275 1" BillboardOffset="0" BillboardSize="9 6" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="32" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo_no_depthtest.mat" Name="Billboard_2" Rotation="0 -0 0" Tag="" WorldPos="0 1.5 3.4187" />
+                <ParticleSystem Active="true" Color="1 0.5 0.19 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_light_dust_large.ps" Group="0" ID="33" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="0.220512 2.12569 3.24922" />
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

@@ -1,0 +1,15 @@
+// Intellisense Help
+#include "AmnesiaSignatures.cpp"
+
+// Custom Includes
+#include "ChangeMapExtensions.ihps"
+
+void OnStart()
+{
+    AddTimer("", 5.0f, "StartGame");
+}
+
+void StartGame(string timer)
+{
+    ChangeMap("sphw_02_Dungeon.map");
+}

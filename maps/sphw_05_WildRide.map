@@ -1,0 +1,93 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-10.7684 5.68197 -4.67574" CameraTarget="-5.6253 4.41818 -4.34716" CameraZoom="2.24313" GridHeight="3.5" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="false" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="3">
+                <File Id="0" Path="static_objects/machine/boxes/box05.dae" />
+                <File Id="1" Path="static_objects/machine/pipes/thick_straight_long.dae" />
+                <File Id="2" Path="static_objects/machine/pipes/thick_straight_short_end.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="2">
+                <File Id="0" Path="entities/SPHW_Other/CaveRide/CaveRide.ent" />
+                <File Id="1" Path="entities/SPHW_NPCs/Spelos/SkeletonSpelos.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="8" Name="boxes_box05_1" Rotation="3.14159 1.5708 3.14159" Scale="1.80035 1.80035 1.80035" Tag="" WorldPos="-7.03425 3.5 -5.00278" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="9" Name="pipes_thick_straight_long_1" Rotation="0 1.74846e-007 0" Scale="1 1 1" Tag="" WorldPos="-7.15947 4.40545 -6.41705" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="10" Name="pipes_thick_straight_long_2" Rotation="0 1.74846e-007 0" Scale="1 1 1" Tag="" WorldPos="-7.15947 4.40545 -3.41731" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="11" Name="pipes_thick_straight_long_3" Rotation="0 1.74846e-007 0" Scale="1 1 1" Tag="" WorldPos="-7.15947 4.01803 -6.41705" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="12" Name="pipes_thick_straight_long_4" Rotation="0 1.74846e-007 0" Scale="1 1 1" Tag="" WorldPos="-7.15947 4.01803 -3.41731" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="14" Name="pipes_thick_straight_short_end_1" Rotation="0 1.74846e-007 0" Scale="1.29412 1.29412 1.29412" Tag="" WorldPos="-6.4488 4.37758 -4.89639" />
+            </StaticObjects>
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 3.75" Corner2UV="0 0" Corner3UV="5 0" Corner4UV="5 3.75" EndCorner="5 0 3.75" Group="0" ID="2" Material="C:/dev/Amnesia The Dark Descent/static_objects/technical/plane_black/plane_black.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-11.75 3.5 -6.75" />
+            </Primitives>
+            <Decals />
+            <Entities>
+                <Entity Active="true" FileIndex="0" Group="0" ID="0" Name="Ride" Rotation="0 0 0" Scale="2.25 2.25 2.25" Tag="" WorldPos="10 0 0">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="1" Mesh="" Name="PlayerStartArea_1" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-9.25 3.5 -4.75">
+                    <UserVariables />
+                </Area>
+                <BoxLight Active="true" BlendFunc="0" CastShadows="false" DiffuseColor="0.059 0.059 0.059 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="3" Name="BoxLight_1" Radius="1" Rotation="0 0 0" Scale="55 33 62.5" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="55 33 62.5" Tag="" WorldPos="10.75 5.5 -1.25" />
+                <SpotLight Active="true" Aspect="1" CastShadows="true" DiffuseColor="0.845 0.569 0.362 1" FOV="2.0944" FalloffMap="" FlickerActive="true" FlickerFade="true" FlickerOffColor="1 0.707 0.414 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="2" FlickerOffMinLength="2" FlickerOffPS="" FlickerOffRadius="40" FlickerOffSound="" FlickerOnFadeMaxLength="0.7" FlickerOnFadeMinLength="0.2" FlickerOnMaxLength="2" FlickerOnMinLength="2" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="4" Name="SpotLight_1" NearClipPlane="0.1" Radius="40" Rotation="0 -1.5708 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" SpotFalloffMap="" Tag="" WorldPos="-6.95263 4.86551 -4.75" />
+                <Entity Active="true" FileIndex="1" Group="0" ID="5" Name="SkeletonSpelos_1" Rotation="3.14159 -1.16935 -3.14159" Scale="2 2 2" Tag="" WorldPos="-7.75 3.11856 -4.13278">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+                <PointLight Active="true" CastShadows="false" DiffuseColor="1 0.662 0.276 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="7" Name="PointLight_1" Radius="1.766" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-8.11593 5.3322 -5.06259" />
+                <PointLight Active="true" CastShadows="false" DiffuseColor="0.431 0 0.414 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="13" Name="PointLight_2" Radius="1.766" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-9.44872 4.89765 -3.5626" />
+                <Billboard Active="true" BillboardColor="1 0.621 0.379 1" BillboardOffset="0" BillboardSize="2 1.5" BillboardType="Point" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="15" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 -0 0" Tag="" WorldPos="-6.13346 4.50041 -4.85346" />
+                <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_elevator_fast.ps" Group="0" ID="18" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-6.81257 4.67994 -6.60675" />
+                <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_elevator_fast.ps" Group="0" ID="19" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_2" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-6.81257 4.67994 -3.38863" />
+                <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_electro_charge.ps" Group="0" ID="22" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_3" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-5.72616 4.12832 -4.96453" />
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

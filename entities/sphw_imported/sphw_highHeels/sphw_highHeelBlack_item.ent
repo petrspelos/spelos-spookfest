@@ -1,0 +1,57 @@
+<Entity>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-0.0945345 0.308431 0.683636" CameraTarget="-0.0465514 0.0150434 -0.0377876" CameraZoom="4.16013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+    </EditorSession>
+    <ModelData>
+        <Entities />
+        <Mesh Filename="sphw_highHeelBlack.dae">
+            <SubMesh Active="true" ID="0" Material="" Name="High_Heel" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
+        </Mesh>
+        <Bones />
+        <Shapes>
+            <BodyShape Active="true" ID="3" Name="Shape_1" RelativeRotation="0 -0 0" RelativeScale="0.215 0.08 0.164" RelativeTranslation="0.10363 -0.0453743 -0.00399527" Rotation="0 -0 0" Scale="0.215 0.08 0.164" ShapeType="Box" Tag="" WorldPos="0.0691554 0.0429457 -0.00747498" />
+            <BodyShape Active="true" ID="4" Name="Shape_2" RelativeRotation="0 -0 -0.921691" RelativeScale="0.263984 0.124123 0.114591" RelativeTranslation="-0.0364792 0.0453743 0.00399527" Rotation="0 -0 -0.921691" Scale="0.263984 0.124123 0.114591" ShapeType="Box" Tag="" WorldPos="-0.0709542 0.133694 0.000515562" />
+            <BodyShape Active="true" ID="5" Name="Shape_3" RelativeRotation="0 -0 0" RelativeScale="0.03 0.18 0.03" RelativeTranslation="-0.10363 0.00504182 0.00031814" Rotation="0 -0 0" Scale="0.03 0.18 0.03" ShapeType="Box" Tag="" WorldPos="-0.138105 0.0933617 -0.00316157" />
+        </Shapes>
+        <Bodies>
+            <Body Active="true" AngularDamping="1" BlocksSound="false" BuoyancyDensityMul="1" CanAttachCharacter="true" CollideCharacter="true" CollideNonCharacter="true" ContinuousCollision="true" HasGravity="true" ID="6" LinearDamping="3.5" Mass="1" Material="Default" MaxAngularSpeed="4" MaxLinearSpeed="4" Name="Body_1" PushedByCharacterGravity="true" Rotation="0 0 0" Scale="1 1 1" Tag="" UseSurfaceEffects="true" Volatile="false" WorldPos="-0.0344751 0.0883199 -0.00347971">
+                <Shape ID="3" />
+                <Shape ID="4" />
+                <Shape ID="5" />
+            </Body>
+        </Bodies>
+        <Joints />
+        <Animations />
+    </ModelData>
+    <UserDefinedVariables EntitySubType="Puzzle" EntityType="Item">
+        <Var Name="Health" Value="100" />
+        <Var Name="Toughness" Value="0" />
+        <Var Name="MaxFocusDistance" Value="0" />
+        <Var Name="MainPhysicsBody" Value="" />
+        <Var Name="ShowMesh" Value="true" />
+        <Var Name="DissolveOnDestruction" Value="false" />
+        <Var Name="DissolveTime" Value="1.0" />
+        <Var Name="EffectsOnSound" Value="" />
+        <Var Name="EffectsOffSound" Value="" />
+        <Var Name="EffectsOnTime" Value="1" />
+        <Var Name="EffectsOffTime" Value="1" />
+        <Var Name="EffectsOffLightColor" Value="0 0 0 0" />
+        <Var Name="EffectsOffLightRadius" Value="-1" />
+        <Var Name="ShowHints" Value="true" />
+        <Var Name="StaticMoveCheckCollision" Value="false" />
+        <Var Name="StaticMoveStartSound" Value="" />
+        <Var Name="StaticMoveStopSound" Value="" />
+        <Var Name="StaticMoveLoopSound" Value="" />
+        <Var Name="RandomizeAnimationStart" Value="true" />
+        <Var Name="SubItemTypeName" Value="high_heel_black" />
+        <Var Name="ImageFile" Value="sphw_highHeelBlack_item.tga" />
+        <Var Name="PickSound" Value="Generic" />
+        <Var Name="TempVar" Value="0" />
+    </UserDefinedVariables>
+</Entity>

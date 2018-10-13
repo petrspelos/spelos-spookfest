@@ -1,0 +1,118 @@
+void PlayIntro(string t)
+{
+    int stage = GetLocalVarInt("PlayIntro");
+    AddLocalVarInt("PlayIntro", 1);
+    float delay = 0.0f;
+
+    if(stage == 0)
+    {
+        FadeGlobalSoundVolume(0.0f, 0.0f);
+        MovePlayerHeadPos(0.0f, -1.2f, 0.0f, 1.0f, 0.5f);
+        StartPlayerLookAt("IntroHoleArea", 1.0f, 1.5f, "");
+        FadePlayerRollTo(30.0f, 10.0f, 15.0f);
+        SetPlayerMoveSpeedMul(0.5f);
+        SetPlayerRunSpeedMul(0.6f);
+        //SetPlayerJumpDisabled(true);
+        SetPlayerHealth(70.0f);
+        FadeOut(0.0f);
+        SetPlayerActive(false);
+        delay = 8.0f;
+    }
+    else if(stage == 1)
+    {
+        FadeGlobalSoundVolume(1.0f, 0.0f);
+        PlaySoundAtEntity("", "15_intro.snt", "Player", 0.0f, false);
+        PlaySoundAtEntity("amb", "13_amb.snt", "Player", 0.0f, false);
+        delay = 12.0f;
+    }
+    else if(stage == 2)
+    {
+        PlaySoundAtEntity("", "react_breath_slow.snt", "Player", 0.0f, false);
+        delay = 4.0f;
+    }
+    else if(stage == 3)
+    {
+        PlaySoundAtEntity("", "react_sigh.snt", "Player", 0.0f, false);
+        delay = 1.0f;
+    }
+    else if(stage == 4)
+    {
+        PlaySoundAtEntity("", "15_rock_break.snt", "IntroHoleArea", 0.0f, false);
+        delay = 6.0f;
+    }
+    else if(stage == 5)
+    {
+        PlaySoundAtEntity("", "player_cough.snt", "Player", 0.0f, false);
+        delay = 3.0f;
+    }
+    else if(stage == 6)
+    {
+        FadeIn(1.5f);
+        PlaySoundAtEntity("", "react_sigh.snt", "Player", 0.0f, false);
+        FadePlayerRollTo(20.0f, 0.5f, 1.0f);
+        FadeRadialBlurTo(0.01f, 0.5f);
+        delay = 3.0f;
+    }
+    else if(stage == 7)
+    {
+        FadeOut(0.1f);
+        delay = 0.1f;
+    }
+    else if(stage == 8)
+    {
+        PlaySoundAtEntity("", "player_cough.snt", "Player", 0.0f, false);
+        delay = 1.0f;
+    }
+    else if(stage == 9)
+    {
+        FadeIn(0.5f);
+        delay = 3.0f;
+    }
+    else if(stage == 10)
+    {
+        PlaySoundAtEntity("", "15_man02_whimp.snt", "DarknessArea", 0.0f, false);
+        delay = 0.2f;
+    }
+    else if(stage == 11)
+    {
+        PlaySoundAtEntity("", "react_pant.snt", "Player", 0.0f, false);
+        GiveSanityDamage(10.0f, true);
+        StartPlayerLookAt("DarknessArea", 4.0f, 5.0f, "");
+        delay = 4.0f;
+    }
+    else if(stage == 12)
+    {
+        PlaySoundAtEntity("", "react_breath.snt", "Player", 0.0f, false);
+        PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
+        delay = 6.0f;
+    }
+    else if(stage == 13)
+    {
+        FadeOut(0.1f);
+        PlaySoundAtEntity("", "react_sigh.snt", "Player", 0.0f, false);
+        delay = 0.3f;
+    }
+    else if(stage == 14)
+    {
+        SetPlayerCrouching(true);
+        MovePlayerHeadPos(0.0f, 0.0f, 0.0f, 10.0, 0.5f);
+        FadePlayerRollTo(0.0f, 20.0f, 22.0f);
+        delay = 0.5f;
+    }
+    else if(stage == 15)
+    {
+        FadeIn(1.0f);
+        delay = 1.0f;
+    }
+    else if(stage == 16)
+    {
+        SetPlayerActive(true);
+        StopPlayerLookAt();
+    }
+    else
+    {
+        return;
+    }
+
+    AddTimer("", delay, "PlayIntro");
+}

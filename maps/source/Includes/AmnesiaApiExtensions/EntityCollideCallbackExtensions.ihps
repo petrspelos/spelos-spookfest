@@ -1,0 +1,17 @@
+// ============================================================================
+// Amnesia API Overload methods to make the API cleaner
+// ============================================================================
+
+void PlayerEnterCallbackOnce(string child, string func)
+{
+    AddEntityCollideCallback("Player", child, func, true, 1);
+}
+
+// A standard event is an event that is triggered by an entity with
+// the following name: [EventName]Area (eg. MyScareArea) and calls
+// a callback function with [EventName]Callback signature (eg. 
+// MyScareCallback)
+void SetPlayerEntersEventOnce(string eventName)
+{
+    PlayerEnterCallbackOnce(eventName + "Area", eventName + "Callback");
+}

@@ -1,0 +1,10 @@
+// ============================================================================
+// UTILITY CREDITS
+// ============================================================================
+// This utility module is for testing the final credits sequence
+// all it does is it immediately runs the proper credits.
+
+void OnStart()
+{
+    StartCredits("", false, "CreditsResources", "MainCredits", 4);
+}
