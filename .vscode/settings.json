@@ -1,10 +1,13 @@
 {
     "files.associations": {
-        "*.hps" : "cpp",
-        "*.ihps" : "cpp",
-        "*.shps" : "cpp",
-        "*.dae" : "xml",
-        "*.lang" : "xml",
-        "*.csg" : "xml"
-    }
+        "*.hps": "cpp",
+        "*.lang": "xml",
+        "*.ihps": "cpp",
+        "*.shps": "cpp",
+        "*.dae": "xml",
+        "*.csg": "xml",
+        "xstring": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.dimInactiveRegions": true
 }
