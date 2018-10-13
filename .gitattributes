@@ -1,7 +1,7 @@
-*.hps linguist-language=AngelScript
+*.ihps linguist-language=AngelScript
 *.ps linguist-language=AmnesiaConfig
 *.cfg linguist-language=AmnesiaConfig
-*.hps linguist-language=AngelScript
+*.shps linguist-language=AngelScript
 *.ps linguist-language=AmnesiaConfig
 *.cfg linguist-language=AmnesiaConfig
 *.ogg filter=lfs diff=lfs merge=lfs -text
