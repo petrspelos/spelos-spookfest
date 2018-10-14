@@ -5,7 +5,7 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="0.142232 1.64576 17.1849" CameraTarget="0.0452517 1.27935 13.8831" CameraZoom="2.71101" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0.0775336 1.40132 14.9822" CameraTarget="0.0452517 1.27935 13.8831" CameraZoom="3.81101" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -195,7 +195,7 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="13" Group="0" ID="274" Name="wall_default_32" Rotation="3.14159 8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="-8.25 0 36.25" />
             </StaticObjects>
             <Primitives>
-                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="9.6 1.04997" Corner2UV="4.05 1.04999" Corner3UV="4.05 -1.05001" Corner4UV="9.6 -1.05003" EndCorner="3.5 0 9.25" Group="0" ID="20" Material="C:/dev/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="1.5708" TileAmount="0.6 1 0.6" TileOffset="0 0 0" WorldPos="-1.75 0 6.75" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="9.59883 1.04997" Corner2UV="4.04883 1.04999" Corner3UV="4.04882 -1.05001" Corner4UV="9.59882 -1.05003" EndCorner="3.5 0 9.25" Group="0" ID="20" Material="C:/dev/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="1.5708" TileAmount="0.6 1 0.6" TileOffset="0 0 0" WorldPos="-1.75 0 6.74804" />
                 <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 12" Corner2UV="0 0" Corner3UV="12 0" Corner4UV="12 12" EndCorner="12 0 12" Group="0" ID="42" Material="C:/dev/Amnesia The Dark Descent/static_objects/technical/plane_black/plane_black.mat" Name="Plane_1" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-6 -3.75 0" />
                 <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 12" Corner2UV="0 0" Corner3UV="12 0" Corner4UV="12 12" EndCorner="12 0 12" Group="0" ID="47" Material="C:/dev/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor.mat" Name="Plane_2" Rotation="0 0 3.14159" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="6 8 0" />
                 <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 4" Corner2UV="0 0" Corner3UV="12 0" Corner4UV="12 4" EndCorner="12 0 4" Group="0" ID="51" Material="C:/dev/Amnesia The Dark Descent/static_objects/mansionbase/floor/mansionbase_floor.mat" Name="Plane_3" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-6 0 -4" />
@@ -1167,7 +1167,7 @@
                 <Entity Active="true" FileIndex="16" Group="0" ID="275" Name="sphw_pumpkin_1" Rotation="0 4.18879 0" Scale="1.51605 1.51605 1.51605" Tag="" WorldPos="-1.55164 0 10.4359">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
-                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="StaticPhysics" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="false" />
                         <Var Name="CallbackFunc" Value="" />
                         <Var Name="ConnectedProps" Value="" />
@@ -1186,7 +1186,7 @@
                 <Entity Active="true" FileIndex="16" Group="0" ID="276" Name="sphw_pumpkin_2" Rotation="3.14159 -0.77287 3.14159" Scale="1.12755 1.12755 1.12755" Tag="" WorldPos="-1.58815 0 10.7574">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
-                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="StaticPhysics" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="false" />
                         <Var Name="CallbackFunc" Value="" />
                         <Var Name="ConnectedProps" Value="" />
@@ -1205,7 +1205,7 @@
                 <Entity Active="true" FileIndex="16" Group="0" ID="277" Name="sphw_pumpkin_3" Rotation="2.95685 0.648333 2.84148" Scale="1.99898 1.99898 1.99898" Tag="" WorldPos="1.72239 1.3711 6.83319">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
-                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="StaticPhysics" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="false" />
                         <Var Name="CallbackFunc" Value="" />
                         <Var Name="ConnectedProps" Value="" />
@@ -1401,7 +1401,7 @@
                         <Var Name="ConnectionLightUseSpec" Value="false" />
                     </UserVariables>
                 </Entity>
-                <PointLight Active="true" CastShadows="false" DiffuseColor="0.397 0.256 0.041 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="292" Name="PointLight_12" Radius="1.06101" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="1.21671 0.67862 11.2121" />
+                <PointLight Active="true" CastShadows="false" DiffuseColor="0.397 0.256 0.041 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="292" Name="PointLight_12" Radius="1.06101" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="1.21671 0.67862 11.2121" />
                 <Entity Active="true" FileIndex="19" Group="0" ID="293" Name="candle_floor_small_2" Rotation="0 -1.15952 0" Scale="0.484956 0.484956 0.484956" Tag="" WorldPos="-1.55277 0.20956 10.4319">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
@@ -1726,7 +1726,7 @@
                 <PointLight Active="true" CastShadows="false" DiffuseColor="0.138 0.534 0 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="317" Name="PointLight_17" Radius="1.487" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="4.15717 3.35993 12.6321" />
             </Entities>
             <Misc>
-                <Compound Active="true" Group="0" ID="297" Name="Compound_1" Rotation="-0.176212 1.06162 -0.313093" Scale="1 1 1" Tag="" WorldPos="-1.75611 -0.133643 10.2325">
+                <Compound Active="true" Group="0" ID="297" Name="Compound_1" Rotation="-0.176212 1.06162 -0.313093" Scale="1 1 1" Tag="" WorldPos="-1.75611 -0.133642 10.2325">
                     <Component ID="295" />
                     <Component ID="296" />
                 </Compound>

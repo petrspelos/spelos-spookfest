@@ -201,4 +201,15 @@
     <CATEGORY Name="DeathHints">
         <Entry Name="Hint01">Always have somewhere to hide...</Entry>
     </CATEGORY>
+
+    <CATEGORY Name="PrologueText">
+        <Entry Name="Line01">Finally, it's October.</Entry>
+        <Entry Name="Line02">I urge you to stop for a moment...</Entry>
+        <Entry Name="Line03">..and just listen to that atmosphere.</Entry>
+        <Entry Name="Line04">Irreplaceable, isn't it?</Entry>
+        <Entry Name="Line05">You've been invited to a party by a talking skeleton.</Entry>
+        <Entry Name="Line06">Sorry for breaking the mood a little.</Entry>
+        <Entry Name="Line07">And so you head to the Brennenburg castle.</Entry>
+        <Entry Name="Line08">I mean, what could go wrong?</Entry>
+    </CATEGORY>
 </LANGUAGE>

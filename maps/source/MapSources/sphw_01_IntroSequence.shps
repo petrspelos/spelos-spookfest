@@ -4,12 +4,113 @@
 // Custom Includes
 #include "ChangeMapExtensions.ihps"
 
-void OnStart()
+void OnEnter()
 {
-    AddTimer("", 5.0f, "StartGame");
+    PreloadSound("FallAmbience.snt");
+    PlaySoundAtEntity("amb", "FallAmbience.snt", "Player", 3.0f, false);
+    FadeOut(0.0f);
+    SetInDarknessEffectsActive(false);
+    SetSanityDrainDisabled(true);
+    SetPlayerActive(false);
+    AddTimer("", 4.0f, "PrologueTimer");
 }
 
-void StartGame(string timer)
+void PrologueTimer(string t)
 {
-    ChangeMap("sphw_02_Dungeon.map");
+    int stage = GetLocalVarInt("PrologueTimer");
+    AddLocalVarInt("PrologueTimer", 1);
+    float delay = 0.0f;
+
+    if(stage == 0)
+    {
+        SetMessage("PrologueText", "Line01", 5.0f);
+        delay = 6.0f;
+    }
+    else if(stage == 1)
+    {
+        SetMessage("PrologueText", "Line02", 5.0f);
+        delay = 6.0f;
+    }
+    else if(stage == 2)
+    {
+        SetMessage("PrologueText", "Line03", 8.0f);
+        delay = 9.0f;
+    }
+    else if(stage == 3)
+    {
+        SetMessage("PrologueText", "Line04", 6.0f);
+        delay = 14.0f;
+    }
+    else if(stage == 4)
+    {
+        SetMessage("PrologueText", "Line05", 5.0f);
+        delay = 6.0f;
+    }
+    else if(stage == 5)
+    {
+        SetMessage("PrologueText", "Line06", 5.0f);
+        delay = 9.0f;
+    }
+    else if(stage == 6)
+    {
+        SetMessage("PrologueText", "Line07", 4.0f);
+        delay = 7.0f;
+    }
+    else if(stage == 7)
+    {
+        SetMessage("PrologueText", "Line08", 4.0f);
+        delay = 8.0f;
+    }
+    else if(stage == 8)
+    {
+        FadeIn(2.0f);
+        delay = 7.0f;
+    }
+    else if(stage == 9)
+    {
+        FadeOut(2.0f);
+        delay = 3.0f;
+    }
+    else if(stage == 10)
+    {
+        TeleportPlayer("PlayerStartArea_2");
+        delay = 0.5f;
+    }
+    else if(stage == 11)
+    {
+        FadeIn(2.0f);
+        delay = 7.0f;
+    }
+    else if(stage == 12)
+    {
+        FadeOut(2.0f);
+        delay = 3.0f;
+    }
+    else if(stage == 13)
+    {
+        TeleportPlayer("PlayerStartArea_3");
+        delay = 2.0f;
+    }
+    else if(stage == 14)
+    {
+        FadeIn(2.0f);
+        delay = 8.0f;
+    }
+    else if(stage == 15)
+    {
+        FadeOut(2.0f);
+        delay = 1.0f;
+    }
+    else if(stage == 16)
+    {
+        StopSound("amb", 2.0f);
+        delay = 2.0f;
+    }
+    else
+    {
+        ChangeMap("sphw_02_Dungeon.map");
+        return;
+    }
+
+    AddTimer("", delay, "PrologueTimer");
 }
