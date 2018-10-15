@@ -79,29 +79,34 @@ void PrologueTimer(string t)
     else if(stage == 11)
     {
         FadeIn(2.0f);
-        delay = 7.0f;
+        delay = 5.0f;
     }
     else if(stage == 12)
+    {
+        PlayMusic("skeletonJingle.ogg", false, 1.0f, 0.0f, 1, false);
+        delay = 2.0f;
+    }
+    else if(stage == 13)
     {
         FadeOut(2.0f);
         delay = 3.0f;
     }
-    else if(stage == 13)
+    else if(stage == 14)
     {
         TeleportPlayer("PlayerStartArea_3");
         delay = 2.0f;
     }
-    else if(stage == 14)
+    else if(stage == 15)
     {
         FadeIn(2.0f);
         delay = 8.0f;
     }
-    else if(stage == 15)
+    else if(stage == 16)
     {
         FadeOut(2.0f);
         delay = 1.0f;
     }
-    else if(stage == 16)
+    else if(stage == 17)
     {
         StopSound("amb", 2.0f);
         delay = 2.0f;

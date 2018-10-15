@@ -12,6 +12,7 @@ void OnStart()
     PreloadSound("sphw_poof.snt");
 
     PreloadParticleSystem("ps_cloud_thing01.ps");
+    PreloadParticleSystem("blood.ps");
     PreloadParticleSystem("ps_elevator_slow.ps");
 
     //SetLightVisible("LeverHintLight", false);
@@ -350,6 +351,7 @@ void OnLastChristmasSceneEnd()
 {
     StopMusic(0.5f, 1);
     PlayMusic("PlayWithMe.ogg", true, 0.4f, 0.0f, 1, false);
+    PlaySoundAtEntity("", "sphw_poof.snt", "SkeletonSpelos", 0.0f, false);
     AddTimer("", 0.5f, "SpelosFlyLoop");
     SetEntityPos("SkeletonSpelos", GetEntityPosX("SpelosTrolleyArea"), GetEntityPosY("SkeletonSpelos"), GetEntityPosZ("SpelosTrolleyArea") - 0.5f);
     AddEntityCollideCallback("Player", "TrolleyEventArea", "StartTrolleyEvent", true, 1);
@@ -362,18 +364,16 @@ void SpelosFlyLoop(string t)
 
     if(stage >= 20)
     {
-        // TODO: Continue
         return;
     }
 
-    //ps_cloud_thing01.ps
     if(stage == 16)
     {
         SetSwingDoorLocked("mansion_1", false, false);
         SetPropHealth("mansion_1", 0.0f);
     }
 
-    CreateParticleSystemAtEntity("", "ps_cloud_thing01.ps", "SpelosTrailArea_" + stage, false);
+    CreateParticleSystemAtEntity("", "blood.ps", "SpelosTrailArea_" + stage, false);
     AddTimer("", 0.5f, "SpelosFlyLoop");
 }
 

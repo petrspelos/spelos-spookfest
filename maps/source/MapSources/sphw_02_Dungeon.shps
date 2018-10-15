@@ -6,6 +6,7 @@
 #include "PlaySoundAtEntityExtensions.ihps"
 #include "02_Dungeon_Intro.ihps"
 #include "Interactions.ihps"
+#include "DoorUnlocking.ihps"
 
 void Preload()
 {
@@ -18,6 +19,7 @@ void Preload()
     PreloadSound("react_pant.snt");
     PreloadSound("15_man02_whimp.snt");
     PreloadSound("scare_scratch");
+    PreloadSound("unlock_door.snt");
     PreloadParticleSystem("ps_rose_petals_loop.ps");
 }
 
@@ -38,6 +40,8 @@ void OnEnter()
     SetPlayerEntersEventOnce("StairsEvent");
     SetPlayerEntersEventOnce("BruteWalkPast");
     SetPlayerEntersEventOnce("BruteCorridorEvent");
+
+    AddUseItemCallback("", "DungeonDoorKey", "DungeonDoor", "UnlockLevelDoor", true);
 }
 
 void StartInDarknessCallback(string a, string b, int s)

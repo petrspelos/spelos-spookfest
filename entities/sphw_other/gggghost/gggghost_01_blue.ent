@@ -5,12 +5,12 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
-            <Viewport CameraPosition="-1.61533 0.844229 0.601007" CameraTarget="0 0 0" CameraZoom="3.26013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-1.13951 0.588895 0.098463" CameraTarget="0 0 0" CameraZoom="3.66013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
     </EditorSession>
     <ModelData>
         <Entities>
-            <Billboard Active="true" BillboardColor="1 1 1 1" BillboardOffset="0" BillboardSize="1.5 2" BillboardType="Point" ConnectLight="PointLight_1" HaloSourceSize="0.3 0.3 0.3" ID="12" IsHalo="false" MaterialFile="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/billboards/bb_white_halo_no_depthtest.mat" Name="Billboard_1" Rotation="0 0 0" Tag="" WorldPos="0 0.25 0" />
+            <Billboard Active="true" BillboardColor="1 1 1 1" BillboardOffset="0" BillboardSize="1.5 2" BillboardType="Point" ConnectLight="PointLight_1" HaloSourceSize="0.3 0.3 0.3" ID="12" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 0 0" Tag="" WorldPos="0 0.25 0" />
             <PointLight Active="true" CastShadows="false" DiffuseColor="0.121 0.966 0.793 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="13" Name="PointLight_1" Radius="1.25" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0 0 0" />
         </Entities>
         <Mesh Filename="entities/SPHW_Other/gggghost/gggghost_01.dae">
@@ -37,7 +37,7 @@
         <Bodies />
         <Joints />
         <Animations>
-            <Animation File="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/entities/SPHW_Other/gggghost/float.dae_ANIM" Name="Float" SpecialEventTime="4.59135e-41" Speed="1" />
+            <Animation File="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/entities/SPHW_Other/gggghost/float.dae_ANIM" Name="Float" SpecialEventTime="4.59135e-041" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">

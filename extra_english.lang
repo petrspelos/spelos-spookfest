@@ -74,7 +74,7 @@
     <Entry Name="SanityDesc0">Yea, we're dead.</Entry>
     <Entry Name="SanityDesc1">Red means scary!</Entry>
     <Entry Name="SanityDesc2">Did the color change?</Entry>
-    <Entry Name="SanityDesc3">Yep, that's a bain.</Entry>
+    <Entry Name="SanityDesc3">Yep, that's a brain.</Entry>
     <Entry Name="Health">Literally your heart right now</Entry>
     <Entry Name="HealthDesc0">It's official, we're dead.</Entry>
     <Entry Name="HealthDesc1">I ain't a doctor, but isn't that blood?</Entry>
@@ -211,5 +211,13 @@
         <Entry Name="Line06">Sorry for breaking the mood a little.</Entry>
         <Entry Name="Line07">And so you head to the Brennenburg castle.</Entry>
         <Entry Name="Line08">I mean, what could go wrong?</Entry>
+    </CATEGORY>
+
+    <CATEGORY Name="LockedDoors">
+        <Entry Name="DungeonDoor">It's locked and won't open without a key.</Entry>
+    </CATEGORY>
+
+    <CATEGORY Name="Other">
+        <Entry Name="Empty"> </Entry>
     </CATEGORY>
 </LANGUAGE>

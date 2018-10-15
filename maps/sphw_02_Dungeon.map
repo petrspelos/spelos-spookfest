@@ -5,7 +5,7 @@
             <Viewport CameraPosition="-17.0581 -6.84862 180" CameraTarget="-17.0581 -6.84862 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 -7.94476 -19.8483" CameraTarget="0 -7.94476 -19.8483" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="-8.30709 180 -22.9556" CameraTarget="-8.30709 0 -22.9556" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-8.35757 -17.367 -36.9652" CameraTarget="-3.64938 -19.0208 -37.4431" CameraZoom="2.29999" GridHeight="-20" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-12.7728 -14.7874 -38.4785" CameraTarget="-4.81803 -19.857 -28.6443" CameraZoom="1.29998" GridHeight="-20" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -78,7 +78,7 @@
                 <File Id="61" Path="static_objects/debris/cellarbase_broken_wall/rock_round01.dae" />
                 <File Id="62" Path="static_objects/debris/cellarbase_broken_wall/rock_round02.dae" />
             </FileIndex_StaticObjects>
-            <FileIndex_Entities NumOfFiles="78">
+            <FileIndex_Entities NumOfFiles="80">
                 <File Id="0" Path="entities/ornament/banner01/banner01.ent" />
                 <File Id="1" Path="entities/door/level_dungeon/level_dungeon.ent" />
                 <File Id="2" Path="entities/item/note_generic/note_generic.ent" />
@@ -157,6 +157,8 @@
                 <File Id="75" Path="entities/container/wood_box03/wood_box03.ent" />
                 <File Id="76" Path="entities/furniture/chair_wood/chair_wood.ent" />
                 <File Id="77" Path="entities/ornament/banners/banners_rag/banners_rag.ent" />
+                <File Id="78" Path="entities/enemy/servant_brute/servant_brute.ent" />
+                <File Id="79" Path="entities/item/key_study/key_study.ent" />
             </FileIndex_Entities>
             <FileIndex_Decals NumOfFiles="3">
                 <File Id="0" Path="textures/decals/dirt_stain_large.mat" />
@@ -5048,7 +5050,7 @@
                 <Area Active="true" AreaType="PlayerStart" Group="0" ID="1435" Mesh="" Name="StairsRespawn" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-27.25 -20 -37.25">
                     <UserVariables />
                 </Area>
-                <Entity Active="true" FileIndex="1" Group="0" ID="1436" Name="level_dungeon_1" Rotation="0 4.71239 0" Scale="1 1 1" Tag="" WorldPos="-3.5 -19.921 -37.25">
+                <Entity Active="true" FileIndex="1" Group="0" ID="1436" Name="DungeonDoor" Rotation="0 4.71239 0" Scale="1 1 1" Tag="" WorldPos="-3.5 -19.921 -37.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -5064,11 +5066,43 @@
                         <Var Name="TextEntry" Value="" />
                         <Var Name="StartPos" Value="" />
                         <Var Name="MapFile" Value="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/maps/sphw_03_SpelosShow.map" />
-                        <Var Name="Locked" Value="false" />
+                        <Var Name="Locked" Value="true" />
                         <Var Name="LockedSound" Value="" />
-                        <Var Name="LockedTextCat" Value="" />
-                        <Var Name="LockedTextEntry" Value="" />
+                        <Var Name="LockedTextCat" Value="LockedDoors" />
+                        <Var Name="LockedTextEntry" Value="DungeonDoor" />
                         <Var Name="ShowStats" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="false" FileIndex="78" Group="0" ID="1437" Name="BruteWalkPast" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-20 -20 -41">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="false" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="false" FileIndex="78" Group="0" ID="1438" Name="BruteCorridor" Rotation="0 1.8326 0" Scale="1 1 1" Tag="" WorldPos="-15.25 -20 -13.25">
+                    <UserVariables>
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="DisableTriggers" Value="false" />
+                        <Var Name="Hallucination" Value="false" />
+                        <Var Name="HallucinationEndDist" Value="3" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="79" Group="0" ID="1439" Name="DungeonDoorKey" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-6.25 -20 -7.75">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="CustomSubItemTypeName" Value="" />
                     </UserVariables>
                 </Entity>
             </Entities>

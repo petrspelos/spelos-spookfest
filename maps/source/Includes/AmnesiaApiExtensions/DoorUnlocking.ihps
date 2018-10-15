@@ -1,0 +1,18 @@
+// ============================================================================
+// Functions called by UseItem for general door unlocking
+// ============================================================================
+//unlock_door.snt
+
+void UnlockSwingDoor(string item, string entity)
+{
+    PlaySoundAtEntity("", "unlock_door.snt", entity, 0.0f, false);
+    SetSwingDoorLocked(entity, false, true);
+    RemoveItem(item);
+}
+
+void UnlockLevelDoor(string item, string entity)
+{
+    PlaySoundAtEntity("", "unlock_door.snt", entity, 0.0f, false);
+    SetLevelDoorLocked(entity, false);
+    RemoveItem(item);
+}

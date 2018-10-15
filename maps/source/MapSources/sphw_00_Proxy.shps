@@ -4,6 +4,6 @@
 // to the actual first map of the Custom Story.
 void OnEnter()
 {
-    SetupLoadScreen("", "", 0, "menu_loading_screen_halloween.jpg");
+    SetupLoadScreen("Other", "Empty", 0, "menu_loading_screen_halloween.jpg");
     ChangeMap("sphw_01_IntroSequence.map", "PlayerStartArea_1", "", "");
 }

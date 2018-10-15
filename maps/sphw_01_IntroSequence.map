@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-7.19928 11.4298 -3.08851" CameraTarget="-16.2162 3.24909 -1.14005" CameraZoom="1.4" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-30.0352 10.1457 0.0669841" CameraTarget="-20.4758 2.38826 -0.615046" CameraZoom="1.4" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -32,27 +32,27 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="26" Name="plane_black_plane_black_5" Rotation="-1.57079 0 0" Scale="3 1 1" Tag="" WorldPos="0 5.5 4" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="27" Name="plane_black_plane_black_6" Rotation="-1.57079 0 0" Scale="3 1 1" Tag="" WorldPos="0 9.5 4" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="28" Name="plane_black_plane_black_7" Rotation="-1.57079 0 0" Scale="3 1 1" Tag="" WorldPos="0 -2.5 4" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="39" Name="plane_black_plane_black_8" Rotation="1.5708 1.5708 3.14159" Scale="3 1 1" Tag="" WorldPos="-9.5 6 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="40" Name="plane_black_plane_black_9" Rotation="1.5708 1.5708 3.14159" Scale="3 1 1" Tag="" WorldPos="-9.5 10 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="41" Name="plane_black_plane_black_10" Rotation="1.5708 1.5708 3.14159" Scale="3 1 1" Tag="" WorldPos="-9.5 2 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="39" Name="plane_black_plane_black_8" Rotation="-1.57079 1.5708 -2.53518e-006" Scale="3 1 1" Tag="" WorldPos="-9.5 6 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="40" Name="plane_black_plane_black_9" Rotation="-1.57079 1.5708 -2.53518e-006" Scale="3 1 1" Tag="" WorldPos="-9.5 10 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="41" Name="plane_black_plane_black_10" Rotation="-1.57079 1.5708 -2.53518e-006" Scale="3 1 1" Tag="" WorldPos="-9.5 2 6" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="43" Name="plane_black_plane_black_11" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-15.5 2 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="44" Name="plane_black_plane_black_12" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-15.5 6 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="45" Name="plane_black_plane_black_13" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-15.5 10 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="47" Name="plane_black_plane_black_14" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-27.5 2 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="48" Name="plane_black_plane_black_15" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-27.5 6 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="49" Name="plane_black_plane_black_16" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-27.5 10 12" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="51" Name="plane_black_plane_black_17" Rotation="1.5708 -1.5708 3.14159" Scale="3 1 1" Tag="" WorldPos="-33.5 2 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="52" Name="plane_black_plane_black_18" Rotation="1.5708 -1.5708 3.14159" Scale="3 1 1" Tag="" WorldPos="-33.5 6 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="53" Name="plane_black_plane_black_19" Rotation="1.5708 -1.5708 3.14159" Scale="3 1 1" Tag="" WorldPos="-33.5 10 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="51" Name="plane_black_plane_black_17" Rotation="-1.57079 -1.5708 -2.53518e-006" Scale="3 1 1" Tag="" WorldPos="-33.5 2 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="52" Name="plane_black_plane_black_18" Rotation="-1.57079 -1.5708 -2.53518e-006" Scale="3 1 1" Tag="" WorldPos="-33.5 6 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="53" Name="plane_black_plane_black_19" Rotation="-1.57079 -1.5708 -2.53518e-006" Scale="3 1 1" Tag="" WorldPos="-33.5 10 6" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="57" Name="plane_black_plane_black_20" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-51.75 2 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="58" Name="plane_black_plane_black_21" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-51.75 6 12" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="59" Name="plane_black_plane_black_22" Rotation="-1.57079 2.17755e-006 3.82137e-015" Scale="3 1 1" Tag="" WorldPos="-51.75 10 12" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="61" Name="plane_black_plane_black_23" Rotation="-1.57079 -1.5708 8.74228e-008" Scale="3 1 1" Tag="" WorldPos="-57.75 2 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="62" Name="plane_black_plane_black_24" Rotation="-1.57079 -1.5708 8.74228e-008" Scale="3 1 1" Tag="" WorldPos="-57.75 6 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="63" Name="plane_black_plane_black_25" Rotation="-1.57079 -1.5708 8.74228e-008" Scale="3 1 1" Tag="" WorldPos="-57.75 10 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="65" Name="plane_black_plane_black_26" Rotation="-1.57079 1.5708 5.82819e-008" Scale="3 1 1" Tag="" WorldPos="-45.75 2 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="66" Name="plane_black_plane_black_27" Rotation="-1.57079 1.5708 5.82819e-008" Scale="3 1 1" Tag="" WorldPos="-45.75 6 6" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="67" Name="plane_black_plane_black_28" Rotation="-1.57079 1.5708 5.82819e-008" Scale="3 1 1" Tag="" WorldPos="-45.75 10 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="61" Name="plane_black_plane_black_23" Rotation="1.5708 -1.5708 -3.14159" Scale="3 1 1" Tag="" WorldPos="-57.75 2 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="62" Name="plane_black_plane_black_24" Rotation="1.5708 -1.5708 -3.14159" Scale="3 1 1" Tag="" WorldPos="-57.75 6 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="63" Name="plane_black_plane_black_25" Rotation="1.5708 -1.5708 -3.14159" Scale="3 1 1" Tag="" WorldPos="-57.75 10 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="65" Name="plane_black_plane_black_26" Rotation="1.5708 1.5708 -3.14159" Scale="3 1 1" Tag="" WorldPos="-45.75 2 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="66" Name="plane_black_plane_black_27" Rotation="1.5708 1.5708 -3.14159" Scale="3 1 1" Tag="" WorldPos="-45.75 6 6" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="67" Name="plane_black_plane_black_28" Rotation="1.5708 1.5708 -3.14159" Scale="3 1 1" Tag="" WorldPos="-45.75 10 6" />
             </StaticObjects>
             <Primitives>
                 <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 2.5" Corner2UV="0 0" Corner3UV="2.5 0" Corner4UV="2.5 2.5" EndCorner="2.5 0 2.5" Group="0" ID="0" Material="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/static_objects/technical/plane_black/plane_black.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-1.25 0 -1.25" />
@@ -126,8 +126,8 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <BoxLight Active="true" BlendFunc="1" CastShadows="false" DiffuseColor="0.423 0.231 0.138 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="37" Name="BoxLight_2" Radius="1" Rotation="0 -0 0" Scale="0.9007 0.32575 0.343373" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="0.9007 0.32575 0.343373" Tag="" WorldPos="-1.65273 0.486006 3.79681" />
-                <Entity Active="true" FileIndex="3" Group="0" ID="38" Name="SphwCustomStory_1" Rotation="-1.57079 0 0" Scale="1 1 1" Tag="" WorldPos="-21.75 1.59901 6.59609">
+                <BoxLight Active="true" BlendFunc="1" CastShadows="false" DiffuseColor="0.423 0.231 0.138 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="37" Name="BoxLight_2" Radius="1" Rotation="0 0 0" Scale="0.9007 0.32575 0.343373" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="0.9007 0.32575 0.343373" Tag="" WorldPos="-1.65273 0.486006 3.79681" />
+                <Entity Active="true" FileIndex="3" Group="0" ID="38" Name="SphwCustomStory_1" Rotation="-1.57079 0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="-21.75 1.59901 6.59609">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -168,10 +168,10 @@
                 </Entity>
                 <BoxLight Active="true" BlendFunc="1" CastShadows="false" DiffuseColor="1 0.541 0.345 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="71" Name="BoxLight_4" Radius="1" Rotation="0 -0 0" Scale="9 3 1.25" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="9 3 1.25" Tag="" WorldPos="-52.5 2.25 5.5" />
                 <Billboard Active="true" BillboardColor="0.173 0 0.275 1" BillboardOffset="0" BillboardSize="17.5 6" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="72" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo_no_depthtest.mat" Name="Billboard_3" Rotation="0 -0 0" Tag="" WorldPos="-52.25 2 5.5" />
-                <Area Active="true" AreaType="PlayerStart" Group="0" ID="73" Mesh="" Name="PlayerStartArea_2" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-21.5 0 0">
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="73" Mesh="" Name="PlayerStartArea_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-21.5 0 0">
                     <UserVariables />
                 </Area>
-                <Area Active="true" AreaType="PlayerStart" Group="0" ID="74" Mesh="" Name="PlayerStartArea_3" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-52.25 0 0">
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="74" Mesh="" Name="PlayerStartArea_3" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-52.25 0 0">
                     <UserVariables />
                 </Area>
             </Entities>
