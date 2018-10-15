@@ -1,0 +1,65 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-4.5467 22.7615 -13.8" CameraTarget="35.6954 6.06475 10.7314" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="false" UsingLTCam="false" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="1 1 1 1" SkyBoxTexture="custom_stories/spelos-spookfest/textures/UndergroundSkyboxDevil.dds">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="2">
+                <File Id="0" Path="static_objects/sphw/hellmap.dae" />
+                <File Id="1" Path="static_objects/cellarbase/ceiling/welder_extension.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="1">
+                <File Id="0" Path="entities/furniture/bed_nice/bed_nice.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="0" Name="hellmap_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="0 0 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="4" Name="ceiling_welder_extension_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.75 -3.25 2" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="5" Name="ceiling_welder_extension_2" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.75 -3.25 1.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="6" Name="ceiling_welder_extension_3" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.75 -3.25 1" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="7" Name="ceiling_welder_extension_4" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.75 -3.25 0.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="8" Name="ceiling_welder_extension_5" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.75 -3.25 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="9" Name="ceiling_welder_extension_6" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="53.75 -3.25 1.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="10" Name="ceiling_welder_extension_7" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="53.75 -3.25 2" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="11" Name="ceiling_welder_extension_8" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="53.75 -3.25 1" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="12" Name="ceiling_welder_extension_9" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="53.75 -3.25 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="13" Name="ceiling_welder_extension_10" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="53.75 -3.25 0.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="14" Name="ceiling_welder_extension_11" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="63.75 -3.25 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="15" Name="ceiling_welder_extension_12" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="63.75 -3.25 0.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="16" Name="ceiling_welder_extension_13" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="58.75 -3.25 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="17" Name="ceiling_welder_extension_14" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="63.75 -3.25 1" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="18" Name="ceiling_welder_extension_15" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="58.75 -3.25 0.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="19" Name="ceiling_welder_extension_16" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="63.75 -3.25 1.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="20" Name="ceiling_welder_extension_17" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="58.75 -3.25 1" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="21" Name="ceiling_welder_extension_18" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="63.75 -3.25 2" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="22" Name="ceiling_welder_extension_19" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="58.75 -3.25 1.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="23" Name="ceiling_welder_extension_20" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="58.75 -3.25 2" />
+            </StaticObjects>
+            <Primitives />
+            <Decals />
+            <Entities>
+                <Entity Active="true" FileIndex="0" Group="0" ID="1" Name="bed_nice_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-5.5 -0.25 0.5">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="IsAffectedByDecal" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <BoxLight Active="true" BlendFunc="0" CastShadows="false" DiffuseColor="1 1 1 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="2" Name="BoxLight_1" Radius="1" Rotation="0 -0 0" Scale="200 150 150" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="200 150 150" Tag="" WorldPos="44.5 0 0" />
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="3" Mesh="" Name="PlayerStartArea_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="6 0 -1">
+                    <UserVariables />
+                </Area>
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

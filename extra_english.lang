@@ -67,37 +67,37 @@
         <Entry Name="TheEnd">Happy Halloween 2018</Entry>
     </CATEGORY>
 
-     <CATEGORY Name="Inventory">
-    <Entry Name="UseItemDoesNotWork">It's not the solution, but I like your thinking!</Entry>
-    <Entry Name="UseItemHasNoObject">Right... But there's nothing to use that on!</Entry>
-    <Entry Name="Sanity">Literally your brain right now</Entry>
-    <Entry Name="SanityDesc0">Yea, we're dead.</Entry>
-    <Entry Name="SanityDesc1">Red means scary!</Entry>
-    <Entry Name="SanityDesc2">Did the color change?</Entry>
-    <Entry Name="SanityDesc3">Yep, that's a brain.</Entry>
-    <Entry Name="Health">Literally your heart right now</Entry>
-    <Entry Name="HealthDesc0">It's official, we're dead.</Entry>
-    <Entry Name="HealthDesc1">I ain't a doctor, but isn't that blood?</Entry>
-    <Entry Name="HealthDesc2">Show us on this doll where he touched you.</Entry>
-    <Entry Name="HealthDesc3">*Thump* *Thump* Seems good.</Entry>
-    <Entry Name="LampOil">The lantern liquid stuff</Entry>
-    <Entry Name="LampOilDesc">It does the light thing... you know.</Entry>
-    <Entry Name="PickedUp">Literally stole</Entry>
-    <Entry Name="LanternOn">Does the light thing</Entry>
-    <Entry Name="LanternOff">Y it NO light?</Entry>
-    <Entry Name="Tinderboxes">Tindercylinder</Entry>
-    <Entry Name="Journal">Notepad.exe</Entry>
-    <Entry Name="JournalDesc">Click to open.</Entry>
-  </CATEGORY>
+    <CATEGORY Name="Inventory">
+        <Entry Name="UseItemDoesNotWork">It's not the solution, but I like your thinking!</Entry>
+        <Entry Name="UseItemHasNoObject">Right... But there's nothing to use that on!</Entry>
+        <Entry Name="Sanity">Literally your brain right now</Entry>
+        <Entry Name="SanityDesc0">Yea, we're dead.</Entry>
+        <Entry Name="SanityDesc1">Red means scary!</Entry>
+        <Entry Name="SanityDesc2">Did the color change?</Entry>
+        <Entry Name="SanityDesc3">Yep, that's a brain.</Entry>
+        <Entry Name="Health">Literally your heart right now</Entry>
+        <Entry Name="HealthDesc0">It's official, we're dead.</Entry>
+        <Entry Name="HealthDesc1">I ain't a doctor, but isn't that blood?</Entry>
+        <Entry Name="HealthDesc2">Show us on this doll where he touched you.</Entry>
+        <Entry Name="HealthDesc3">*Thump* *Thump* Seems good.</Entry>
+        <Entry Name="LampOil">The lantern liquid stuff</Entry>
+        <Entry Name="LampOilDesc">It does the light thing... you know.</Entry>
+        <Entry Name="PickedUp">Literally stole</Entry>
+        <Entry Name="LanternOn">Does the light thing</Entry>
+        <Entry Name="LanternOff">Y it NO light?</Entry>
+        <Entry Name="Tinderboxes">Tindercylinder</Entry>
+        <Entry Name="Journal">Notepad.exe</Entry>
+        <Entry Name="JournalDesc">Click to open.</Entry>
+    </CATEGORY>
 
-  <CATEGORY Name="Journal">
-    <Entry Name="Notes">Notepad.exe</Entry>
-    <Entry Name="Diaries">Spooky Stories</Entry>
-    <Entry Name="Quest Log">What am I supposed to do again?</Entry>
-    <Entry Name="NotesEmpty">Notepad.exe is empty...</Entry>
-    <Entry Name="DiariesEmpty">Damn, no stories...</Entry>
-    <Entry Name="QuestsEmpty">Ehm... Not sure what you're supposed to be doing, yet.</Entry>
-  </CATEGORY>
+    <CATEGORY Name="Journal">
+        <Entry Name="Notes">Notepad.exe</Entry>
+        <Entry Name="Diaries">Spooky Stories</Entry>
+        <Entry Name="Quest Log">What am I supposed to do again?</Entry>
+        <Entry Name="NotesEmpty">Notepad.exe is empty...</Entry>
+        <Entry Name="DiariesEmpty">Damn, no stories...</Entry>
+        <Entry Name="QuestsEmpty">Ehm... Not sure what you're supposed to be doing, yet.</Entry>
+    </CATEGORY>
 
     <CATEGORY Name="Inventory">
         <Entry Name="ItemName_PadlockKey">Morgue padlock key</Entry>
