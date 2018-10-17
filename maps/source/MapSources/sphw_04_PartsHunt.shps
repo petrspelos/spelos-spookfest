@@ -2,22 +2,6 @@
 
 const string gAmbSoundFile = "CavernOfLostSouls.snt";
 
-void Preload()
-{
-    PreloadSound(gAmbSoundFile);
-    PreloadSound("ui_lantern_off.snt");
-    PreloadSound("scare_wings.snt");
-    PreloadSound("29_rotating_rock_single.snt");
-    PreloadSound("explosion_rock_large.snt");
-    PreloadSound("player_cough.snt");
-    PreloadSound("move_gate.snt");
-    PreloadSound("door_sewer_unlock.snt.snt");
-    PreloadSound("step_sneak_female_rock.snt");
-    PreloadSound("puzzle_place_jar.snt");
-
-    PreloadParticleSystem("ps_dust_elevator_crash.ps");
-}
-
 void OnStart()
 {
     CandleBaitSetup();
@@ -31,6 +15,7 @@ void OnStart()
 
 void OnEnter()
 {
+    Preload();
     PlaySoundAtEntity(
         "ambience",    /* Name */
         gAmbSoundFile, /* File */
@@ -285,7 +270,10 @@ void PlayFemaleSneakSound(string t)
 // -----------------------------------------------------------------------------
 void SlowDownAreasSetup()
 {
-    AddSlowDownAreaCallback("SlowDownArea");
+    for(int i = 1; i <= 3; i++)
+    {
+        AddSlowDownAreaCallback($"SlowDownArea_{i}");
+    }
 }
 
 void AddSlowDownAreaCallback(string name)

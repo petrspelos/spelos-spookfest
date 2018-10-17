@@ -6,5 +6,6 @@
 
 void OnStart()
 {
+    Preload();
     StartCredits("", false, "CreditsResources", "MainCredits", 4);
 }

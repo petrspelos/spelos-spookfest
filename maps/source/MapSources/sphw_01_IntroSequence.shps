@@ -6,7 +6,7 @@
 
 void OnEnter()
 {
-    PreloadSound("FallAmbience.snt");
+    Preload();
     PlaySoundAtEntity("amb", "FallAmbience.snt", "Player", 3.0f, false);
     FadeOut(0.0f);
     SetInDarknessEffectsActive(false);

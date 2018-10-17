@@ -7,21 +7,8 @@
 #include "02_Dungeon_Intro.ihps"
 #include "Interactions.ihps"
 #include "DoorUnlocking.ihps"
-
-void Preload()
-{
-    PreloadSound("15_rock_break.snt");
-    PreloadSound("15_intro.snt");
-    PreloadSound("13_amb.snt");
-    PreloadSound("react_breath_slow.snt");
-    PreloadSound("react_breath.snt");
-    PreloadSound("react_sigh.snt");
-    PreloadSound("react_pant.snt");
-    PreloadSound("15_man02_whimp.snt");
-    PreloadSound("scare_scratch");
-    PreloadSound("unlock_door.snt");
-    PreloadParticleSystem("ps_rose_petals_loop.ps");
-}
+#include "StartPlayerLookAtExtensions.ihps"
+#include "GeneralExtensions.ihps"
 
 void OnStart()
 {
