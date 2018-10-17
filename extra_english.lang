@@ -112,8 +112,10 @@
         <Entry Name="Quest_LockedMorgue_Text">The morgue is locked and won't open without a key.</Entry>
         <Entry Name="Quest_HeelsPuzzle_Text">There seems to be some sort of a mechanism to open the gate with the two pedestals.</Entry>
 
-        <Entry Name="Note_Polaroid01_Name">the mistress</Entry>
+        <Entry Name="Note_Polaroid01_Name">The mistress</Entry>
         <Entry Name="Note_Polaroid01_Text"></Entry>
+        <Entry Name="Note_WineBrute_Name">An angry note</Entry>
+        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br] [br]by The Brute <3</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Messages">
