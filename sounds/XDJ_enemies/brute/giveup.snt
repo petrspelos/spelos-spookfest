@@ -1,0 +1,9 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="brute/amb_idle_whimp02" />
+  		<Sound File="brute/notice_long01" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="0.7" MinDistance="2" MaxDistance="18" Random="1" Interval="0" FadeEnd="False" FadeStart="False" Stream="false" Loop="false" Use3D="True" Blockable="True" BlockVolumeMul="0.7" Priority="1" />
+</SOUNDENTITY>
