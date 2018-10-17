@@ -161,6 +161,10 @@
         <Entry Name="Entrance_04">How have you been, old friend. No, really, do tell.</Entry>
         <Entry Name="Entrance_05">[PLEASE TALK TO THE SKELETON]</Entry>
         <Entry Name="Entrance_06">Enough chit-chat my fleshy friend, for we have a great party in front of us.</Entry>
+
+        <Entry Name="PreHell_01">Wouldn't it be funny if we were literally in hell? Heh, actually, that would be terrible, now that I think about it.</Entry>
+        <Entry Name="PreHell_02">Oh no no no no, I'm sure that's just a phrase. You know, a little lighthearted hyperbole.</Entry>
+        <Entry Name="PreHell_03">I need a lawyer.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Credits">
