@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
-            <Viewport CameraPosition="-15.75 0 160.5" CameraTarget="-15.75 0 -19.5" CameraZoom="1.75736" GridHeight="-19.5" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="164.25 0 -19.5" CameraTarget="-15.75 0 -19.5" CameraZoom="3.10109" GridHeight="-15.75" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-15 180 -16.625" CameraTarget="-15 0 -16.625" CameraZoom="1.75736" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-19.0585 17.3148 -7.13659" CameraTarget="-18.6616 2.14577e-006 -17.2249" CameraZoom="0.914127" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="-15.75 0 160.5" CameraTarget="-15.75 0 -19.5" CameraZoom="0" GridHeight="-19.5" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="164.25 0 -19.5" CameraTarget="-15.75 0 -19.5" CameraZoom="0" GridHeight="-15.75" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-15 180 -16.625" CameraTarget="-15 0 -16.625" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-37.8831 10.5846 -51.7032" CameraTarget="-30.5577 4 -53.1342" CameraZoom="1.61413" GridHeight="4" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -13,7 +13,7 @@
     </EditorSession>
     <MapData FogActive="false" FogColor="0.079 0.045 0.045 1" FogCulling="false" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="0 0 0 1" SkyBoxTexture="../../../../../">
         <MapContents>
-            <FileIndex_StaticObjects NumOfFiles="27">
+            <FileIndex_StaticObjects NumOfFiles="30">
                 <File Id="0" Path="static_objects/dungeonbase/wall/default.dae" />
                 <File Id="1" Path="static_objects/dungeonbase/wall/default_short.dae" />
                 <File Id="2" Path="static_objects/dungeonbase/wall/corner_concave_round_short.dae" />
@@ -41,6 +41,9 @@
                 <File Id="24" Path="static_objects/decals/creepers_corner.dae" />
                 <File Id="25" Path="static_objects/dungeonbase/ceiling/concave_window.dae" />
                 <File Id="26" Path="static_objects/dungeonbase/wall/default_broken.dae" />
+                <File Id="27" Path="static_objects/dungeonbase/wall/welder_stone_floorspikes.dae" />
+                <File Id="28" Path="static_objects/decals/damaged_cellarbase_wood_floor02.dae" />
+                <File Id="29" Path="static_objects/decals/damaged_cellarbase_wood_floor01.dae" />
             </FileIndex_StaticObjects>
             <FileIndex_Entities NumOfFiles="26">
                 <File Id="0" Path="entities/door/castle_gate_arched01/castle_gate_arched01.ent" />
@@ -255,9 +258,8 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="299" Name="wall_default_extension_11" Rotation="-3.12158 1.5708 -3.12158" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -19.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="300" Name="wall_default_extension_12" Rotation="-3.12158 1.5708 -3.12158" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -23.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="301" Name="wall_default_extension_13" Rotation="-3.12158 1.5708 -3.12158" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -27.75" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="302" Name="wall_door_way_9" Rotation="4.01154e-019 -3.6637e-006 -9.17733e-012" Scale="1 1 1" Tag="" WorldPos="-46.5 4 -29.5" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="303" Name="wall_door_frame_7" Rotation="4.01154e-019 -3.6637e-006 -9.17733e-012" Scale="1 1 1" Tag="" WorldPos="-46.5 4 -30" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="304" Name="wall_door_way_10" Rotation="3.14159 3.6637e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="-46.5 4 -30.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="302" Name="wall_door_way_9" Rotation="4.01154e-019 -3.6637e-006 -9.17733e-012" Scale="1 1 1" Tag="" WorldPos="-36.25 -1.25 -27.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="303" Name="wall_door_frame_7" Rotation="4.01154e-019 -3.6637e-006 -9.17733e-012" Scale="1 1 1" Tag="" WorldPos="-36.25 -1.25 -28" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="6" Group="0" ID="306" Name="wall_default_extension_14" Rotation="0 6.5883e-006 0" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -29.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="6" Group="0" ID="307" Name="wall_default_extension_15" Rotation="0 6.5883e-006 0" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -29.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="308" Name="wall_default_short_24" Rotation="2.38419e-007 -1.39873e-006 -2.38419e-007" Scale="1 1 1" Tag="" WorldPos="-49 0 -29.75" />
@@ -327,6 +329,97 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="472" Name="wall_default_75" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-8 0 -27.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="473" Name="wall_default_short_40" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-8 0 -24.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="26" Group="0" ID="474" Name="wall_default_short_41" Rotation="0 0 0" Scale="0.75 1 1" Tag="" WorldPos="-9 0 -30" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="478" Name="wall_door_way_10" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-46.5 4 -29.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="479" Name="wall_door_way_13" Rotation="3.14159 -8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="-46.5 4 -30" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="480" Name="wall_door_frame_9" Rotation="3.14159 -8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="-46.5 4 -30" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="482" Name="wall_default02_4" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -32" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="483" Name="wall_default02_5" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -32" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="484" Name="wall_default02_7" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -36" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="485" Name="wall_default02_8" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -36" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="486" Name="wall_default02_9" Rotation="3.14159 0 3.14159" Scale="1 1 1" Tag="" WorldPos="-41.5 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="27" Group="0" ID="487" Name="wall_welder_stone_floorspikes_1" Rotation="-3.14159 2.26498e-006 -1.5708" Scale="1 1.25 1.25" Tag="" WorldPos="-43.75 6 -38.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="488" Name="wall_default02_10" Rotation="-3.14159 1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="-49.25 4 -42" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="489" Name="wall_default02_11" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-41.5 4 -44" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="7" Group="0" ID="490" Name="wall_welder_stone_43" Rotation="-3.14159 -3.01202e-006 -3.14159" Scale="1.25 1 1.25" Tag="" WorldPos="-44.25 4 -30.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="7" Group="0" ID="491" Name="wall_welder_stone_44" Rotation="-3.14159 -3.01202e-006 -3.14159" Scale="1.25 1 1.25" Tag="" WorldPos="-48.75 4 -30.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="492" Name="wall_door_frame_10" Rotation="-3.14159 1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -42" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="494" Name="wall_default02_short_5" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -39" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="495" Name="wall_default02_12" Rotation="-3.14159 -1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="-49.75 4 -42" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="497" Name="wall_default02_short_6" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -45" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="498" Name="wall_default02_13" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -48" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="499" Name="wall_default02_14" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="500" Name="wall_default02_15" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -56" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="501" Name="wall_default02_16" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -48" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="27" Group="0" ID="502" Name="wall_welder_stone_floorspikes_2" Rotation="1.5708 2.26498e-006 -1.5708" Scale="1 1.25 1.25" Tag="" WorldPos="-43.75 6 -43.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="503" Name="wall_default02_17" Rotation="3.14159 2.26498e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="-51.5 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="27" Group="0" ID="504" Name="wall_welder_stone_floorspikes_3" Rotation="-1.5708 2.26498e-006 -1.5708" Scale="1 1.25 1.25" Tag="" WorldPos="-49.25 6 -58.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="505" Name="wall_default02_18" Rotation="3.14159 2.26498e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="-55.5 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="506" Name="wall_default02_19" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-51.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="507" Name="wall_default02_20" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-55.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="508" Name="wall_default02_21" Rotation="2.53518e-006 -1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="-58 4 -61" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="509" Name="wall_default02_22" Rotation="2.53518e-006 1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="-57.5 4 -61" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="510" Name="wall_door_frame_11" Rotation="2.53518e-006 1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="-57.75 4 -61" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="512" Name="wall_default02_short_7" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-57.75 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="513" Name="wall_default02_short_8" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-57.75 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="514" Name="wall_default02_short_9" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-57.75 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="515" Name="wall_default02_short_10" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-57.75 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="516" Name="wall_default02_23" Rotation="-3.14159 -0 3.14159" Scale="1 1 1" Tag="" WorldPos="-45.5 4 -64.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="517" Name="wall_default02_24" Rotation="-2.88505e-022 -8.74229e-008 6.60024e-015" Scale="1 1 1" Tag="" WorldPos="-45.5 4 -63.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="518" Name="wall_door_frame_12" Rotation="-2.88505e-022 -8.74229e-008 6.60024e-015" Scale="1 1 1" Tag="" WorldPos="-45.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="520" Name="wall_default02_short_11" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="-48.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="521" Name="wall_default02_short_12" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="-42.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="522" Name="wall_default02_25" Rotation="2.53518e-006 -1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="-43.75 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="523" Name="wall_default02_26" Rotation="2.53518e-006 1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="-43.25 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="524" Name="wall_door_frame_13" Rotation="2.53518e-006 1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="526" Name="wall_default02_short_13" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -45" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="527" Name="wall_default02_27" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -56" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="27" Group="0" ID="528" Name="wall_welder_stone_floorspikes_4" Rotation="-3.14159 2.26498e-006 -1.5708" Scale="1 1.25 1.25" Tag="" WorldPos="-43.75 6 -58.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="529" Name="wall_default02_short_14" Rotation="0 3.14159 0" Scale="1 1 1" Tag="" WorldPos="-42.5 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="530" Name="wall_default02_28" Rotation="-3.14159 -0 -3.14159" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -64.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="531" Name="wall_default02_29" Rotation="-2.88505e-022 -8.74229e-008 6.60024e-015" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -63.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="532" Name="wall_door_frame_14" Rotation="-2.88505e-022 -8.74229e-008 6.60024e-015" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="535" Name="wall_default02_30" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-39.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="28" Group="0" ID="536" Name="damaged_cellarbase_wood_floor02_1" Rotation="0 0 0" Scale="2 1 2" Tag="" WorldPos="-42 4.001 -41" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="29" Group="0" ID="537" Name="damaged_cellarbase_wood_floor01_1" Rotation="0 0 0" Scale="2 1 2" Tag="" WorldPos="-45.5 4.001 -61" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="539" Name="wall_default02_31" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-37.5 4 -44" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="540" Name="wall_default02_32" Rotation="3.14159 0 3.14159" Scale="1 1 1" Tag="" WorldPos="-37.5 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="542" Name="wall_default02_33" Rotation="-3.14159 -1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="-28 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="543" Name="wall_default02_34" Rotation="-3.14159 1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="-27.5 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="544" Name="wall_door_frame_15" Rotation="-3.14159 1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="-27.75 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="546" Name="wall_default02_35" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-33.5 4 -44" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="547" Name="wall_default02_36" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-29.5 4 -44" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="548" Name="wall_default02_short_15" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-27.75 4 -45" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="549" Name="wall_default02_37" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-27.75 4 -48" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="550" Name="wall_default02_38" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-27.75 4 -56" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="27" Group="0" ID="551" Name="wall_welder_stone_floorspikes_5" Rotation="-1.5708 2.26498e-006 -1.5708" Scale="1 1.25 1.25" Tag="" WorldPos="-27.5 6 -58.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="552" Name="wall_default02_39" Rotation="3.14159 2.26498e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="-29.75 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="27" Group="0" ID="553" Name="wall_welder_stone_floorspikes_6" Rotation="5.84126e-006 2.26498e-006 -1.5708" Scale="1 1.25 1.25" Tag="" WorldPos="-27.5 6 -43.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="554" Name="wall_default02_short_16" Rotation="0 3.14159 0" Scale="1 1 1" Tag="" WorldPos="-36.5 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="555" Name="wall_default02_40" Rotation="3.14159 2.26498e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="-33.75 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="7" Group="0" ID="556" Name="wall_welder_stone_45" Rotation="-3.14159 -3.01202e-006 -3.14159" Scale="1.25 1 1.25" Tag="" WorldPos="-35.75 4 -58.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="559" Name="wall_default02_41" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -61" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="561" Name="wall_default02_42" Rotation="3.14159 2.26498e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="-39.5 4 -58" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="562" Name="wall_default02_short_17" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="-36.5 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="563" Name="wall_default02_43" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-33.75 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="7" Group="0" ID="564" Name="wall_welder_stone_46" Rotation="-3.14159 -3.01202e-006 -3.14159" Scale="1.25 1 1.25" Tag="" WorldPos="-35.75 4 -63.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="565" Name="wall_default02_44" Rotation="3.14159 3.14159 3.14159" Scale="1 1 1" Tag="" WorldPos="-29.75 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="566" Name="wall_default02_short_18" Rotation="0 2.14577e-006 0" Scale="0.5 1 1" Tag="" WorldPos="-27.25 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="567" Name="wall_default02_short_19" Rotation="0 2.14577e-006 0" Scale="0.5 1 1" Tag="" WorldPos="-22.25 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="568" Name="wall_default02_45" Rotation="3.14159 0 3.14159" Scale="1 1 1" Tag="" WorldPos="-33.5 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="569" Name="wall_default02_46" Rotation="3.14159 0 3.14159" Scale="1 1 1" Tag="" WorldPos="-29.5 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="570" Name="wall_default02_47" Rotation="-3.14159 -0 -3.14159" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -38.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="10" Group="0" ID="571" Name="wall_default02_48" Rotation="-2.88505e-022 -8.74229e-008 6.60024e-015" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -37.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="11" Group="0" ID="572" Name="wall_door_frame_16" Rotation="-2.88505e-022 -8.74229e-008 6.60024e-015" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="574" Name="wall_default02_short_20" Rotation="0 3.14159 0" Scale="0.5 1 1" Tag="" WorldPos="-27.25 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="575" Name="wall_default02_short_21" Rotation="0 3.14159 0" Scale="0.5 1 1" Tag="" WorldPos="-22.25 4 -38" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="576" Name="wall_default02_short_22" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -64" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="578" Name="wall_default02_49" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -52" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="580" Name="wall_default02_50" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -56" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="581" Name="wall_default02_short_23" Rotation="3.14159 -1.5708 3.14159" Scale="0.5 1 1" Tag="" WorldPos="-21.75 4 -58.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="582" Name="wall_default02_51" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -48" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="583" Name="wall_default02_short_24" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -45" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="584" Name="wall_default02_52" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -42" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="585" Name="wall_default02_short_25" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-21.75 4 -39" />
             </StaticObjects>
             <Primitives>
                 <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 0.625" Corner2UV="0 0" Corner3UV="4.75 0" Corner4UV="4.75 0.625" EndCorner="9.5 0 1.25" Group="0" ID="83" Material="C:/dev/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane" Rotation="3.14159 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.5 1 0.5" TileOffset="0 0 0" WorldPos="-1.5 8 2" />
@@ -352,13 +445,22 @@
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-15.5 -7.2" Corner2UV="-15.5 -10.2" Corner3UV="-14 -10.2" Corner4UV="-14 -7.2" EndCorner="3.75 0 7.5" Group="0" ID="282" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_19" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-38.75 0 -25.5" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-16.4 -7.2" Corner2UV="-16.4 -9.4" Corner3UV="-15.5 -9.4" Corner4UV="-15.5 -7.2" EndCorner="2.25 0 5.5" Group="0" ID="283" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_20" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-41 0 -23.5" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-17.2 -7.2" Corner2UV="-17.2 -8.6" Corner3UV="-16.4 -8.6" Corner4UV="-16.4 -7.2" EndCorner="2 0 3.5" Group="0" ID="284" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_21" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-43 0 -21.5" />
-                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 1" Corner2UV="0 0" Corner3UV="4 0" Corner4UV="4 1" EndCorner="4 0 1" Group="0" ID="310" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_22" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-48.5 4 -30.5" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-19.7 -7.2" Corner2UV="-19.7 -11.8" Corner3UV="-17.5 -11.8" Corner4UV="-17.5 -7.2" EndCorner="5.5 0 11.5" Group="0" ID="311" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_23" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-49.25 0 -29.5" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-14.5 -0.4" Corner2UV="-14.5 -3" Corner3UV="-13 -3" Corner4UV="-13 -0.4" EndCorner="3.75 0 6.5" Group="0" ID="384" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_24" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-36.25 0 -7.5" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-16.3 4.8" Corner2UV="-16.3 -0.3" Corner3UV="-11.3 -0.3" Corner4UV="-11.3 4.8" EndCorner="12.5 0 12.75" Group="0" ID="385" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_25" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-40.75 0 -0.75" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-14.5 5.6" Corner2UV="-14.5 4.8" Corner3UV="-13.1 4.8" Corner4UV="-13.1 5.6" EndCorner="3.5 0 2" Group="0" ID="386" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_26" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-36.25 0 12" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-17.2 3.1" Corner2UV="-17.2 1.6" Corner3UV="-16.3 1.6" Corner4UV="-16.3 3.1" EndCorner="2.25 0 3.75" Group="0" ID="387" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_27" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-43 0 4" />
                 <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-11.3 3.1" Corner2UV="-11.3 1.6" Corner3UV="-10.4 1.6" Corner4UV="-10.4 3.1" EndCorner="2.25 0 3.75" Group="0" ID="388" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_28" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.4 1 0.4" TileOffset="0 0 0" WorldPos="-28.25 0 4" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-10.5625 -7.25" Corner2UV="-10.5625 -15.75" Corner3UV="-9.1875 -15.75" Corner4UV="-9.1875 -7.25" EndCorner="5.5 0 34" Group="0" ID="481" Material="D:/SteamLibrary/steamapps/common/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane_29" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="1.75 0 0.25" WorldPos="-49.25 4 -64" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-12.6875 -14.25" Corner2UV="-12.6875 -15.75" Corner3UV="-10.5625 -15.75" Corner4UV="-10.5625 -14.25" EndCorner="8.5 0 6" Group="0" ID="534" Material="D:/SteamLibrary/steamapps/common/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane_30" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="1.75 0 0.25" WorldPos="-57.75 4 -64" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-10.9375 -11.5" Corner2UV="-10.9375 -14.5" Corner3UV="-8.9375 -14.5" Corner4UV="-8.9375 -11.5" EndCorner="8 0 12" Group="0" ID="538" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_22" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="0 0 0" WorldPos="-43.75 4 -58" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-8.9375 -12" Corner2UV="-8.9375 -14" Corner3UV="-6.9375 -14" Corner4UV="-6.9375 -12" EndCorner="8 0 8" Group="0" ID="541" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_31" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="0 0 0" WorldPos="-35.75 4 -56" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-9.1875 -14.25" Corner2UV="-9.1875 -15.75" Corner3UV="-3.6875 -15.75" Corner4UV="-3.6875 -14.25" EndCorner="22 0 6" Group="0" ID="557" Material="D:/SteamLibrary/steamapps/common/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane_32" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="1.75 0 0.25" WorldPos="-43.75 4 -64" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-5.1875 -9.25" Corner2UV="-5.1875 -14.25" Corner3UV="-3.6875 -14.25" Corner4UV="-3.6875 -9.25" EndCorner="6 0 20" Group="0" ID="558" Material="D:/SteamLibrary/steamapps/common/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane_33" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="1.75 0 0.25" WorldPos="-27.75 4 -58" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-9.1875 -9.25" Corner2UV="-9.1875 -10.75" Corner3UV="-5.1875 -10.75" Corner4UV="-5.1875 -9.25" EndCorner="16 0 6" Group="0" ID="560" Material="D:/SteamLibrary/steamapps/common/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane_34" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="1.75 0 0.25" WorldPos="-43.75 4 -44" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-7.4375 -7.5" Corner2UV="-7.4375 -9.5" Corner3UV="-5.4375 -9.5" Corner4UV="-5.4375 -7.5" EndCorner="8 0 8" Group="0" ID="586" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_35" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="0 0 0" WorldPos="-29.75 4 -38" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-8.4375 -16" Corner2UV="-8.4375 -18" Corner3UV="-5.4375 -18" Corner4UV="-5.4375 -16" EndCorner="12 0 8" Group="0" ID="587" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_36" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="0 0 0" WorldPos="-33.75 4 -72" />
+                <Plane Active="true" AlignToWorldCoords="true" CastShadows="false" Collides="true" Corner1UV="-12.625 -16" Corner2UV="-12.625 -18.5" Corner3UV="-10.125 -18.5" Corner4UV="-10.125 -16" EndCorner="10 0 10" Group="0" ID="588" Material="C:/dev/Amnesia The Dark Descent/static_objects/dungeonbase/floor/cobbled_stone.mat" Name="Plane_37" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="0.25 1 0.25" TileOffset="0 0 0" WorldPos="-50.5 4 -74" />
             </Primitives>
             <Decals>
                 <Decal Active="true" Color="1 1 1 1" CurrentSubDiv="0" Group="0" ID="149" MaterialIndex="0" MaxTriangles="-1" Name="hay_1" Offset="0.00694555" OnEntity="false" OnPrimitive="true" OnStatic="false" Rotation="0 0.771232 0" Scale="1.5 1.5 1.5" SubDiv="1 1" Tag="" WorldPos="3.90503 0 -2.22902">
@@ -726,7 +828,7 @@
                         <Var Name="DisableBreakable" Value="false" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="10" Group="0" ID="321" Name="level_wood_1" Rotation="0 0 0" Scale="0.949333 1 1" Tag="" WorldPos="-46.5 4.02506 -30">
+                <Entity Active="true" FileIndex="10" Group="0" ID="321" Name="level_wood_1" Rotation="0 0 0" Scale="0.949333 1 1" Tag="" WorldPos="-36.25 -1.25 -28">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1186,7 +1288,43 @@
                     </UserVariables>
                 </Area>
             </Entities>
-            <Misc />
+            <Misc>
+                <Compound Active="true" Group="0" ID="496" Name="Compound_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-49.5 4 -42">
+                    <Component ID="495" />
+                    <Component ID="488" />
+                    <Component ID="492" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="511" Name="Compound_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-57.75 4 -61">
+                    <Component ID="508" />
+                    <Component ID="509" />
+                    <Component ID="510" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="519" Name="Compound_3" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-45.5 4 -64">
+                    <Component ID="516" />
+                    <Component ID="517" />
+                    <Component ID="518" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="525" Name="Compound_4" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-43.5 4 -52">
+                    <Component ID="522" />
+                    <Component ID="523" />
+                    <Component ID="524" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="533" Name="Compound_5" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -64">
+                    <Component ID="530" />
+                    <Component ID="531" />
+                    <Component ID="532" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="545" Name="Compound_6" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-27.75 4 -52">
+                    <Component ID="542" />
+                    <Component ID="543" />
+                    <Component ID="544" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="573" Name="Compound_7" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="-24.75 4 -38">
+                    <Component ID="570" />
+                    <Component ID="571" />
+                    <Component ID="572" />
+                </Compound>
+            </Misc>
             <StaticObjectCombos />
         </MapContents>
     </MapData>
