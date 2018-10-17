@@ -1,8 +1,10 @@
 #include "AmnesiaSignatures.cpp"
 #include "06_PreHellCutscene.ihps"
+#include "06_InHellCutscene.ihps"
 
 void OnEnter()
 {
+    PlayPropAnimation("Spelos", "TalkToDevil", 0.0f, true, "");
     Preload();
     SetupSkybox();
     SetInDarknessEffectsActive(false);
@@ -18,5 +20,22 @@ void SetupSkybox()
 
 void OnPreHellFinished(string t)
 {
+    PlayInHellSequence("OnRunStarts");
+}
 
+void OnRunStarts(string t)
+{
+    AddTimer("", 0.0f, "SanityBeat");
+}
+
+void SanityBeat(string t)
+{
+    FadePlayerFOVMulTo(0.95f, 15.0f);
+    AddTimer("", 0.2f, "CorrectFOV");
+    AddTimer("", 0.6f, "SanityBeat");
+}
+
+void CorrectFOV(string t)
+{
+    FadePlayerFOVMulTo(1.3f, 0.5f);
 }

@@ -1,6 +1,3 @@
-// TODO: DEBUG: REMOVE ME
-//#include "AmnesiaSignatures.cpp"
-
 void PlayPreHellSequence(string finishedCallback)
 {
     AddLocalVarString("PreHellFinishedCallback", finishedCallback);
@@ -22,7 +19,7 @@ void PreHellSequence(string t)
     else if(stage == 1)
     {
         SetEffectVoiceOverCallback("SequenceVoiceTrigger");
-        AddEffectVoice("prehell-01.ogg", "", "???", "???", true, "PreHellSpelosArea", 0.0f, 20.0f);
+        AddEffectVoice("prehell-01.ogg", "", "Subtitles", "PreHell_01", true, "PreHellSpelosArea", 0.0f, 20.0f);
         return;
     }
     else if(stage == 2)
@@ -44,7 +41,7 @@ void PreHellSequence(string t)
     else if(stage == 5)
     {
         SetEffectVoiceOverCallback("SequenceVoiceTrigger");
-        AddEffectVoice("prehell-02.ogg", "", "???", "???", true, "PreHellSpelosArea", 0.0f, 20.0f);
+        AddEffectVoice("prehell-02.ogg", "", "Subtitles", "PreHell_02", true, "PreHellSpelosArea", 0.0f, 20.0f);
         return;
     }
     else if(stage == 6)
@@ -56,7 +53,7 @@ void PreHellSequence(string t)
     else if(stage == 7)
     {
         SetEffectVoiceOverCallback("SequenceVoiceTrigger");
-        AddEffectVoice("prehell-03.ogg", "", "???", "???", true, "PreHellSpelosArea", 0.0f, 20.0f);
+        AddEffectVoice("prehell-03.ogg", "", "Subtitles", "PreHell_03", true, "PreHellSpelosArea", 0.0f, 20.0f);
         return;
     }
     else if(stage == 8)
@@ -71,6 +68,7 @@ void PreHellSequence(string t)
     else if(stage == 10)
     {
         TeleportPlayer("PlayerStartArea_2");
+        StartPlayerLookAt("DevilFace", 1.0f, 1.5f, "");
         delay = 1.0f;
     }
     else
