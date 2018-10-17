@@ -101,11 +101,16 @@ void HellConversationSequence(string t)
         AddEffectVoice("inhell-13.ogg", "", "Subtitles", "InHell_13", true, "Spelos", 0.0f, 20.0f);
         StopMusic(0.2f, 1);
         StopPlayerLookAt();
-        delay = 1.5f;
+        delay = 0.5f;
     }
     else if(stage == 13)
     {
         CreateParticleSystemAtEntity("", "ps_cloud_thing01.ps", "Spelos", false);
+        delay = 1.0f;
+    }
+    else if(stage == 14)
+    {
+        
         PlaySoundAtEntity("", "sphw_poof.snt", "Spelos", 0.0f, false);
         SetPropActiveAndFade("Spelos", false, 0.2f);
         PlayMusic("SSSDamianUrbanskiRemix.ogg", true, 0.8f, 0.1f, 1, false);
