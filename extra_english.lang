@@ -116,7 +116,7 @@
         <Entry Name="Note_Polaroid01_Name">The mistress</Entry>
         <Entry Name="Note_Polaroid01_Text"></Entry>
         <Entry Name="Note_WineBrute_Name">An angry note</Entry>
-        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br] [br]by The Brute <3</Entry>
+        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br][br]by The Brute</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Messages">
