@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-1.56462 3.81149 -5.47917" CameraTarget="-1.24957 0 2.81635" CameraZoom="1.69994" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-2.53552 6.07158 -8.98547" CameraTarget="0.167646 -4.17233e-007 -0.0238662" CameraZoom="1.49994" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -18,9 +18,8 @@
                 <File Id="1" Path="static_objects/cellarbase/ceiling/welder_extension.dae" />
                 <File Id="2" Path="static_objects/technical/plane_black/plane_black.dae" />
             </FileIndex_StaticObjects>
-            <FileIndex_Entities NumOfFiles="2">
-                <File Id="0" Path="entities/furniture/bed_nice/bed_nice.ent" />
-                <File Id="1" Path="custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/SkeletonSpelos.ent" />
+            <FileIndex_Entities NumOfFiles="1">
+                <File Id="0" Path="custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/SkeletonSpelos.ent" />
             </FileIndex_Entities>
             <FileIndex_Decals NumOfFiles="0" />
             <StaticObjects>
@@ -55,14 +54,8 @@
             <Primitives />
             <Decals />
             <Entities>
-                <Entity Active="true" FileIndex="0" Group="0" ID="1" Name="bed_nice_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-5.5 -0.25 0.5">
-                    <UserVariables>
-                        <Var Name="CastShadows" Value="true" />
-                        <Var Name="IsAffectedByDecal" Value="true" />
-                    </UserVariables>
-                </Entity>
                 <BoxLight Active="true" BlendFunc="0" CastShadows="false" DiffuseColor="0.586 0.335 0.138 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="2" Name="BoxLight_1" Radius="1" Rotation="0 -0 0" Scale="82.25 124.25 31.75" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Size="82.25 124.25 31.75" Tag="" WorldPos="19.5 -51 0" />
-                <Area Active="true" AreaType="PlayerStart" Group="0" ID="3" Mesh="" Name="PlayerStartArea_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.75 0 -1">
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="3" Mesh="" Name="PlayerStartArea_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.25 0 -2">
                     <UserVariables />
                 </Area>
                 <FogArea Active="true" Color="0.173 0 0 1" End="10" FalloffExp="1" Group="0" ID="24" Name="FogArea_1" Rotation="0 0 0" Scale="300 1.75 300" ShownBacksideWhenInside="false" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="22.25 -49 -17" />
@@ -77,7 +70,7 @@
                 <Area Active="true" AreaType="PlayerStart" Group="0" ID="43" Mesh="" Name="PlayerStartArea_1" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="161 15 56.5">
                     <UserVariables />
                 </Area>
-                <Entity Active="true" FileIndex="1" Group="0" ID="44" Name="Spelos" Rotation="3.14159 -0.349829 3.14159" Scale="1.89032 1.89032 1.89032" Tag="" WorldPos="-0.137169 -0.5 1.07689">
+                <Entity Active="true" FileIndex="0" Group="0" ID="44" Name="Spelos" Rotation="3.14159 -4.44253e-006 3.14159" Scale="1.89032 1.89032 1.89032" Tag="" WorldPos="0 -0.63234 0">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />

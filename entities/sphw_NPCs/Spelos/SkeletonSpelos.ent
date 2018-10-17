@@ -10,7 +10,7 @@
     </EditorSession>
     <ModelData>
         <Entities />
-        <Mesh Filename="entities/SPHW_NPCs/Spelos/SkeletonSpelos.dae">
+        <Mesh Filename="custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/SkeletonSpelos.dae">
             <SubMesh Active="true" ID="0" Material="" Name="SkeletonSpelos" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
         </Mesh>
         <Bones>
@@ -53,6 +53,7 @@
             <Animation File="C:/dev/Amnesia The Dark Descent/entities/SPHW_NPCs/Spelos/Animations/SkeletonSpelos_CoffinJumpOut.dae_ANIM" Name="CoffinJumpOut" SpecialEventTime="1.09244e-038" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/entities/SPHW_NPCs/Spelos/Animations/SkeletonSpelos_Talk01.dae_ANIM" Name="Talk" SpecialEventTime="1.09244e-038" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/entities/SPHW_NPCs/Spelos/Animations/SkeletonSpelos_Listen.dae_ANIM" Name="Idle" SpecialEventTime="2.86449e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/TalkToDevil.dae_ANIM" Name="TalkToDevil" SpecialEventTime="2.82797e-038" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">
