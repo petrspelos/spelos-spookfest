@@ -1,0 +1,4 @@
+void StartPlayerLookAtNormal(string entity)
+{
+    StartPlayerLookAt(entity, 1.0f, 1.5f, "");
+}
