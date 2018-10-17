@@ -6,3 +6,8 @@ void PlaySoundAtEntity(string sound, string entity)
 {
     PlaySoundAtEntity("", sound, entity, 0.0f, false);
 }
+
+void PlaySoundAtEntity(string sound, float fadeTime)
+{
+    PlaySoundAtEntity("", sound, "Player", fadeTime, false);
+}

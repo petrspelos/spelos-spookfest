@@ -1,3 +1,5 @@
+#require "StartPlayerLookAtExtensions.ihps"
+
 void PlayIntro(string t)
 {
     int stage = GetLocalVarInt("PlayIntro");
@@ -6,21 +8,12 @@ void PlayIntro(string t)
 
     if(stage == 0)
     {
-        FadeGlobalSoundVolume(0.0f, 0.0f);
-        MovePlayerHeadPos(0.0f, -1.2f, 0.0f, 1.0f, 0.5f);
-        StartPlayerLookAt("IntroHoleArea", 1.0f, 1.5f, "");
-        FadePlayerRollTo(30.0f, 10.0f, 15.0f);
-        SetPlayerMoveSpeedMul(0.5f);
-        SetPlayerRunSpeedMul(0.6f);
-        //SetPlayerJumpDisabled(true);
-        SetPlayerHealth(70.0f);
-        FadeOut(0.0f);
-        SetPlayerActive(false);
+        
         delay = 8.0f;
     }
     else if(stage == 1)
     {
-        FadeGlobalSoundVolume(1.0f, 0.0f);
+        UnmuteGame();
         PlaySoundAtEntity("", "15_intro.snt", "Player", 0.0f, false);
         PlaySoundAtEntity("amb", "13_amb.snt", "Player", 0.0f, false);
         delay = 12.0f;
@@ -115,4 +108,42 @@ void PlayIntro(string t)
     }
 
     AddTimer("", delay, "PlayIntro");
+}
+
+void InitializePlayerPosition()
+{
+    StartPlayerCutsceneMode();
+    MakePlayerHurtAndSlow();
+
+    MovePlayerHeadPos(
+        0.0f,  /* Right */
+        -1.2f, /* Up */
+        0.0f,  /* Forward */
+        1.0f,  /* Speed */
+        0.5f   /* Slowdown distance */
+    );
+
+    StartPlayerLookAtNormal("IntroHoleArea");
+    
+    FadePlayerRollTo(
+        30.0f, /* Degrees */
+        10.0f, /* Speed */
+        15.0f  /* Max Speed */
+    );    
+}
+
+// The player cannot move in cutscene mode
+// nor can they see or hear.
+void StartPlayerCutsceneMode()
+{
+    SetPlayerActive(false);
+    MuteGame();
+    FadeOut(0.0f);
+}
+
+void MakePlayerHurtAndSlow()
+{
+    SetPlayerMoveSpeedMul(0.5f);
+    SetPlayerRunSpeedMul(0.6f);
+    SetPlayerHealth(70.0f);
 }

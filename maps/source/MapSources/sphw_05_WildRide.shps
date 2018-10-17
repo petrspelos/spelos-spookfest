@@ -1,26 +1,38 @@
+// ============================================================================
 #include "AmnesiaSignatures.cpp"
+#include "ChangeMapExtensions.ihps"
+#include "PlaySoundAtEntityExtensions.ihps"
 
-void OnStart()
+void OnEnter()
 {
-    PreloadSound("elevator_move_fall_quieter.snt");
-    PreloadSound("FallingAmb.snt");
-    PreloadSound("SkeletonRidePanic.snt");
-    PreloadSound("explosion_rock_large.snt");
+    Preload();
 
     PlayMusic("TrippingWithSpelos.ogg", false, 1.0f, 0.0f, 1, false);
+    SetPlayerActive(false);
+    FadeOut(0.0f);
+    
     SetLightVisible("SpotLight_1", false);
 
-    SetPlayerActive(false);
-
-    FadeOut(0.0f);
-
-    PlaySoundAtEntity("", "SkeletonRidePanic.snt", "Player", 0.5f, false);
-    PlaySoundAtEntity("elevator", "elevator_move_fall_quieter.snt", "Player", 0.5f, false);
-    PlaySoundAtEntity("wind", "FallingAmb.snt", "Player", 0.5f, false);
+    PlaySoundAtEntity("SkeletonRidePanic.snt", 0.5f);
+    PlaySoundAtEntity(
+        "wind", /* SoundName */
+        "FallingAmb.snt", /* SoundFile */
+        "Player", /* Entity */
+        0.5f, /* FadeTime */
+        false /* SaveSound */
+    );
+    PlaySoundAtEntity(
+        "elevator", /* SoundName */
+        "elevator_move_fall_quieter.snt", /* SoundFile */
+        "Player", /* Entity */
+        0.5f, /* FadeTime */
+        false /* SaveSound */
+    );
 
     AddTimer("", 11.5f, "StartTrip");
     AddTimer("", 59.0f, "EndTrip");
     AddTimer("", 65.0f, "Explode");
+    AddTimer("", 70.0f, "NextMap");
 }
 
 void StartTrip(string t)
@@ -35,12 +47,6 @@ void StartTrip(string t)
     SetSanityDrainDisabled(true);
 }
 
-void EndTrip(string t)
-{
-    FadeOut(1.5f);
-    StopSound("elevator", 1.0f);
-}
-
 void SanityBeat(string t)
 {
     FadePlayerFOVMulTo(0.8f, 10.0f);
@@ -53,8 +59,19 @@ void CorrectFOV(string t)
     FadePlayerFOVMulTo(1.3f, 0.5f);
 }
 
+void EndTrip(string t)
+{
+    FadeOut(1.5f);
+    StopSound("elevator", 1.0f);
+}
+
 void Explode(string t)
 {
     PlaySoundAtEntity("", "explosion_rock_large.snt", "Player", 0.0f, false);
     StopSound("wind", 0.5f);
+}
+
+void NextMap(string t)
+{
+    ChangeMap("sphw_06_Hell.map");
 }

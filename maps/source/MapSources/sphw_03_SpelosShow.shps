@@ -7,13 +7,7 @@ const int reflectorCount = 14;
 
 void OnStart()
 {
-    PreloadSound("20_pipe_stuck.snt");
-    PreloadSound("break_wood_metal.snt");
-    PreloadSound("sphw_poof.snt");
-
-    PreloadParticleSystem("ps_cloud_thing01.ps");
-    PreloadParticleSystem("blood.ps");
-    PreloadParticleSystem("ps_elevator_slow.ps");
+    Preload();
 
     //SetLightVisible("LeverHintLight", false);
     FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f);
