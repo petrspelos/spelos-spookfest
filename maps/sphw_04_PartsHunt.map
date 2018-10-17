@@ -1,17 +1,17 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="-24.652 10.5731 128.001" CameraTarget="-24.652 10.5731 -51.9992" CameraZoom="1.6065" GridHeight="-51.9992" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="155.348 10.5731 -51.9992" CameraTarget="-24.652 10.5731 -51.9992" CameraZoom="1.6065" GridHeight="-24.652" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="-24.777 189.66 -52.0361" CameraTarget="-24.777 9.66025 -52.0361" CameraZoom="2.11643" GridHeight="9.66025" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-24.8547 14.1903 -29.2326" CameraTarget="-30.4313 4 -40.5941" CameraZoom="1.124" GridHeight="4" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="false" UsingLTCam="true" />
+            <Viewport CameraPosition="-45.5029 9.38347 -37.0501" CameraTarget="-45.0184 4 -45.291" CameraZoom="1.624" GridHeight="4" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="false" UsingLTCam="true" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
         </Groups>
     </EditorSession>
-    <MapData FogActive="false" FogColor="0.079 0.045 0.045 1" FogCulling="false" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="0 0 0 1" SkyBoxTexture="../../../../../">
+    <MapData FogActive="true" FogColor="0.079 0.045 0.045 1" FogCulling="false" FogEnd="33" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="0 0 0 1" SkyBoxTexture="../../../../../">
         <MapContents>
             <FileIndex_StaticObjects NumOfFiles="54">
                 <File Id="0" Path="static_objects/dungeonbase/wall/default.dae" />
