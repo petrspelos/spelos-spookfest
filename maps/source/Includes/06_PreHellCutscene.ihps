@@ -1,0 +1,88 @@
+// TODO: DEBUG: REMOVE ME
+//#include "AmnesiaSignatures.cpp"
+
+void PlayPreHellSequence(string finishedCallback)
+{
+    AddLocalVarString("PreHellFinishedCallback", finishedCallback);
+    PreHellSequence("");
+}
+
+void PreHellSequence(string t)
+{
+    int stage = GetLocalVarInt("PreHellSequence");
+    AddLocalVarInt("PreHellSequence", 1);
+    float delay = 0.0f;
+
+    if(stage == 0)
+    {
+        SetPlayerActive(false);
+
+        delay = 3.0f;
+    }
+    else if(stage == 1)
+    {
+        SetEffectVoiceOverCallback("SequenceVoiceTrigger");
+        AddEffectVoice("prehell-01.ogg", "", "???", "???", true, "PreHellSpelosArea", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 2)
+    {
+        PlaySoundAtEntity("", "NeonBoot.snt", "Player", 0.0f, false);
+        FadeLightTo("WelcomeToHellLight", 0.81f, 0.0f, 0.379f, 1.0f, -1.0f, 0.05f);
+        delay = 0.1f;
+    }
+    else if(stage == 3)
+    {
+        FadeLightTo("WelcomeToHellLight", 0.0f, 0.0f, 0.0f, 1.0f, -1.0f, 0.1f);
+        delay = 0.2f;
+    }
+    else if(stage == 4)
+    {
+        FadeLightTo("WelcomeToHellLight", 1.0f, 0.0f, 0.793f, 1.0f, -1.0f, 0.2f);
+        delay = 2.0f;
+    }
+    else if(stage == 5)
+    {
+        SetEffectVoiceOverCallback("SequenceVoiceTrigger");
+        AddEffectVoice("prehell-02.ogg", "", "???", "???", true, "PreHellSpelosArea", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 6)
+    {
+        FadeLightTo("LiteralHellLight", 1.0f, 1.0f, 1.0f, 1.0f, -1.0f, 0.2f);
+        PlaySoundAtEntity("", "NeonBoot.snt", "Player", 0.0f, false);
+        delay = 1.0f;
+    }
+    else if(stage == 7)
+    {
+        SetEffectVoiceOverCallback("SequenceVoiceTrigger");
+        AddEffectVoice("prehell-03.ogg", "", "???", "???", true, "PreHellSpelosArea", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 8)
+    {
+        delay = 1.0f;
+    }
+    else if(stage == 9)
+    {
+        StartEffectFlash(0.5f, 1.0f, 0.5f);
+        delay = 0.6f;
+    }
+    else if(stage == 10)
+    {
+        TeleportPlayer("PlayerStartArea_2");
+        delay = 1.0f;
+    }
+    else
+    {
+        AddTimer("", 0.0f, GetLocalVarString("PreHellFinishedCallback"));
+        return;
+    }
+
+    AddTimer("", delay, "PreHellSequence");
+}
+
+void SequenceVoiceTrigger()
+{
+    AddTimer("", 0.0f, "PreHellSequence");
+}

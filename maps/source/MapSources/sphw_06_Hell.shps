@@ -1,0 +1,22 @@
+#include "AmnesiaSignatures.cpp"
+#include "06_PreHellCutscene.ihps"
+
+void OnEnter()
+{
+    Preload();
+    SetupSkybox();
+    SetInDarknessEffectsActive(false);
+    SetSanityDrainDisabled(true);
+    PlayPreHellSequence("OnPreHellFinished");
+}
+
+void SetupSkybox()
+{
+    SetSkyBoxActive(true);
+    SetSkyBoxTexture("UndergroundSkyboxDevil.dds");
+}
+
+void OnPreHellFinished(string t)
+{
+
+}

@@ -1,0 +1,8 @@
+<SOUNDENTITY>
+  <SOUNDS>
+  	<Main>
+  		<Sound File="NeonBoot" />
+  	</Main>
+  </SOUNDS>
+  <PROPERTIES Volume="1" MinDistance="0" MaxDistance="40" Random="0" Interval="5" FadeEnd="False" FadeStart="False" Stream="False" Loop="False" Use3D="True" Blockable="False" BlockVolumeMul="0.5" Priority="0" />
+</SOUNDENTITY>
