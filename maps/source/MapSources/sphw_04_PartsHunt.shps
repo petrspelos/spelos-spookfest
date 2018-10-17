@@ -10,7 +10,16 @@ void OnStart()
     MorgueUnlockingSetup();
     PuzzleRoomSetup();
     HighHeelsPuzzleSetup();
-    SetPlayerLampOil(0.0f);
+
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// XDJ5000 CODE
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    for(int i=1; i<=16; i++) PlayerEntityCollide("AreaSpikes_" + i, "CollidePlayerAreaSpikes", "Enter");
+
+    if(ScriptDebugOn())
+    {
+        if(HasItem("lantern_1") == false) GiveItemFromFile("lantern_1", "lantern.ent");
+    }
 }
 
 void OnEnter()
@@ -28,6 +37,384 @@ void OnEnter()
     SetMapDisplayNameEntry("00_introduction");
 }
 
+void OnLeave()
+{
+    if(GetPlayerLampOil() < 10.0f) AddPlayerLampOil(10.0f);
+}
+
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// XDJ5000 CODE
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+void CollidePlayerAreaSpikes(string &in asParent, string &in asChild, int alState)
+{
+    GivePlayerDamage(8.0f, "BloodSplat", true, true);
+    PlayGuiSound("21_meat.snt", 1.0f);
+    SetEntityActive(asChild, false);
+    AddTimer(asChild, 10.0f, "TimerActiveEntity");
+}
+
+void TimerFadeActiveEntity(string &in asTimer)
+{
+	SetPropActiveAndFade(asTimer, true, 2.0f);
+}
+
+void TimerFadeInActiveEntity(string &in asTimer)
+{
+	SetPropActiveAndFade(asTimer, false, 2.0f);
+}
+
+void TimerActiveEntity(string &in asTimer)
+{
+	SetEntityActive(asTimer, true);
+}
+
+void TimerInActiveEntity(string &in asTimer)
+{
+	SetEntityActive(asTimer, false);
+}
+
+void PlayMusicRedux(string &in asName, string &in asType)
+{
+	if(asType == "AmbienceLoop") PlayMusic(asName, true, 0.85f, 2.0f, 0, false);
+	else if(asType == "EventLoop") PlayMusic(asName, true, 0.95f, 0.0f, 1, false);
+	else if(asType == "Ambience") PlayMusic(asName, false, 0.85f, 2.0f, 0, false);
+	else if(asType == "Event") PlayMusic(asName, false, 0.95f, 0.0f, 1, false);
+	else PlayMusic(asName, true, 0.85f, 2.0f, 0, false);
+}
+
+void TimerStopMusic(string &in asTimer)
+{
+	if(asTimer == "Ambience") StopMusic(2.0f, 0);
+	else if(asTimer == "Event") StopMusic(1.0f, 1);
+	else
+	{
+		StopMusic(2.0f, 0);
+		StopMusic(1.0f, 1);
+	}
+}
+
+void PlayerEntityCollide(string &in asEntity, string &in asFunction, string &in asType)
+{
+	if(asType == "EnterOnce") AddEntityCollideCallback("Player", asEntity, asFunction, true, 1);
+	else if(asType == "LeaveOnce") AddEntityCollideCallback("Player", asEntity, asFunction, true, -1);
+	else if(asType == "BothOnce") AddEntityCollideCallback("Player", asEntity, asFunction, true, 0);
+	else if(asType == "Enter") AddEntityCollideCallback("Player", asEntity, asFunction, false, 1);
+	else if(asType == "Leave") AddEntityCollideCallback("Player", asEntity, asFunction, false, -1);
+	else if(asType == "Both") AddEntityCollideCallback("Player", asEntity, asFunction, false, 0);
+	else AddEntityCollideCallback("Player", asEntity, asFunction, true, 1);
+}
+
+void ChangeDoorState(string &in asEntity, string &in asType)
+{
+	if(asType == "doorlock" || asType == "doorclose")
+	{
+		PlaySoundAtEntity("SlamDoor", "scare_slam_door.snt", asEntity, 0, false);
+		SetSwingDoorClosed(asEntity, true, true);
+		StartScreenShake(0.01f, 1, 0.5f, 1);
+		if(asType == "doorlock") SetSwingDoorLocked(asEntity, true, true);
+	}	
+	else if(asType == "doorexplode")
+	{
+		SetPropHealth(asEntity, 0);
+		StartScreenShake(0.03f, 1, 0.5f, 1);
+	}
+	else if(asType == "dooropen" || asType == "dooropensilent" || asType == "dooropenunlock" || asType == "dooropenunlocksilent")
+	{
+		SetSwingDoorDisableAutoClose(asEntity, true);
+		if(asType == "dooropen" || asType == "dooropenunlock")
+		{
+			PlaySoundAtEntity("OpenDoor", "01_door.snt", asEntity, 0, false);
+			StartScreenShake(0.005f, 0.5f, 0.5f, 1);
+			if(asType == "dooropenunlock")
+			{
+				SetSwingDoorLocked(asEntity, false, true);
+				SetSwingDoorClosed(asEntity, false, true);
+			}
+		}
+		else if(asType == "dooropenunlocksilent")
+		{
+			SetSwingDoorLocked(asEntity, false, true);
+			SetSwingDoorClosed(asEntity, false, true);
+		}
+		AddTimer(asEntity, 0.1f, "TimerForceOpenDoor");
+	}
+}
+
+void TimerForceOpenDoor(string &in asTimer)
+{
+	if(asTimer == "") AddPropForce(asTimer, 100.0f, 0, 0, "world");
+	else if(asTimer == "") AddPropForce(asTimer, 0, 0, 100.0f, "world");
+}
+
+void UsedKeyOnDoor(string &in asItem, string &in asEntity)
+{
+	PlaySoundAtEntity("UnlockDoor", "unlock_door.snt", asEntity, 0, false);
+	SetSwingDoorLocked(asEntity, false, false);
+	SetLevelDoorLocked(asEntity, false);
+}
+
+void TimerFadeScreen(string &in asTimer)
+{
+	if(asTimer == "fadein")	FadeIn(2.0f);
+	else if(asTimer == "fadeinslow")	FadeIn(5.0f);
+	else if(asTimer == "fadeout") FadeOut(2.0f);
+	else if(asTimer == "fadeoutslow") FadeOut(5.0f);
+	else if(asTimer == "fadeinplayer")
+	{
+		FadeIn(2.0f);
+		SetPlayerActive(true);
+	}
+	else if(asTimer == "fadeinslowplayer")
+	{
+		FadeIn(5.0f);
+		SetPlayerActive(true);
+	}
+	else if(asTimer == "fadeoutplayer")
+	{
+		FadeOut(2.0f);
+		SetPlayerActive(false);	
+	}
+	else if(asTimer == "fadeoutslowplayer")
+	{
+		FadeOut(5.0f);
+		SetPlayerActive(false);	
+	}
+}
+
+void TimerFadeGlobalSound(string &in asTimer)
+{
+	if(asTimer == "globalsoundon") FadeGlobalSoundVolume(1.0f, 4.0f);
+	else if(asTimer == "globalsoundonquick") FadeGlobalSoundVolume(1.0f, 0.5f);
+	else if(asTimer == "globalsoundoff") FadeGlobalSoundVolume(0.0f, 4.0f);
+	else if(asTimer == "globalsoundoffquick") FadeGlobalSoundVolume(0.0f, 0.5f);
+}
+
+void PlayerMindBodyOil(float afSanity, float afHealth, float afLanternOil)
+{
+	SetPlayerSanity(afSanity);
+	SetPlayerHealth(afHealth);
+	SetPlayerLampOil(afLanternOil);
+}
+
+void PlayerGeneralState(string &in asType)
+{
+	if(asType == "normalspeed")
+	{
+		SetPlayerMoveSpeedMul(1.0f);
+		SetPlayerRunSpeedMul(1.0f);
+		SetPlayerLookSpeedMul(1.0f);
+		SetPlayerJumpForceMul(1.0f);
+		ShowPlayerCrossHairIcons(true);
+	}
+	else if(asType == "normaleffects")
+	{
+		FadeIn(2.0f);
+		FadeImageTrailTo(0.0f, 2.0f);
+		FadeSepiaColorTo(0.0f, 2.0f);
+		FadeRadialBlurTo(0.0f, 2.0f);
+		FadePlayerFOVMulTo(1, 2);
+		FadePlayerAspectMulTo(1, 2);
+		ShowPlayerCrossHairIcons(true);
+	}
+	else if(asType == "normaleverything")
+	{
+		FadeIn(2.0f);
+		FadeImageTrailTo(0.0f, 2.0f);
+		FadeSepiaColorTo(0.0f, 2.0f);
+		FadeRadialBlurTo(0.0f, 2.0f);
+		FadePlayerFOVMulTo(1, 2);
+		FadePlayerAspectMulTo(1, 2);
+		SetPlayerMoveSpeedMul(1.0f);
+		SetPlayerRunSpeedMul(1.0f);
+		SetPlayerLookSpeedMul(1.0f);
+		SetPlayerJumpForceMul(1.0f);
+		ShowPlayerCrossHairIcons(true);
+	}
+}
+
+void PlayerSpeed(string &in asType)
+{
+	if(asType == "veryslow")
+	{
+		SetPlayerMoveSpeedMul(0.2f);
+		SetPlayerRunSpeedMul(0.2f);
+	}
+	else if(asType == "slow")
+	{
+		SetPlayerMoveSpeedMul(0.4f);
+		SetPlayerRunSpeedMul(0.4f);
+	}
+	else if(asType == "normal")
+	{
+		SetPlayerMoveSpeedMul(1.0f);
+		SetPlayerRunSpeedMul(1.0f);
+	}
+}
+
+void PlayerLook(string &in asEntity, string &in asType, float afSpeed, float afTime)
+{
+	StartPlayerLookAt(asEntity, afSpeed, afSpeed, "");
+	if(asType == "lookspeed")
+	{
+		SetPlayerMoveSpeedMul(0.2f);
+		SetPlayerRunSpeedMul(0.2f);
+		SetPlayerLookSpeedMul(0.2f);
+		SetPlayerJumpForceMul(0.2f);
+		AddTimer(asType, afTime, "TimerStopLook");
+	}
+	else if(asType == "lookactive")
+	{
+		SetPlayerActive(false);
+		ShowPlayerCrossHairIcons(false);
+		AddTimer(asType, afTime, "TimerStopLook");
+	}
+	else if(asType == "lookzoom")
+	{
+		SetPlayerActive(false);
+		ShowPlayerCrossHairIcons(false);
+		FadePlayerFOVMulTo(0.7f, 2);
+		FadePlayerAspectMulTo(0.7f, 2);
+		AddTimer(asType, afTime, "TimerStopLook");
+	}
+	else AddTimer("", afTime, "TimerStopLook");
+}
+
+void TimerStopLook(string &in asTimer)
+{
+	StopPlayerLookAt();
+	if(asTimer == "lookspeed")
+	{
+		SetPlayerMoveSpeedMul(1.0f);
+		SetPlayerRunSpeedMul(1.0f);
+		SetPlayerLookSpeedMul(1.0f);
+		SetPlayerJumpForceMul(1.0f);
+	}
+	else if(asTimer == "lookactive")
+	{
+		SetPlayerActive(true);
+		ShowPlayerCrossHairIcons(true);
+	}
+	else if(asTimer == "lookzoom")
+	{
+		SetPlayerActive(true);
+		ShowPlayerCrossHairIcons(true);
+		FadePlayerFOVMulTo(1, 2);
+		FadePlayerAspectMulTo(1, 2);
+	}
+}
+
+void PlayerReact(string &in asType, float afTime)
+{
+	AddTimer(asType, afTime, "TimerPlayerReactions");
+	if(asType == "scarebreatheffect" || asType == "pantbreatheffect")
+	{
+		AddTimer("breatheffect", afTime + 3.0f, "TimerPlayerReactions");
+		AddTimer("breatheffect", afTime + 6.0f, "TimerPlayerReactions");
+	}
+	else if(asType == "scarebreathsloweffect" || asType == "pantbreathsloweffect")
+	{
+		AddTimer("breathsloweffect", afTime + 3.0f, "TimerPlayerReactions");
+		AddTimer("breathsloweffect", afTime + 6.0f, "TimerPlayerReactions");
+	}
+	else if(asType == "scaresigheffect" || asType == "pantsigheffect")
+	{
+		AddTimer("sigheffect", afTime + 3.0f, "TimerPlayerReactions");
+		AddTimer("sigheffect", afTime + 6.0f, "TimerPlayerReactions");
+	}
+	else if(asType == "scarehighdamage" || asType == "panthighdamage" || asType == "scaremaxdamage" || asType == "pantmaxdamage")
+	{
+		AddTimer("breath_slow", afTime + 3.0f, "TimerPlayerReactions");
+		AddTimer("breath_slow", afTime + 6.0f, "TimerPlayerReactions");
+	}
+}
+
+void TimerPlayerReactions(string &in asTimer)
+{
+	if(asTimer == "scarebreatheffect" || asTimer == "scarebreathsloweffect" || asTimer == "scaresigheffect")
+	{
+		PlayGuiSound("react_scare", 0.7f);
+		FadeSepiaColorTo(0.5f, 0.025f);
+		FadeRadialBlurTo(0.1f, 0.025f);
+		SetRadialBlurStartDist(0.2f);
+		GiveSanityDamage(RandFloat(10.0f, 20.0f), false);
+	}
+	else if(asTimer == "breatheffect")
+	{
+		PlayGuiSound("react_breath", 0.5f);
+		FadeSepiaColorTo(0, 0.1f);
+		FadeRadialBlurTo(0, 0.1f);
+	}
+	else if(asTimer == "breathsloweffect")
+	{
+		PlayGuiSound("react_breath_slow", 0.5f);
+		FadeSepiaColorTo(0, 0.1f);
+		FadeRadialBlurTo(0, 0.1f);
+	}
+	else if(asTimer == "sigheffect")
+	{
+		PlayGuiSound("react_sigh", 0.5f);
+		FadeSepiaColorTo(0, 0.1f);
+		FadeRadialBlurTo(0, 0.1f);
+	}
+	else if(asTimer == "pantbreatheffect" || asTimer == "pantbreathsloweffect" || asTimer == "pantsigheffect")
+	{
+		PlayGuiSound("react_pant", 0.7f);
+		FadeSepiaColorTo(0.5f, 0.025f);
+		FadeRadialBlurTo(0.1f, 0.025f);
+		SetRadialBlurStartDist(0.2f);
+		GiveSanityDamage(RandFloat(10.0f, 20.0f), false);
+	}
+	else if(asTimer == "scare")
+	{
+		PlayGuiSound("react_scare", 0.7f);
+		GiveSanityDamage(RandFloat(5.0f, 10.0f), true);
+	}
+	else if(asTimer == "breath")
+	{
+		PlayGuiSound("react_breath", 0.5f);
+		GiveSanityDamage(RandFloat(2.5f, 5.0f), false);
+	}
+	else if(asTimer == "breath_slow")
+	{
+		PlayGuiSound("react_breath_slow", 0.5f);
+		GiveSanityDamage(RandFloat(5.0f, 10.0f), false);
+	}
+	else if(asTimer == "sigh")
+	{
+		PlayGuiSound("react_sigh", 0.5f);
+		GiveSanityDamage(RandFloat(2.5f, 5.0f), false);
+	}
+	else if(asTimer == "pant")
+	{
+		PlayGuiSound("react_pant", 0.7f);
+		GiveSanityDamage(RandFloat(5.0f, 10.0f), true);
+	}
+	else if(asTimer == "scarehighdamage")
+	{
+		PlayGuiSound("react_scare", 0.9f);
+		GiveSanityDamage(RandFloat(20.0f, 40.0f), true);
+	}
+	else if(asTimer == "panthighdamage")
+	{
+		PlayGuiSound("react_pant", 0.9f);
+		GiveSanityDamage(RandFloat(20.0f, 40.0f), true);
+	}
+	else if(asTimer == "scaremaxdamage")
+	{
+		PlayGuiSound("react_scare", 0.9f);
+		GiveSanityDamage(100.0f, true);
+	}
+	else if(asTimer == "pantmaxdamage")
+	{
+		PlayGuiSound("react_pant", 0.9f);
+		GiveSanityDamage(100.0f, true);
+	}
+}
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
+// SPELOS CODE
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 // -----------------------------------------------------------------------------
 // Candle Bait
 // -----------------------------------------------------------------------------
