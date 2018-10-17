@@ -41,6 +41,7 @@
         https://tabletopaudio.com[br]
         [br]
         "Play with Me"[br]
+        "Dance Of Shadows"[br]
         by myuu[br]
         Licensed under a Creative Commons License[br]
         [br]
@@ -165,6 +166,20 @@
         <Entry Name="PreHell_01">Wouldn't it be funny if we were literally in hell? Heh, actually, that would be terrible, now that I think about it.</Entry>
         <Entry Name="PreHell_02">Oh no no no no, I'm sure that's just a phrase. You know, a little lighthearted hyperbole.</Entry>
         <Entry Name="PreHell_03">I need a lawyer.</Entry>
+
+        <Entry Name="InHell_01">Did somebody say my name?</Entry>
+        <Entry Name="InHell_02">Um, first of all, no. And second of all, that is the fucking devil, innit?</Entry>
+        <Entry Name="InHell_03">Welcome, to the single most painful place in the uni...</Entry>
+        <Entry Name="InHell_04">Excuse me, Mr. Devil man. Why are we here?</Entry>
+        <Entry Name="InHell_05">*laughs* You died</Entry>
+        <Entry Name="InHell_06">Right, but, why are we in hell?</Entry>
+        <Entry Name="InHell_07">Because of your sins.</Entry>
+        <Entry Name="InHell_08">Alright, that's fair. So, what happens to us now?</Entry>
+        <Entry Name="InHell_09">You will suffer for eternity.</Entry>
+        <Entry Name="InHell_10">Well if I may, my dear Devil offer a counter argument, for you are forgetting one important attribute, that might indeed save me and my client from such terrible fate.</Entry>
+        <Entry Name="InHell_11">And what's that?</Entry>
+        <Entry Name="InHell_12">Well the simple fact, that we indeed can...</Entry>
+        <Entry Name="InHell_13">RUN FOR OUR LIVES!</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Credits">

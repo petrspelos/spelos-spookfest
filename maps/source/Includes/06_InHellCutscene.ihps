@@ -1,0 +1,133 @@
+//#include "AmnesiaSignatures.cpp"
+
+void PlayInHellSequence(string callback)
+{
+    SetLocalVarString("HellSequenceCallback", callback);
+    HellConversationSequence("");
+}
+
+void HellConversationSequence(string t)
+{
+    int stage = GetLocalVarInt("HellConversationSequence");
+    AddLocalVarInt("HellConversationSequence", 1);
+    float delay = 0.0f;
+
+    if(stage == 0)
+    {
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-01.ogg", "", "Subtitles", "InHell_01", false, "", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 1)
+    {
+        LookAtSpelos();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-02.ogg", "", "Subtitles", "InHell_02", true, "Spelos", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 2)
+    {
+        LookAtDevil();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-03.ogg", "", "Subtitles", "InHell_03", false, "", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 3)
+    {
+        LookAtSpelos();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-04.ogg", "", "Subtitles", "InHell_04", true, "Spelos", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 4)
+    {
+        LookAtDevil();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-05.ogg", "", "Subtitles", "InHell_05", false, "", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 5)
+    {
+        LookAtSpelos();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-06.ogg", "", "Subtitles", "InHell_06", true, "Spelos", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 6)
+    {
+        LookAtDevil();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-07.ogg", "", "Subtitles", "InHell_07", false, "", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 7)
+    {
+        LookAtSpelos();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-08.ogg", "", "Subtitles", "InHell_08", true, "Spelos", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 8)
+    {
+        LookAtDevil();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-09.ogg", "", "Subtitles", "InHell_09", false, "", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 9)
+    {
+        LookAtSpelos();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-10.ogg", "", "Subtitles", "InHell_10", true, "Spelos", 0.0f, 20.0f);
+        PlayMusic("DanceOfShadows.ogg", false, 0.5f, 0.5f, 1, false);
+        return;
+    }
+    else if(stage == 10)
+    {
+        LookAtDevil();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-11.ogg", "", "Subtitles", "InHell_11", false, "", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 11)
+    {
+        LookAtSpelos();
+        SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
+        AddEffectVoice("inhell-12.ogg", "", "Subtitles", "InHell_12", true, "Spelos", 0.0f, 20.0f);
+        return;
+    }
+    else if(stage == 12)
+    {
+        AddEffectVoice("inhell-13.ogg", "", "Subtitles", "InHell_13", true, "Spelos", 0.0f, 20.0f);
+        StopMusic(0.2f, 1);
+        StopPlayerLookAt();
+        delay = 1.5f;
+    }
+    else if(stage == 13)
+    {
+        PlayMusic("SSSDamianUrbanskiRemix.ogg", true, 0.8f, 0.1f, 1, false);
+        SetPlayerActive(true);
+    }
+    else
+    {
+        AddTimer("", 0.0f, GetLocalVarString("HellSequenceCallback"));
+        return;
+    }
+
+    AddTimer("", delay, "HellConversationSequence");
+}
+
+void HellConversationVoiceoverLoop()
+{
+    AddTimer("", 0.0f, "HellConversationSequence");
+}
+
+void LookAtDevil()
+{
+    StartPlayerLookAt("DevilFace", 3.0f, 4.5f, "");
+}
+
+void LookAtSpelos()
+{
+    StartPlayerLookAt("Spelos", 3.0f, 4.5f, "");
+}

@@ -1,5 +1,6 @@
 #include "AmnesiaSignatures.cpp"
 #include "06_PreHellCutscene.ihps"
+#include "06_InHellCutscene.ihps"
 
 void OnEnter()
 {
@@ -17,6 +18,11 @@ void SetupSkybox()
 }
 
 void OnPreHellFinished(string t)
+{
+    PlayInHellSequence("OnRunStarts");
+}
+
+void OnRunStarts(string t)
 {
 
 }
