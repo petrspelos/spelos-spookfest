@@ -42,6 +42,7 @@
         [br]
         "Play with Me"[br]
         "Dance Of Shadows"[br]
+        "Keep Going"[br]
         by myuu[br]
         Licensed under a Creative Commons License[br]
         [br]
@@ -115,8 +116,23 @@
 
         <Entry Name="Note_Polaroid01_Name">The mistress</Entry>
         <Entry Name="Note_Polaroid01_Text"></Entry>
+    
         <Entry Name="Note_WineBrute_Name">An angry note</Entry>
         <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br][br]by The Brute</Entry>
+
+        <Entry Name="Note_Final_Name">A letter from Spelos</Entry>
+        <Entry Name="Note_Final_Text">[voice Final_Note.ogg][br]My dearest friend,[br]
+If you read this, I got myself into a situation from which I will never escape. Knowing myself, I probably destroyed the whole world or got stuck in Hell or whatever.[br]
+[br]
+In any case, I would like to apologize for what you potentially may or may not have gone through. You were probably promised a party. A party, that will never happen, at least not with me.[br]
+[br]
+I sincerely hope that my actions brought a bit of happiness into your life. And if my crazy antics and weird little jokes had managed to create a smile on your face for at least a little while, I regret nothing.[br]
+[br]
+Please don't be sad, for we will meet again.[br]
+See you in hell.[br]
+[br]
+- The Spooky Skeleton Spelos[br]</Entry>
+        
     </CATEGORY>
 
     <CATEGORY Name="Messages">

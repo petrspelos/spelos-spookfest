@@ -1,0 +1,17 @@
+void OnEnter()
+{
+    Preload();
+    PlayMusic("KeepGoing.ogg", true, 0.5f, 0.0f, 1, false);
+    SetInDarknessEffectsActive(false);
+    SetSanityDrainDisabled(true);
+}
+
+void OnFinalNotePickup(string entity)
+{
+    AddTimer("", 2.0f, "EndGame");
+}
+
+void EndGame(string t)
+{
+    StartCredits("", false, "CreditsResources", "MainCredits", 4);
+}
