@@ -33,17 +33,25 @@
         Shima[br]
         XDJ5000[br]
         [br]
-        [br]*Music by[br]
-        Whitesand (Martynas Lau)[br]
+        [br]*Music[br][br]
+        "Spooky Scary Skeletons (piano)"[br]
+        "Play with Me"[br]
+        "Dance Of Shadows"[br]
+        "Keep Going"[br]
+        by myuu[br]
+        Licensed under a Creative Commons License[br][br]
         [br]
-        [br]*Ambient sounds and music[br]
+        "Spooky Scary Skeletons (Mini - Remix)"[br]
+        by Equinox Eurobeat[br]
+        https://soundcloud.com/equinox-eurobeat[br][br]
+        [br]
+        "Spooky Scary Skeletons (House Remix)"[br]
+        by Damian Urbański[br]
+        https://soundcloud.com/damian-urba-ski[br][br]
+        [br]*Ambient sounds[br]
         Tabletop Audio[br]
         https://tabletopaudio.com[br]
         [br]
-        "Play with Me"[br]
-        "Dance Of Shadows"[br]
-        by myuu[br]
-        Licensed under a Creative Commons License[br]
         [br]
         [br]*WHOA[br]
         ...,-----,...[br]
@@ -59,7 +67,7 @@
         ==' . '==[br]
         [br]
         [br]
-        [br]*We hope you enjoyed[br]
+        [br]*Thank you for playing[br]
         Please enjoy the Halloween spirit, while you still can. =)</Entry>
     </CATEGORY>
 
@@ -69,23 +77,23 @@
     </CATEGORY>
 
     <CATEGORY Name="Inventory">
-        <Entry Name="UseItemDoesNotWork">It's not the solution, but I like your thinking!</Entry>
+        <Entry Name="UseItemDoesNotWork">That's not the solution, but I like your thinking!</Entry>
         <Entry Name="UseItemHasNoObject">Right... But there's nothing to use that on!</Entry>
         <Entry Name="Sanity">Literally your brain right now</Entry>
-        <Entry Name="SanityDesc0">Yea, we're dead.</Entry>
+        <Entry Name="SanityDesc0">Yeah, we're dead.</Entry>
         <Entry Name="SanityDesc1">Red means scary!</Entry>
         <Entry Name="SanityDesc2">Did the color change?</Entry>
         <Entry Name="SanityDesc3">Yep, that's a brain.</Entry>
         <Entry Name="Health">Literally your heart right now</Entry>
         <Entry Name="HealthDesc0">It's official, we're dead.</Entry>
-        <Entry Name="HealthDesc1">I ain't a doctor, but isn't that blood?</Entry>
+        <Entry Name="HealthDesc1">I'm not a doctor, but I think that's not supposed to bleed.</Entry>
         <Entry Name="HealthDesc2">Show us on this doll where he touched you.</Entry>
         <Entry Name="HealthDesc3">*Thump* *Thump* Seems good.</Entry>
         <Entry Name="LampOil">The lantern liquid stuff</Entry>
-        <Entry Name="LampOilDesc">It does the light thing... you know.</Entry>
-        <Entry Name="PickedUp">Literally stole</Entry>
-        <Entry Name="LanternOn">Does the light thing</Entry>
-        <Entry Name="LanternOff">Y it NO light?</Entry>
+        <Entry Name="LampOilDesc">Put it in a lantern to make it work.</Entry>
+        <Entry Name="PickedUp">You literally stole:</Entry>
+        <Entry Name="LanternOn">Is currently glowing</Entry>
+        <Entry Name="LanternOff">Off or broken</Entry>
         <Entry Name="Tinderboxes">Tindercylinder</Entry>
         <Entry Name="Journal">Notepad.exe</Entry>
         <Entry Name="JournalDesc">Click to open.</Entry>
@@ -97,7 +105,7 @@
         <Entry Name="Quest Log">What am I supposed to do again?</Entry>
         <Entry Name="NotesEmpty">Notepad.exe is empty...</Entry>
         <Entry Name="DiariesEmpty">Damn, no stories...</Entry>
-        <Entry Name="QuestsEmpty">Ehm... Not sure what you're supposed to be doing, yet.</Entry>
+        <Entry Name="QuestsEmpty">Ehm... I'm not sure what you're supposed to be doing, yet.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Inventory">
@@ -115,8 +123,28 @@
 
         <Entry Name="Note_Polaroid01_Name">The mistress</Entry>
         <Entry Name="Note_Polaroid01_Text"></Entry>
+    
         <Entry Name="Note_WineBrute_Name">An angry note</Entry>
-        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br] [br]by The Brute <3</Entry>
+        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br][br]- The Brute</Entry>
+
+        <Entry Name="Note_StairsNote_Name">Torn piece of paper</Entry>
+        <Entry Name="Note_StairsNote_Text">And then there were four. Their banners containing four harps symbolizing the challengers. Each enclosed in a small cell. This imagery serving as a grim reminder of what is about to happen to the poor souls.</Entry>
+        
+        <Entry Name="Quest_LitEscape_Text">I'm too hurt to climb out the hole.[br] - Look around for tools and supplies to help you escape.</Entry>
+        <Entry Name="Quest_Enemy_Text">Something is in here with me. I cannot outrun it in this state.[br]- I need to make sure I always have somewhere to hide.</Entry>
+        
+        <Entry Name="Note_Final_Name">A letter from Spelos</Entry>
+        <Entry Name="Note_Final_Text">[voice Final_Note.ogg][br]My dearest friend,[br]
+If you read this, I got myself into a situation from which I will never escape. Knowing myself, I probably destroyed the whole world or got stuck in Hell or whatever.[br]
+[br]
+In any case, I would like to apologize for what you potentially may or may not have gone through. You were probably promised a party. A party, that will never happen, at least not with me.[br]
+[br]
+I sincerely hope that my actions brought a bit of happiness into your life. And if my crazy antics and weird little jokes had managed to create a smile on your face for at least a little while, I regret nothing.[br]
+[br]
+Please don't be sad, for we will meet again.[br]
+See you in hell.[br]
+[br]
+- The Spooky Skeleton Spelos[br]</Entry>        
     </CATEGORY>
 
     <CATEGORY Name="Messages">
@@ -149,17 +177,21 @@
     </CATEGORY>
 
     <CATEGORY Name="Levels">
-        <Entry Name="00_introduction">Depths</Entry>
+        <Entry Name="sphw_02_Dungeon">The Dungeon</Entry>
+        <Entry Name="sphw_03_SpelosShow">Spelos Show</Entry>
+        <Entry Name="sphw_04_PartsHunt">Parts hunt</Entry>
+        <Entry Name="sphw_06_Hell">The Hell</Entry>
+        <Entry Name="sphw_07_Final">The Ending</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Subtitles">
         <Entry Name="Stuck_01">Huh? Am I already there?</Entry>
         <Entry Name="Stuck_02">What do you mean stuck?</Entry>
-        <Entry Name="Stuck_03">ARE YOU SERIOUS?</Entry>
-        <Entry Name="Stuck_04">So what do we do now?</Entry>
+        <Entry Name="Stuck_03">ARE YOU SERIOUS?!</Entry>
+        <Entry Name="Stuck_04">So, what do we do now?</Entry>
         <Entry Name="Stuck_05">Listen, Steven, I paid great money for this and you're telling me it got stuck?</Entry>
         <Entry Name="Stuck_06">Well that's great.</Entry>
-        <Entry Name="Stuck_07">So I'm going to be stuck here, till someone fixes it? Great.</Entry>
+        <Entry Name="Stuck_07">So I'm going to be stuck here, till someone fixes it? Great!</Entry>
         <Entry Name="Stuck_08">Well this is a bit claustrophobic now that I think about it.</Entry>
 
         <Entry Name="Entrance_01">*Spelos sings*</Entry>
@@ -186,15 +218,48 @@
         <Entry Name="InHell_11">And what's that?</Entry>
         <Entry Name="InHell_12">Well the simple fact, that we indeed can...</Entry>
         <Entry Name="InHell_13">RUN FOR OUR LIVES!</Entry>
-    </CATEGORY>
 
-    <CATEGORY Name="Credits">
-        <Entry Name="Main">
-        [br]
-        [br]
-        *Fonts
-        
-        </Entry>
+        <Entry Name="Gate_01">I'm going to hold the gate open.</Entry>
+        <Entry Name="Gate_02">Comon, go through. Go! Go! Go!</Entry>
+        <Entry Name="Gate_03">Yeah, yeah, we don't have time. You gotta go!</Entry>
+        <Entry Name="Gate_04">Don't worry about me, you gotta go!</Entry>
+
+        <Entry Name="LastChristmas_01">Actually, before we do that...</Entry>
+        <Entry Name="LastChristmas_02">Let's talk about last Christmas.</Entry>
+        <Entry Name="LastChristmas_03">Just like I told the cops,</Entry>
+        <Entry Name="LastChristmas_04">the aligations, that we murdered Santa Claus</Entry>
+        <Entry Name="LastChristmas_05">and single handedly ruined Christmas</Entry>
+        <Entry Name="LastChristmas_06">I'm telling you, that</Entry>
+        <Entry Name="LastChristmas_07">might be true</Entry>
+        <Entry Name="LastChristmas_08">and so is the one about me having illegal weaponry</Entry>
+        <Entry Name="LastChristmas_09">BUT</Entry>
+        <Entry Name="LastChristmas_10">he did fly over our property, so technically</Entry>
+        <Entry Name="LastChristmas_11">well I did tell all that to the Sheriff</Entry>
+        <Entry Name="LastChristmas_12">and he was actually very understanding</Entry>
+        <Entry Name="LastChristmas_13">he wrote everything down</Entry>
+        <Entry Name="LastChristmas_14">and now we're wanted</Entry>
+        <Entry Name="LastChristmas_15">but don't let that break your spooky spirit. Follow me!</Entry>
+
+        <Entry Name="TrolleyBroken_01">Oh you must be wondering where the party is.</Entry>
+        <Entry Name="TrolleyBroken_02">It's on the very other side of the castle.</Entry>
+        <Entry Name="TrolleyBroken_03">But hold on, hold on, hold on.</Entry>
+        <Entry Name="TrolleyBroken_04">I utilized my boney enginuity...</Entry>
+        <Entry Name="TrolleyBroken_05">and created a trolley of sorts</Entry>
+        <Entry Name="TrolleyBroken_06">that will effortlessly transfer us to the party itself.</Entry>
+        <Entry Name="TrolleyBroken_07">What? What are you looking at?</Entry>
+        <Entry Name="TrolleyBroken_08">You don't think I'm able to...</Entry>
+        <Entry Name="TrolleyBroken_09">How dare you?!</Entry>
+        <Entry Name="TrolleyBroken_10">Well either way, you're right. I did not make the trolley,</Entry>
+        <Entry Name="TrolleyBroken_11">I just found it here.</Entry>
+        <Entry Name="TrolleyBroken_12">And it's missing a few parts.</Entry>
+        <Entry Name="TrolleyBroken_13">Good news, they're in the local storage.</Entry>
+        <Entry Name="TrolleyBroken_14">Bad news, a crazy woman ghost haunts the place.</Entry>
+        <Entry Name="TrolleyBroken_15">But it's either a haunted dungeon, or the entire castle.</Entry>
+        <Entry Name="TrolleyBroken_16">So chop chop, I'll wait here till you find all three missing parts.</Entry>
+        <Entry Name="TrolleyBroken_17">Cause I swear she's the most terrifying thing I've ever seen.</Entry>
+        <Entry Name="TrolleyBroken_18">Good luck!</Entry>
+
+        <Entry Name="HopIn">Oh look, I pimped our ride. Get in, loser...</Entry>
     </CATEGORY>
 
     <CATEGORY Name="DoorNoAccess">

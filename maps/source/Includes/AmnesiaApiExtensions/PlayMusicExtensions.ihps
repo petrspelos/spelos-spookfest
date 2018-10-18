@@ -1,0 +1,22 @@
+// ============================================================================
+// Amnesia API Overload methods to make the API cleaner
+// ============================================================================
+void PlayMusic(string file)
+{
+    PlayMusic(file, 1.0f);
+}
+
+void PlayMusicLoop(string file)
+{
+    PlayMusicLoop(file, 1.0f);
+}
+
+void PlayMusic(string file, float volume)
+{
+    PlayMusic(file, false, 1.0f, 0.0f, 1, false);
+}
+
+void PlayMusicLoop(string file, float volume)
+{
+    PlayMusic(file, false, 1.0f, 0.0f, 1, true);
+}

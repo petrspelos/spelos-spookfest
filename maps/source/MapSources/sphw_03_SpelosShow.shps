@@ -17,9 +17,104 @@ void OnStart()
     SetMoveObjectState("HorisontalGate", 7.0f);
     GiveItemFromFile("Lantern", "lantern.ent");
     
-    AddTimer("", 2.0f, "StartShow");
     FocusReflectors("");
     ReflectorsOff("");
+
+    AddEntityCollideCallback("Player", "StartShowArea", "StartShowCallback", true, 0);
+}
+
+void OnEnter()
+{
+    if(GetGlobalVarInt("HuntedForParts") == 1)
+    {
+        SetEntityActive("Rider", true);
+        SetEntityActive("BacktrackBlockbox", true);
+        PlayPropAnimation("Rider", "RideSit", 0.0f, true, "");
+        AddEntityCollideCallback("Player", "HopInEventArea", "GetInCallback", true, 0);
+    }
+}
+
+void GetInCallback(string parent, string child, int state)
+{
+    AddEffectVoice("HopIn.ogg", "", "Subtitles", "HopIn", true, "Rider", 0.0f, 20.0f);
+    AddTimer("", 3.5f, "StartPanic");
+    SetPlayerActive(false);
+    HoppingInSwitch("");
+}
+
+void HoppingInSwitch(string t)
+{
+    int stage = GetLocalVarInt("HoppingInSwitch");
+    AddLocalVarInt("HoppingInSwitch", 1);
+    float delay = 0.0f;
+
+    if(stage == 0)
+    {
+        StartPlayerLookAt("TrolleyArea", 2.0f, 2.5f, "");
+        delay = 3.5f;
+    }
+    else if(stage == 1)
+    {
+        StartPlayerLookAt("ChaseLookArea", 4.0f, 5.5f, "");
+        delay = 1.0f;
+    }
+    else if(stage == 2)
+    {
+        StartPlayerLookAt("TrolleyArea", 4.0f, 5.5f, "");
+        delay = 1.0f;
+    }
+    else if(stage == 3)
+    {
+        PlayerStartRunning();
+        delay = 2.0f;
+    }
+    else if(stage == 4)
+    {
+        FadeOut(0.5f);
+        FadeGlobalSoundVolume(0.0f, 0.5f);
+        StopMusic(0.5f, 1);
+        delay = 4.0f;
+    }
+    else if(stage == 5)
+    {
+        PlaySoundAtEntity(
+            "elevator",       /* SoundName */
+            "elevator_move_fall_quieter.snt", /* SoundFile */
+            "Player",         /* Entity */
+            0.5f,             /* FadeTime */
+            false             /* SaveSound */
+        );
+        delay = 3.0f;
+    }
+    else
+    {
+        StopPlayerLookAt();
+        ChangeMap("sphw_05_WildRide.map", "PlayerStartArea_1", "", "");
+        return;
+    }
+
+    AddTimer("", delay, "HoppingInSwitch");
+}
+
+void PlayerStartRunning()
+{
+    RunLoop("");
+}
+
+void RunLoop(string t)
+{
+    MovePlayerForward(10.0f);
+    AddTimer("", 0.05f, "RunLoop");
+}
+
+void StartPanic(string t)
+{
+    PlayMusic("10_event_coming.ogg", false, 1.0f, 0.0f, 1, false);
+}
+
+void StartShowCallback(string parent, string child, int state)
+{
+    AddTimer("", 0.0f, "StartShow");
 }
 
 void StartShow(string t)
@@ -330,7 +425,7 @@ void StartLastChristmasScene(string t)
     FadeIn(0.2f);
     for(int i = 1; i < 16; i++)
     {
-        AddEffectVoice("", "01-last-christmas-" + IntToDoubleDigit(i) + ".ogg", "Category?", "Entry?", true, "SkeletonSpelos", 0.0f, 10.0f);
+        AddEffectVoice("", $"01-last-christmas-{IntToDoubleDigit(i)}.ogg", "Subtitles", $"LastChristmas_{IntToDoubleDigit(i)}", true, "SkeletonSpelos", 0.0f, 10.0f);
     }
     SetEffectVoiceOverCallback("OnLastChristmasSceneEnd");
 }
@@ -375,23 +470,18 @@ void StartTrolleyEvent(string parent, string child, int state)
 {
     for(int i = 1; i < 19; i++)
     {
-        AddEffectVoice("", "02-trolley-broken-" + IntToDoubleDigit(i) + ".ogg", "Category?", "Entry?", true, "SkeletonSpelos", 0.0f, 20.0f);
+        AddEffectVoice("", $"02-trolley-broken-{IntToDoubleDigit(i)}.ogg", "Subtitles", $"TrolleyBroken_{IntToDoubleDigit(i)}", true, "SkeletonSpelos", 0.0f, 20.0f);
     }
-    SetEffectVoiceOverCallback("SetupJumpscare");
+    SetEffectVoiceOverCallback("ReadyForHunt");
 }
 
-void SetupJumpscare()
+void ReadyForHunt()
 {
-    AddEntityCollideCallback("Player", "JumpScareSpelosArea", "JumpScareSpelosEvent", true, 1);
+    SetEntityActive("PartsHuntBlockbox", false);
 }
 
-void JumpScareSpelosEvent(string parent, string child, int state)
+void OnLeave()
 {
-    SetEntityActive("SkeletonSpelos", false);
-    SetEntityActive("JumpScareSpelos", true);
-    for(int i = 1; i < 7; i++)
-    {
-        AddEffectVoice("", "003btl-" + IntToDoubleDigit(i) + ".ogg", "Category?", "Entry?", true, "JumpScareSpelos", 0.0f, 20.0f);
-    }
-    //SetEffectVoiceOverCallback("");
+    SetEntityActive("PartsHuntBlockbox", true);
+    SetEntityActive("BacktrackBlockbox", true);
 }

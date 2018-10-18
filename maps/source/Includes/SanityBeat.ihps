@@ -1,0 +1,60 @@
+// ============================================================================
+// Public Functions
+// ============================================================================
+void StartSanityBeat()
+{
+    ValidateSanityBeatConfig();
+    SetLocalVarInt("StopSanityBeat", 0);
+    AddTimer("", 0.0f, "SanityBeat");
+}
+
+void StopSanityBeat()
+{
+    SetLocalVarInt("StopSanityBeat", 1);
+}
+
+// ============================================================================
+// Configuration
+// ============================================================================
+void SetSanityBeatFov(float fov)
+{
+    SetLocalVarFloat("Beat_FOV", fov);
+}
+
+void SetSanityBeatCorrectAfterSeconds(float seconds)
+{
+    SetLocalVarFloat("Beat_Correction", seconds);
+}
+
+void SetSanityBeatRepeatInSeconds(float seconds)
+{
+    SetLocalVarFloat("Beat_Repeat", seconds);
+}
+
+void ValidateSanityBeatConfig()
+{
+    if(GetLocalVarFloat("Beat_FOV") < 0.1f) 
+        SetSanityBeatFov(1.0f);
+
+    if(GetLocalVarFloat("Beat_Correction") < 0.05f) 
+        SetSanityBeatCorrectAfterSeconds(0.2f);
+
+    if(GetLocalVarFloat("Beat_Repeat") < 0.05f)
+        SetSanityBeatRepeatInSeconds(0.6f);
+}
+
+// ============================================================================
+// Implementation
+// ============================================================================
+void SanityBeat(string t)
+{
+    if(GetLocalVarInt("StopSanityBeat") == 1) return;
+    FadePlayerFOVMulTo(GetLocalVarFloat("Beat_FOV"), 15.0f);
+    AddTimer("", GetLocalVarFloat("Beat_Correction"), "CorrectFOV");
+    AddTimer("", GetLocalVarFloat("Beat_Repeat"), "SanityBeat");
+}
+
+void CorrectFOV(string t)
+{
+    FadePlayerFOVMulTo(1.3f, 0.5f);
+}

@@ -1,9 +1,11 @@
 #include "AmnesiaSignatures.cpp"
 #include "06_PreHellCutscene.ihps"
 #include "06_InHellCutscene.ihps"
+#include "SanityBeat.ihps"
 
 void OnEnter()
 {
+    SetLanternActive(false, false);
     PlayPropAnimation("Spelos", "TalkToDevil", 0.0f, true, "");
     Preload();
     SetupSkybox();
@@ -25,17 +27,29 @@ void OnPreHellFinished(string t)
 
 void OnRunStarts(string t)
 {
-    AddTimer("", 0.0f, "SanityBeat");
+    PlayPropAnimation("SpelosHolder", "HoldGate", 0.0f, true, "");
+
+    SetSanityBeatFov(0.95f);
+    SetSanityBeatCorrectAfterSeconds(0.2f);
+    SetSanityBeatRepeatInSeconds(0.6f);
+    
+    StartSanityBeat();
+
+    AddEntityCollideCallback("Player", "FinalStandArea", "FinalStandCallback", true, 0);
+    AddEntityCollideCallback("Player", "EscapeArea", "EscapeCallback", false, 0);
 }
 
-void SanityBeat(string t)
+void FinalStandCallback(string parent, string child, int state)
 {
-    FadePlayerFOVMulTo(0.95f, 15.0f);
-    AddTimer("", 0.2f, "CorrectFOV");
-    AddTimer("", 0.6f, "SanityBeat");
+    StopSanityBeat();
+    StopMusic(1.0f, 1);
+    for(int i = 1; i <= 4; i++)
+    {
+        AddEffectVoice($"gate-0{i}", "", "Subtitles", $"Gate_0{i}", true, "SpelosHolder", 0.0f, 20.0f);
+    }
 }
 
-void CorrectFOV(string t)
+void EscapeCallback(string parent, string child, int state)
 {
-    FadePlayerFOVMulTo(1.3f, 0.5f);
+    ChangeMap("sphw_07_Final.map", "PlayerStartArea_1", "", "");
 }

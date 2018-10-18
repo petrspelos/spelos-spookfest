@@ -1,0 +1,69 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="6.50879 6.60452 0.313089" CameraTarget="0.240256 0.833676 -0.862586" CameraZoom="1.76013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="false" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="1">
+                <File Id="0" Path="static_objects/technical/plane_black/plane_black.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="2">
+                <File Id="0" Path="entities/furniture/table_wood01/table_wood01.ent" />
+                <File Id="1" Path="entities/item/note_letter/note_letter.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="3" Name="plane_black_plane_black_2" Rotation="3.14159 -2.38498e-008 3.14159" Scale="1.75 1.75 1.75" Tag="" WorldPos="0 0 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="4" Name="plane_black_plane_black_3" Rotation="-3.14159 8.74227e-008 1.5708" Scale="1.75 1.75 1.75" Tag="" WorldPos="-3.5 3.5 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="5" Name="plane_black_plane_black_4" Rotation="-4.52995e-006 8.74227e-008 1.5708" Scale="1.75 1.75 1.75" Tag="" WorldPos="3.5 3.5 0" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="6" Name="plane_black_plane_black_5" Rotation="-1.5708 8.74227e-008 1.5708" Scale="1.75 1.75 1.75" Tag="" WorldPos="0 3.5 3.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="7" Name="plane_black_plane_black_6" Rotation="1.5708 8.74227e-008 1.5708" Scale="1.75 1.75 1.75" Tag="" WorldPos="0 3.5 -3.5" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="8" Name="plane_black_plane_black_7" Rotation="-4.44055e-006 -2.38498e-008 -3.14159" Scale="1.75 1.75 1.75" Tag="" WorldPos="0 7 0" />
+            </StaticObjects>
+            <Primitives />
+            <Decals />
+            <Entities>
+                <FogArea Active="true" Color="1 1 1 1" End="10" FalloffExp="1" Group="0" ID="1" Name="FogArea_1" Rotation="0 -0 0" Scale="8.25 7.25 7.5" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="0 3.75 0" />
+                <Entity Active="true" FileIndex="0" Group="0" ID="9" Name="table_wood01_1" Rotation="0 0.0941653 0" Scale="1 1 1" Tag="" WorldPos="0 0 1.57126">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="IsAffectedByDecal" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="1" Group="0" ID="11" Name="note_letter_1" Rotation="3.14159 -8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="-0.0220509 1 1.28803">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="OnFinalNotePickup" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="CustomSubItemTypeName" Value="" />
+                        <Var Name="NoteText" Value="Final" />
+                        <Var Name="OpenNoteInJournal" Value="true" />
+                        <Var Name="UseNarration" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="13" Mesh="" Name="PlayerStartArea_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="0 0 -3">
+                    <UserVariables />
+                </Area>
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>
