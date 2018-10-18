@@ -133,11 +133,8 @@
         <Edge Node="PathNodeArea_31" Distance="4.75000000000000000000" />
     </Node>
     <Node Name="PathNodeArea_31" ID="1351">
-        <Edge Node="PathNodeArea_32" Distance="2.79508495330810550000" />
         <Edge Node="PathNodeArea_30" Distance="4.75000000000000000000" />
+        <Edge Node="PathNodeArea_28" Distance="5.50000000000000000000" />
     </Node>
-    <Node Name="PathNodeArea_32" ID="1352">
-        <Edge Node="PathNodeArea_31" Distance="2.79508495330810550000" />
-        <Edge Node="PathNodeArea_28" Distance="8.26513767242431640000" />
-    </Node>
+    <Node Name="PathNodeArea_32" ID="1352" />
 </AINodes>

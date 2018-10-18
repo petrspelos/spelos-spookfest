@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="-17.0581 -6.84862 180" CameraTarget="-17.0581 -6.84862 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 -7.94476 -19.8483" CameraTarget="0 -7.94476 -19.8483" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="-8.30709 180 -22.9556" CameraTarget="-8.30709 0 -22.9556" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-12.7728 -14.7874 -38.4785" CameraTarget="-4.81803 -19.857 -28.6443" CameraZoom="1.29998" GridHeight="-20" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-14.6247 -8.20895 -38.6741" CameraTarget="-8.80983 -17.574 -36.9548" CameraZoom="1.49998" GridHeight="-20" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -78,7 +78,7 @@
                 <File Id="61" Path="static_objects/debris/cellarbase_broken_wall/rock_round01.dae" />
                 <File Id="62" Path="static_objects/debris/cellarbase_broken_wall/rock_round02.dae" />
             </FileIndex_StaticObjects>
-            <FileIndex_Entities NumOfFiles="80">
+            <FileIndex_Entities NumOfFiles="82">
                 <File Id="0" Path="entities/ornament/banner01/banner01.ent" />
                 <File Id="1" Path="entities/door/level_dungeon/level_dungeon.ent" />
                 <File Id="2" Path="entities/item/note_generic/note_generic.ent" />
@@ -159,6 +159,8 @@
                 <File Id="77" Path="entities/ornament/banners/banners_rag/banners_rag.ent" />
                 <File Id="78" Path="entities/enemy/servant_brute/servant_brute.ent" />
                 <File Id="79" Path="entities/item/key_study/key_study.ent" />
+                <File Id="80" Path="entities/furniture/table_wood01/table_wood01.ent" />
+                <File Id="81" Path="entities/item/lantern/lantern.ent" />
             </FileIndex_Entities>
             <FileIndex_Decals NumOfFiles="3">
                 <File Id="0" Path="textures/decals/dirt_stain_large.mat" />
@@ -5089,7 +5091,29 @@
                         <Var Name="HallucinationEndDist" Value="3" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="79" Group="0" ID="1439" Name="DungeonDoorKey" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-6.25 -20 -7.75">
+                <Entity Active="true" FileIndex="79" Group="0" ID="1439" Name="DungeonDoorKey" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-6.25 -18.9278 -7.75">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="CustomSubItemTypeName" Value="" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="80" Group="0" ID="1440" Name="table_wood01_1" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-6.25 -20 -7.75">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="IsAffectedByDecal" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="81" Group="0" ID="1442" Name="Lantern" Rotation="3.14159 0.774037 3.14159" Scale="1 1 1" Tag="" WorldPos="-6.40972 -19 -7.46467">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
