@@ -5,13 +5,13 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="228.488 48.5178 99.392" CameraTarget="222.634 41.623 100.665" CameraZoom="1.7" GridHeight="39.25" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="222.497 44.7795 98.9898" CameraTarget="226.255 40.2185 100.59" CameraZoom="2.10003" GridHeight="39.25" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
         </Groups>
     </EditorSession>
-    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../../../../../../../../../../../custom_stories/spelos-spookfest/textures/UndergroundSkyboxDevil.dds">
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="true" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../../../../../../../../../../../../../../custom_stories/spelos-spookfest/textures/UndergroundSkyboxDevil.dds">
         <MapContents>
             <FileIndex_StaticObjects NumOfFiles="17">
                 <File Id="0" Path="static_objects/sphw/hellmap.dae" />
@@ -337,7 +337,7 @@
                         <Var Name="AngularOffsetArea" Value="" />
                     </UserVariables>
                 </Entity>
-                <FogArea Active="true" Color="1 1 1 1" End="1" FalloffExp="1" Group="0" ID="137" Name="FogArea_2" Rotation="0 -0 0" Scale="6.75 6.5 6.25" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="222.75 42.25 109.25" />
+                <FogArea Active="true" Color="1 1 1 1" End="1" FalloffExp="1" Group="0" ID="137" Name="FogArea_2" Rotation="0 0 0" Scale="6.75 6.5 6.25" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="222.75 42.25 109.25" />
                 <Entity Active="true" FileIndex="6" Group="0" ID="143" Name="lever_small_mount_1" Rotation="0 0 -1.57079" Scale="4.5 4.5 4.5" Tag="" WorldPos="225.75 39.25 101.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />

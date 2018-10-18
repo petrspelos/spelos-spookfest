@@ -54,6 +54,7 @@
             <Animation File="C:/dev/Amnesia The Dark Descent/entities/SPHW_NPCs/Spelos/Animations/SkeletonSpelos_Talk01.dae_ANIM" Name="Talk" SpecialEventTime="1.09244e-038" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/entities/SPHW_NPCs/Spelos/Animations/SkeletonSpelos_Listen.dae_ANIM" Name="Idle" SpecialEventTime="2.86449e-038" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/TalkToDevil.dae_ANIM" Name="TalkToDevil" SpecialEventTime="2.82797e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/HoldGate.dae_ANIM" Name="HoldGate" SpecialEventTime="1.32218e-038" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">

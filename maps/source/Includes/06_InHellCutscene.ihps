@@ -1,5 +1,3 @@
-//#include "AmnesiaSignatures.cpp"
-
 void PlayInHellSequence(string callback)
 {
     SetLocalVarString("HellSequenceCallback", callback);

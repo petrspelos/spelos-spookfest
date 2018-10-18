@@ -26,9 +26,29 @@ void OnPreHellFinished(string t)
 
 void OnRunStarts(string t)
 {
+    PlayPropAnimation("SpelosHolder", "HoldGate", 0.0f, true, "");
+
     SetSanityBeatFov(0.95f);
     SetSanityBeatCorrectAfterSeconds(0.2f);
     SetSanityBeatRepeatInSeconds(0.6f);
     
     StartSanityBeat();
+
+    AddEntityCollideCallback("Player", "FinalStandArea", "FinalStandCallback", true, 0);
+    AddEntityCollideCallback("Player", "EscapeArea", "EscapeCallback", false, 0);
+}
+
+void FinalStandCallback(string parent, string child, int state)
+{
+    StopSanityBeat();
+    StopMusic(1.0f, 1);
+    for(int i = 1; i <= 4; i++)
+    {
+        AddEffectVoice($"gate-0{i}", "", "Subtitles", $"Gate_0{i}", true, "SpelosHolder", 0.0f, 20.0f);
+    }
+}
+
+void EscapeCallback(string parent, string child, int state)
+{
+    ChangeMap("sphw_07_Final.map", "PlayerStartArea_1", "", "");
 }

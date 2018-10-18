@@ -215,6 +215,11 @@ See you in hell.[br]
         <Entry Name="InHell_11">And what's that?</Entry>
         <Entry Name="InHell_12">Well the simple fact, that we indeed can...</Entry>
         <Entry Name="InHell_13">RUN FOR OUR LIVES!</Entry>
+
+        <Entry Name="Gate_01">I'm going to hold the gate open.</Entry>
+        <Entry Name="Gate_02">Comon, go through. Go! Go! Go!</Entry>
+        <Entry Name="Gate_03">Yeah, yeah, we don't have time. You gotta go!</Entry>
+        <Entry Name="Gate_04">Don't worry about me, you gotta go!</Entry>
     </CATEGORY>
 
     <CATEGORY Name="DoorNoAccess">

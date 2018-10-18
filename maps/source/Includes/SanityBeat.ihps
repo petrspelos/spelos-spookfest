@@ -48,7 +48,7 @@ void ValidateSanityBeatConfig()
 // ============================================================================
 void SanityBeat(string t)
 {
-    if(GetLocalVarInt("StopSanityBeat" == 1)) return;
+    if(GetLocalVarInt("StopSanityBeat") == 1) return;
     FadePlayerFOVMulTo(GetLocalVarFloat("Beat_FOV"), 15.0f);
     AddTimer("", GetLocalVarFloat("Beat_Correction"), "CorrectFOV");
     AddTimer("", GetLocalVarFloat("Beat_Repeat"), "SanityBeat");
