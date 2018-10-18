@@ -8,7 +8,7 @@ void PlayIntro(string t)
 
     if(stage == 0)
     {
-        
+        InitializePlayerPosition();
         delay = 8.0f;
     }
     else if(stage == 1)

@@ -1,3 +1,10 @@
 <AINodes>
     <Node Name="PathNodeArea_1" ID="761" />
+    <Node Name="PathNodeArea_2" ID="1038" />
+    <Node Name="PathNodeArea_3" ID="1039">
+        <Edge Node="PathNodeArea_4" Distance="1.25000000000000000000" />
+    </Node>
+    <Node Name="PathNodeArea_4" ID="1041">
+        <Edge Node="PathNodeArea_3" Distance="1.25000000000000000000" />
+    </Node>
 </AINodes>

@@ -74,18 +74,8 @@ void BruteCorridorEventCallback(string a, string b, int s)
 
 void PlayIntroOrStartDebug()
 {
-    if (ScriptDebugOn())
-    {
-        GiveItemFromFile("Lantern", "lantern.ent");
-        PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
-        FadeRadialBlurTo(0.01f, 0.5f);
-        SetInDarknessEffectsActive(true);
-    }
-    else
-    {
-        SetPlayerLampOil(0.0f);
-        PlayIntro("");
-    }
+    SetPlayerLampOil(0.0f);
+    PlayIntro("");
 }
 
 void OnHoleExamine(string entity)
