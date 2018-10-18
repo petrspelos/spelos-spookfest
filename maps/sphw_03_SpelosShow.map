@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
-            <Viewport CameraPosition="48 0.923668 204.25" CameraTarget="48 0.923668 24.25" CameraZoom="2.81052" GridHeight="24.25" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="228 0.923668 24.25" CameraTarget="48 0.923668 24.25" CameraZoom="2.81052" GridHeight="48" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="48.0215 180 24.1637" CameraTarget="48.0215 0 24.1637" CameraZoom="3.62736" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="45.4978 11.6297 27.2781" CameraTarget="48.804 0.903749 29.8102" CameraZoom="1.46915" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="48 0.923668 204.25" CameraTarget="48 0.923668 24.25" CameraZoom="0" GridHeight="24.25" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="228 0.923668 24.25" CameraTarget="48 0.923668 24.25" CameraZoom="0" GridHeight="48" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="48.0215 180 24.1637" CameraTarget="48.0215 0 24.1637" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="49.3761 7.50317 37.4805" CameraTarget="48.4406 1.43553 42.149" CameraZoom="1.86915" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -100,7 +100,7 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="49" Name="wall_default02_28" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="6 0 -2" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="50" Name="wall_default02_29" Rotation="-0.0198714 1.5708 -0.0198714" Scale="1 1 1" Tag="" WorldPos="-6 0 -2" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="73" Name="stairs_railing_wood_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0 -0.445039 7" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="75" Name="stairs_railing_wood_3" Rotation="-2.53518e-006 -1.5708 -2.53518e-006" Scale="1 1 1" Tag="" WorldPos="1.6336 -0.000726491 10.1573" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="75" Name="stairs_railing_wood_3" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="1.6336 -0.000726491 10.1573" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="76" Name="stairs_welder_wood_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="1.75 0 6.85534" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="77" Name="stairs_welder_wood_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-1.75 0 6.85345" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="3" Group="0" ID="79" Name="boxes_box02_1" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-1.93659 0 7.6654" />
@@ -207,7 +207,7 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="322" Name="stairs_railing_wood_5" Rotation="0 1.0252e-005 -5.00679e-006" Scale="1 1 1" Tag="" WorldPos="6.99091 0 12.0413" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="323" Name="stairs_welder_wood_3" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="1.79139 0 11.8862" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="324" Name="stairs_welder_wood_4" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-1.77268 0 12.0971" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="325" Name="stairs_railing_wood_6" Rotation="-2.53518e-006 -1.5702 -2.53518e-006" Scale="0.444894 1 1" Tag="" WorldPos="1.6336 -0.000726491 7.63569" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="325" Name="stairs_railing_wood_6" Rotation="-2.53518e-006 -1.57011 -2.53518e-006" Scale="0.444894 1 1" Tag="" WorldPos="1.6336 -0.000726491 7.63569" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="327" Name="stairs_railing_wood_7" Rotation="-3.12211 1.5708 -3.12211" Scale="1 1 1" Tag="" WorldPos="-1.65532 -0.000726601 8.69919" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="328" Name="stairs_railing_wood_8" Rotation="-3.14142 1.57002 -3.14141" Scale="0.444894 1 1" Tag="" WorldPos="-1.65531 -0.000726381 11.2208" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="332" Name="wall_welder_1" Rotation="1.5708 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="-2 3.75 12" />
@@ -725,7 +725,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Billboard Active="true" BillboardColor="0.517 1 0.483 1" BillboardOffset="-0" BillboardSize="3.5 11.5" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="101" IsHalo="true" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_lightyellow_lightray.mat" Name="Billboard_1" Rotation="0 -1.5096 -1.57079" Tag="" WorldPos="0 0.104841 -1.12105" />
+                <Billboard Active="true" BillboardColor="0.517 1 0.483 1" BillboardOffset="0" BillboardSize="3.5 11.5" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="101" IsHalo="true" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_lightyellow_lightray.mat" Name="Billboard_1" Rotation="0 -1.5096 -1.57079" Tag="" WorldPos="0 0.104841 -1.12105" />
                 <PointLight Active="true" CastShadows="false" DiffuseColor="1 0.586 0.362 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="102" Name="PointLight_1" Radius="1.78231" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0.0462302 0.170223 1.04677" />
                 <PointLight Active="true" CastShadows="false" DiffuseColor="0.328 0.189 0.062 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="103" Name="PointLight_2" Radius="1.78231" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0.0462302 0.547514 1.75591" />
                 <Area Active="true" AreaType="Script" Group="0" ID="105" Mesh="" Name="SparksArea" Rotation="3.14159 -4.44253e-006 3.14159" Scale="0.25 0.25 0.25" Tag="" WorldPos="-1.33616 1.59397 7.68662">
@@ -992,7 +992,7 @@
                         <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
                         <Var Name="TextEntry" Value="" />
                         <Var Name="StartPos" Value="" />
-                        <Var Name="MapFile" Value="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/custom_stories/when-i-am-once-more/maps/wiaom_00_introduction.map" />
+                        <Var Name="MapFile" Value="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/maps/sphw_04_PartsHunt.map" />
                         <Var Name="Locked" Value="false" />
                         <Var Name="LockedSound" Value="" />
                         <Var Name="LockedTextCat" Value="" />
@@ -1474,7 +1474,7 @@
                         <Var Name="ConnectionLightUseSpec" Value="false" />
                     </UserVariables>
                 </Entity>
-                <PointLight Active="true" CastShadows="false" DiffuseColor="0.397 0.256 0.041 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="294" Name="PointLight_13" Radius="1.06101" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-1.35904 0.262148 9.00153" />
+                <PointLight Active="true" CastShadows="false" DiffuseColor="0.397 0.256 0.041 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="294" Name="PointLight_13" Radius="1.06101" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-1.35904 0.262148 9.00153" />
                 <Entity Active="true" FileIndex="17" Group="0" ID="295" Name="tombstone03_3" Rotation="-3.01873 0.807049 3.0411" Scale="1 1.05671 0.999255" Tag="" WorldPos="-1.66287 -0.146324 8.37436">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
