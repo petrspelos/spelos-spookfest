@@ -9,6 +9,9 @@ void OnStart()
 {
     Preload();
 
+    SetPlayerMoveSpeedMul(1.0f);
+    SetPlayerRunSpeedMul(1.0f);
+
     //SetLightVisible("LeverHintLight", false);
     FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f);
 
