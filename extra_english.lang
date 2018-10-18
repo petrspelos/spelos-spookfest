@@ -142,6 +142,10 @@
 
     <CATEGORY Name="DeathHints">
         <Entry Name="Careful">Be careful...</Entry>
+        <Entry Name="DoNotGetTooClose">Don't get too close to him...</Entry>
+        <Entry Name="DoNotLetHimCatchYou">Don't let him catch you...</Entry>
+        <Entry Name="Hint01">Always have somewhere to hide...</Entry>
+    </CATEGORY>
     </CATEGORY>
 
     <CATEGORY Name="Levels">
@@ -217,10 +221,6 @@
 
     <CATEGORY Name="Loading">
         <Entry Name="Fall">I don't remember much from the fall itself. Just the sound of leaves crunching under my boots followed by a roar of breaking stone.</Entry>
-    </CATEGORY>
-
-    <CATEGORY Name="DeathHints">
-        <Entry Name="Hint01">Always have somewhere to hide...</Entry>
     </CATEGORY>
 
     <CATEGORY Name="PrologueText">
