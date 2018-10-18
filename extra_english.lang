@@ -174,7 +174,6 @@ See you in hell.[br]
         <Entry Name="DoNotLetHimCatchYou">Don't let him catch you...</Entry>
         <Entry Name="Hint01">Always have somewhere to hide...</Entry>
     </CATEGORY>
-    </CATEGORY>
 
     <CATEGORY Name="Levels">
         <Entry Name="sphw_02_Dungeon">The Dungeon</Entry>
