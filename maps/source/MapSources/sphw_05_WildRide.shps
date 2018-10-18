@@ -1,5 +1,6 @@
 // ============================================================================
 #include "AmnesiaSignatures.cpp"
+#include "PlayMusicExtensions.ihps"
 #include "ChangeMapExtensions.ihps"
 #include "PlaySoundAtEntityExtensions.ihps"
 #include "SanityBeat.ihps"
@@ -7,27 +8,26 @@
 void OnEnter()
 {
     Preload();
-
-    PlayMusic("TrippingWithSpelos.ogg", false, 1.0f, 0.0f, 1, false);
+    PlayMusic("TrippingWithSpelos.ogg");
+    
     SetPlayerActive(false);
     FadeOut(0.0f);
-    
     SetLightVisible("SpotLight_1", false);
 
     PlaySoundAtEntity("SkeletonRidePanic.snt", 0.5f);
     PlaySoundAtEntity(
-        "wind", /* SoundName */
+        "wind",           /* SoundName */
         "FallingAmb.snt", /* SoundFile */
-        "Player", /* Entity */
-        0.5f, /* FadeTime */
-        false /* SaveSound */
+        "Player",         /* Entity */
+        0.5f,             /* FadeTime */
+        false             /* SaveSound */
     );
     PlaySoundAtEntity(
-        "elevator", /* SoundName */
+        "elevator",       /* SoundName */
         "elevator_move_fall_quieter.snt", /* SoundFile */
-        "Player", /* Entity */
-        0.5f, /* FadeTime */
-        false /* SaveSound */
+        "Player",         /* Entity */
+        0.5f,             /* FadeTime */
+        false             /* SaveSound */
     );
 
     AddTimer("", 11.5f, "StartTrip");
