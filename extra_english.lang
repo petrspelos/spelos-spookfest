@@ -33,18 +33,25 @@
         Shima[br]
         XDJ5000[br]
         [br]
-        [br]*Music by[br]
-        Whitesand (Martynas Lau)[br]
-        [br]
-        [br]*Ambient sounds and music[br]
-        Tabletop Audio[br]
-        https://tabletopaudio.com[br]
-        [br]
+        [br]*Music[br][br]
+        "Spooky Scary Skeletons (piano)"[br]
         "Play with Me"[br]
         "Dance Of Shadows"[br]
         "Keep Going"[br]
         by myuu[br]
-        Licensed under a Creative Commons License[br]
+        Licensed under a Creative Commons License[br][br]
+        [br]
+        "Spooky Scary Skeletons (Mini - Remix)"[br]
+        by Equinox Eurobeat[br]
+        https://soundcloud.com/equinox-eurobeat[br][br]
+        [br]
+        "Spooky Scary Skeletons (House Remix)"[br]
+        by Damian Urbański[br]
+        https://soundcloud.com/damian-urba-ski[br][br]
+        [br]*Ambient sounds[br]
+        Tabletop Audio[br]
+        https://tabletopaudio.com[br]
+        [br]
         [br]
         [br]*WHOA[br]
         ...,-----,...[br]
@@ -60,7 +67,7 @@
         ==' . '==[br]
         [br]
         [br]
-        [br]*We hope you enjoyed[br]
+        [br]*Thank you for playing[br]
         Please enjoy the Halloween spirit, while you still can. =)</Entry>
     </CATEGORY>
 
@@ -70,23 +77,23 @@
     </CATEGORY>
 
     <CATEGORY Name="Inventory">
-        <Entry Name="UseItemDoesNotWork">It's not the solution, but I like your thinking!</Entry>
+        <Entry Name="UseItemDoesNotWork">That's not the solution, but I like your thinking!</Entry>
         <Entry Name="UseItemHasNoObject">Right... But there's nothing to use that on!</Entry>
         <Entry Name="Sanity">Literally your brain right now</Entry>
-        <Entry Name="SanityDesc0">Yea, we're dead.</Entry>
+        <Entry Name="SanityDesc0">Yeah, we're dead.</Entry>
         <Entry Name="SanityDesc1">Red means scary!</Entry>
         <Entry Name="SanityDesc2">Did the color change?</Entry>
         <Entry Name="SanityDesc3">Yep, that's a brain.</Entry>
         <Entry Name="Health">Literally your heart right now</Entry>
         <Entry Name="HealthDesc0">It's official, we're dead.</Entry>
-        <Entry Name="HealthDesc1">I ain't a doctor, but isn't that blood?</Entry>
+        <Entry Name="HealthDesc1">I'm not a doctor, but I think that's not supposed to bleed.</Entry>
         <Entry Name="HealthDesc2">Show us on this doll where he touched you.</Entry>
         <Entry Name="HealthDesc3">*Thump* *Thump* Seems good.</Entry>
         <Entry Name="LampOil">The lantern liquid stuff</Entry>
-        <Entry Name="LampOilDesc">It does the light thing... you know.</Entry>
-        <Entry Name="PickedUp">Literally stole</Entry>
-        <Entry Name="LanternOn">Does the light thing</Entry>
-        <Entry Name="LanternOff">Y it NO light?</Entry>
+        <Entry Name="LampOilDesc">Put it in a lantern to make it work.</Entry>
+        <Entry Name="PickedUp">You literally stole:</Entry>
+        <Entry Name="LanternOn">Is currently glowing</Entry>
+        <Entry Name="LanternOff">Off or broken</Entry>
         <Entry Name="Tinderboxes">Tindercylinder</Entry>
         <Entry Name="Journal">Notepad.exe</Entry>
         <Entry Name="JournalDesc">Click to open.</Entry>
@@ -98,7 +105,7 @@
         <Entry Name="Quest Log">What am I supposed to do again?</Entry>
         <Entry Name="NotesEmpty">Notepad.exe is empty...</Entry>
         <Entry Name="DiariesEmpty">Damn, no stories...</Entry>
-        <Entry Name="QuestsEmpty">Ehm... Not sure what you're supposed to be doing, yet.</Entry>
+        <Entry Name="QuestsEmpty">Ehm... I'm not sure what you're supposed to be doing, yet.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Inventory">
@@ -118,8 +125,14 @@
         <Entry Name="Note_Polaroid01_Text"></Entry>
     
         <Entry Name="Note_WineBrute_Name">An angry note</Entry>
-        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br][br]by The Brute</Entry>
+        <Entry Name="Note_WineBrute_Text">That's what happens when you steal MY WINE![br][br]- The Brute</Entry>
 
+        <Entry Name="Note_StairsNote_Name">Torn piece of paper</Entry>
+        <Entry Name="Note_StairsNote_Text">And then there were four. Their banners containing four harps symbolizing the challengers. Each enclosed in a small cell. This imagery serving as a grim reminder of what is about to happen to the poor souls.</Entry>
+        
+        <Entry Name="Quest_LitEscape_Text">I'm too hurt to climb out the hole.[br] - Look around for tools and supplies to help you escape.</Entry>
+        <Entry Name="Quest_Enemy_Text">Something is in here with me. I cannot outrun it in this state.[br]- I need to make sure I always have somewhere to hide.</Entry>
+        
         <Entry Name="Note_Final_Name">A letter from Spelos</Entry>
         <Entry Name="Note_Final_Text">[voice Final_Note.ogg][br]My dearest friend,[br]
 If you read this, I got myself into a situation from which I will never escape. Knowing myself, I probably destroyed the whole world or got stuck in Hell or whatever.[br]
@@ -131,8 +144,7 @@ I sincerely hope that my actions brought a bit of happiness into your life. And 
 Please don't be sad, for we will meet again.[br]
 See you in hell.[br]
 [br]
-- The Spooky Skeleton Spelos[br]</Entry>
-        
+- The Spooky Skeleton Spelos[br]</Entry>        
     </CATEGORY>
 
     <CATEGORY Name="Messages">
@@ -158,20 +170,25 @@ See you in hell.[br]
 
     <CATEGORY Name="DeathHints">
         <Entry Name="Careful">Be careful...</Entry>
+        <Entry Name="Hint01">Always have somewhere to hide...</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Levels">
-        <Entry Name="00_introduction">Depths</Entry>
+        <Entry Name="sphw_02_Dungeon">The Dungeon</Entry>
+        <Entry Name="sphw_03_SpelosShow">Spelos Show</Entry>
+        <Entry Name="sphw_04_PartsHunt">Parts hunt</Entry>
+        <Entry Name="sphw_06_Hell">The Hell</Entry>
+        <Entry Name="sphw_07_Final">The Ending</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Subtitles">
         <Entry Name="Stuck_01">Huh? Am I already there?</Entry>
         <Entry Name="Stuck_02">What do you mean stuck?</Entry>
-        <Entry Name="Stuck_03">ARE YOU SERIOUS?</Entry>
-        <Entry Name="Stuck_04">So what do we do now?</Entry>
+        <Entry Name="Stuck_03">ARE YOU SERIOUS?!</Entry>
+        <Entry Name="Stuck_04">So, what do we do now?</Entry>
         <Entry Name="Stuck_05">Listen, Steven, I paid great money for this and you're telling me it got stuck?</Entry>
         <Entry Name="Stuck_06">Well that's great.</Entry>
-        <Entry Name="Stuck_07">So I'm going to be stuck here, till someone fixes it? Great.</Entry>
+        <Entry Name="Stuck_07">So I'm going to be stuck here, till someone fixes it? Great!</Entry>
         <Entry Name="Stuck_08">Well this is a bit claustrophobic now that I think about it.</Entry>
 
         <Entry Name="Entrance_01">*Spelos sings*</Entry>
@@ -200,15 +217,6 @@ See you in hell.[br]
         <Entry Name="InHell_13">RUN FOR OUR LIVES!</Entry>
     </CATEGORY>
 
-    <CATEGORY Name="Credits">
-        <Entry Name="Main">
-        [br]
-        [br]
-        *Fonts
-        
-        </Entry>
-    </CATEGORY>
-
     <CATEGORY Name="DoorNoAccess">
         <Entry Name="Message_1">This door is locked. I'm not getting through.</Entry>
         <Entry Name="Message_2">The door is very sturdy. It won't open.</Entry>
@@ -221,22 +229,6 @@ See you in hell.[br]
         <Entry Name="Message_1">It won't open as long as the padlock is there.</Entry>
         <Entry Name="Message_2">I'll need to get rid of that padlock to open this gate.</Entry>
         <Entry Name="Message_3">The padlock seems weak, maybe I could break it with something heavy enough.</Entry>
-    </CATEGORY>
-
-    <CATEGORY Name="Journal">
-        <Entry Name="Note_StairsNote_Name">Torn piece of paper</Entry>
-        <Entry Name="Note_StairsNote_Text">And then there were four. Their banners containing four harps symbolizing the challengers. Each enclosed in a small cell. This imagery serving as a grim reminder of what is about to happen to the poor souls.</Entry>
-        
-        <Entry Name="Quest_LitEscape_Text">I'm too hurt to climb out the hole.[br] - Look around for tools and supplies to help you escape.</Entry>
-        <Entry Name="Quest_Enemy_Text">Something is in here with me. I cannot outrun it in this state.[br]- I need to make sure I always have somewhere to hide.</Entry>
-    </CATEGORY>
-
-    <CATEGORY Name="Loading">
-        <Entry Name="Fall">I don't remember much from the fall itself. Just the sound of leaves crunching under my boots followed by a roar of breaking stone.</Entry>
-    </CATEGORY>
-
-    <CATEGORY Name="DeathHints">
-        <Entry Name="Hint01">Always have somewhere to hide...</Entry>
     </CATEGORY>
 
     <CATEGORY Name="PrologueText">
