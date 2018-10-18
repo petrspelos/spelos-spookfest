@@ -1,6 +1,7 @@
 #include "AmnesiaSignatures.cpp"
 #include "06_PreHellCutscene.ihps"
 #include "06_InHellCutscene.ihps"
+#include "SanityBeat.ihps"
 
 void OnEnter()
 {
@@ -25,17 +26,9 @@ void OnPreHellFinished(string t)
 
 void OnRunStarts(string t)
 {
-    AddTimer("", 0.0f, "SanityBeat");
-}
-
-void SanityBeat(string t)
-{
-    FadePlayerFOVMulTo(0.95f, 15.0f);
-    AddTimer("", 0.2f, "CorrectFOV");
-    AddTimer("", 0.6f, "SanityBeat");
-}
-
-void CorrectFOV(string t)
-{
-    FadePlayerFOVMulTo(1.3f, 0.5f);
+    SetSanityBeatFov(0.95f);
+    SetSanityBeatCorrectAfterSeconds(0.2f);
+    SetSanityBeatRepeatInSeconds(0.6f);
+    
+    StartSanityBeat();
 }
