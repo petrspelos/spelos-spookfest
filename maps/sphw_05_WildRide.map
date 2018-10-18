@@ -5,7 +5,7 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-10.7684 5.68197 -4.67574" CameraTarget="-5.6253 4.41818 -4.34716" CameraZoom="2.24313" GridHeight="3.5" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-10.7511 5.68197 -4.88116" CameraTarget="-5.6253 4.41818 -4.34716" CameraZoom="2.24313" GridHeight="3.5" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -19,8 +19,8 @@
                 <File Id="2" Path="static_objects/machine/pipes/thick_straight_short_end.dae" />
             </FileIndex_StaticObjects>
             <FileIndex_Entities NumOfFiles="2">
-                <File Id="0" Path="entities/SPHW_Other/CaveRide/CaveRide.ent" />
-                <File Id="1" Path="entities/SPHW_NPCs/Spelos/SkeletonSpelos.ent" />
+                <File Id="0" Path="custom_stories/spelos-spookfest/entities/sphw_other/CaveRide/CaveRide.ent" />
+                <File Id="1" Path="custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/SkeletonSpelos.ent" />
             </FileIndex_Entities>
             <FileIndex_Decals NumOfFiles="0" />
             <StaticObjects>
@@ -79,12 +79,22 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <PointLight Active="true" CastShadows="false" DiffuseColor="1 0.662 0.276 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="7" Name="PointLight_1" Radius="1.766" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-8.11593 5.3322 -5.06259" />
+                <PointLight Active="true" CastShadows="false" DiffuseColor="1 0.662 0.276 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="7" Name="PointLight_1" Radius="1.766" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-8.11593 5.3322 -5.06259" />
                 <PointLight Active="true" CastShadows="false" DiffuseColor="0.431 0 0.414 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="13" Name="PointLight_2" Radius="1.766" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-9.44872 4.89765 -3.5626" />
-                <Billboard Active="true" BillboardColor="1 0.621 0.379 1" BillboardOffset="0" BillboardSize="2 1.5" BillboardType="Point" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="15" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 -0 0" Tag="" WorldPos="-6.13346 4.50041 -4.85346" />
+                <Billboard Active="true" BillboardColor="1 0.621 0.379 1" BillboardOffset="0" BillboardSize="2 1.5" BillboardType="Point" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="15" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 0 0" Tag="" WorldPos="-6.13346 4.50041 -4.85346" />
                 <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_elevator_fast.ps" Group="0" ID="18" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-6.81257 4.67994 -6.60675" />
                 <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_elevator_fast.ps" Group="0" ID="19" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_2" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-6.81257 4.67994 -3.38863" />
                 <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/dev/Amnesia The Dark Descent/particles/ps_electro_charge.ps" Group="0" ID="22" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_3" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-5.72616 4.12832 -4.96453" />
+                <Area Active="true" AreaType="Script" Group="0" ID="23" Mesh="" Name="Forward" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-3.41041 5.78052 -5.08264">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
             </Entities>
             <Misc />
             <StaticObjectCombos />

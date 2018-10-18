@@ -5,6 +5,7 @@
 
 void OnEnter()
 {
+    SetLanternActive(false, false);
     PlayPropAnimation("Spelos", "TalkToDevil", 0.0f, true, "");
     Preload();
     SetupSkybox();

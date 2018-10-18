@@ -5,7 +5,7 @@
             <Viewport CameraPosition="48 0.923668 204.25" CameraTarget="48 0.923668 24.25" CameraZoom="2.81052" GridHeight="24.25" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="228 0.923668 24.25" CameraTarget="48 0.923668 24.25" CameraZoom="2.81052" GridHeight="48" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="48.0215 180 24.1637" CameraTarget="48.0215 0 24.1637" CameraZoom="3.62736" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="49.4381 7.5591 32.5115" CameraTarget="47.3047 1.00425 31.4225" CameraZoom="1.96915" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="45.4978 11.6297 27.2781" CameraTarget="48.804 0.903749 29.8102" CameraZoom="1.46915" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -1796,7 +1796,7 @@
                     </UserVariables>
                 </Entity>
                 <PointLight Active="true" CastShadows="false" DiffuseColor="0.397 0.256 0.041 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="384" Name="PointLight_18" Radius="1.06101" Rotation="0 -0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="-0.961451 0.391971 8.86729" />
-                <Entity Active="true" FileIndex="23" Group="0" ID="438" Name="level_dungeon_1" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="34 0 34">
+                <Entity Active="true" FileIndex="23" Group="0" ID="438" Name="level_dungeon_1" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="34 0.0728846 34">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1812,7 +1812,7 @@
                         <Var Name="TextEntry" Value="" />
                         <Var Name="StartPos" Value="" />
                         <Var Name="MapFile" Value="" />
-                        <Var Name="Locked" Value="false" />
+                        <Var Name="Locked" Value="true" />
                         <Var Name="LockedSound" Value="" />
                         <Var Name="LockedTextCat" Value="" />
                         <Var Name="LockedTextEntry" Value="" />
@@ -1827,7 +1827,7 @@
                         <Var Name="CallbackFunc" Value="" />
                         <Var Name="ConnectedProps" Value="" />
                         <Var Name="ConnectionStateChangeCallback" Value="" />
-                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="FullGameSave" Value="true" />
                         <Var Name="PlayerLookAtCallback" Value="" />
                         <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
                         <Var Name="PlayerInteractCallback" Value="" />
@@ -1846,7 +1846,7 @@
                         <Var Name="CallbackFunc" Value="" />
                         <Var Name="ConnectedProps" Value="" />
                         <Var Name="ConnectionStateChangeCallback" Value="" />
-                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="FullGameSave" Value="true" />
                         <Var Name="PlayerLookAtCallback" Value="" />
                         <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
                         <Var Name="PlayerInteractCallback" Value="" />
@@ -1857,7 +1857,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Area Active="true" AreaType="PlayerStart" Group="0" ID="443" Mesh="" Name="PlayerStartArea_3" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="35.25 0 34">
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="443" Mesh="" Name="PlayerStartArea_3" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="35.0124 0 34.0426">
                     <UserVariables />
                 </Area>
                 <Entity Active="false" FileIndex="5" Group="0" ID="444" Name="Rider" Rotation="3.14159 -1.5708 3.14159" Scale="1.75 1.75 1.75" Tag="" WorldPos="49.75 0 26">
@@ -1880,6 +1880,36 @@
                     </UserVariables>
                 </Entity>
                 <Area Active="true" AreaType="Script" Group="0" ID="445" Mesh="" Name="StartShowArea" Rotation="0 -0 0" Scale="3 3.5 1.5" Tag="" WorldPos="0 1.75 15.75">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="true" AreaType="Script" Group="0" ID="446" Mesh="" Name="ChaseLookArea" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.1957 2.33313 41.8326">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="true" AreaType="Script" Group="0" ID="447" Mesh="" Name="HopInEventArea" Rotation="0 0 0" Scale="1.78526 3.5 2.75" Tag="" WorldPos="48.0101 1.75 34">
+                    <UserVariables>
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ItemInteraction" Value="false" />
+                        <Var Name="MaxFocusDistance" Value="-1" />
+                    </UserVariables>
+                </Area>
+                <Area Active="true" AreaType="Script" Group="0" ID="448" Mesh="" Name="TrolleyArea" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="48.2538 1.88907 25.7029">
                     <UserVariables>
                         <Var Name="PlayerLookAtCallback" Value="" />
                         <Var Name="PlayerLookAtCallbackAutoRemove" Value="true" />

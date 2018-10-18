@@ -255,6 +255,8 @@ See you in hell.[br]
         <Entry Name="TrolleyBroken_16">So chop chop, I'll wait here till you find all three missing parts.</Entry>
         <Entry Name="TrolleyBroken_17">Cause I swear she's the most terrifying thing I've ever seen.</Entry>
         <Entry Name="TrolleyBroken_18">Good luck!</Entry>
+
+        <Entry Name="HopIn">Oh look, I pimped our ride. Get in, loser...</Entry>
     </CATEGORY>
 
     <CATEGORY Name="DoorNoAccess">
