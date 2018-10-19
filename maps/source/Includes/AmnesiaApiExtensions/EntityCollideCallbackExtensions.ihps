@@ -15,3 +15,10 @@ void SetPlayerEntersEventOnce(string eventName)
 {
     PlayerEnterCallbackOnce(eventName + "Area", eventName + "Callback");
 }
+
+enum CollisionState
+{
+    onlyEnter = 1,
+    onlyLeave = -1,
+    any = 0
+}

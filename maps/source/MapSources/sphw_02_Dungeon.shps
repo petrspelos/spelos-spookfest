@@ -1,7 +1,4 @@
-// Intellisense Help
 #include "AmnesiaSignatures.cpp"
-
-// Custom Includes
 #include "EntityCollideCallbackExtensions.ihps"
 #include "PlaySoundAtEntityExtensions.ihps"
 #include "02_Dungeon_Intro.ihps"
@@ -9,18 +6,17 @@
 #include "DoorUnlocking.ihps"
 #include "StartPlayerLookAtExtensions.ihps"
 #include "GeneralExtensions.ihps"
+#include "PlayerStates.ihps"
+#include "PlayMusicExtensions.ihps"
 
 void OnStart()
 {
-    PlayIntroOrStartDebug();
+    StartDungeonIntro();
+    SetupOneTimeEvents();
 }
 
-void OnEnter()
+void SetupOneTimeEvents()
 {
-    Preload();
-    SetInDarknessEffectsActive(false);
-    SetSanityDrainDisabled(true);
-
     SetPlayerEntersEventOnce("StartInDarkness");
     SetPlayerEntersEventOnce("DoorSound01");
     SetPlayerEntersEventOnce("StopMusic");
@@ -31,51 +27,16 @@ void OnEnter()
     SetKeyUnlocksLevelDoor("DungeonDoorKey", "DungeonDoor");
 }
 
-void StartInDarknessCallback(string a, string b, int s)
+void OnEnter()
 {
-    SetInDarknessEffectsActive(true);
-    MakeSmallRocksFall("");
+    Preload();
+    SetPlayerNotAfraidOfDarkness();
 }
 
-void DoorSound01Callback(string a, string b, int s)
+void OnLeave()
 {
-    PlaySoundAtEntity("scare_scratch.snt", "DoorSound01SoundArea");
-}
-
-void StopMusicCallback(string a, string b, int s)
-{
-    StopMusic(2.0f, 1);
-}
-
-void StairsEventCallback(string parent, string child, int state)
-{
-    PlayMusic("10_paper_daniel02.ogg", false, 1.0f, 0.0f, 1, false);
-    StartPlayerLookAt("StairsWellArea", 0.5f, 1.0f, "");
-    CreateParticleSystemAtEntity("rose", "ps_rose_petals_loop.ps", "StairsWellParticlesSpawn", false);
-    AddTimer("", 5.0f, "StopRose");
-}
-
-void BruteWalkPastCallback(string a, string b, int s)
-{
-    PlayMusic("04_event_stairs.ogg", false, 1.0f, 0.0f, 1, false);
-    SetEntityActive("BruteWalkPast", true);
-    AddEnemyPatrolNode("BruteWalkPast", "BruteWalkPastTarget", 5.0f, "");
-    AddTimer("", 10.0f, "PoofBruteWalkPast");
-    CheckPoint("respawn", "StairsRespawn", "OnStairsRespawn", "DeathHints", "Hint01");
-}
-
-void BruteCorridorEventCallback(string a, string b, int s)
-{
-    SetEntityActive("BruteCorridor", true);
-    AddEnemyPatrolNode("BruteCorridor", "PathNodeArea_19", 0.001f, "");
-    AddEnemyPatrolNode("BruteCorridor", "PathNodeArea_9", 0.001f, "");
-    AddEntityCollideCallback("BruteCorridor", "CorridorBruteDespawnArea", "DespawnCorridorBrute", true, 1);
-}
-
-void PlayIntroOrStartDebug()
-{
-    SetPlayerLampOil(0.0f);
-    PlayIntro("");
+    CompleteQuest("Enemy", "Enemy");
+    CompleteQuest("LitEscape", "LitEscape");
 }
 
 void OnHoleExamine(string entity)
@@ -83,18 +44,120 @@ void OnHoleExamine(string entity)
     AddQuest("LitEscape", "LitEscape");
 }
 
+// ============================================================================
+// When the player steps into the darkness, they get
+// the nightvision from in darkness effects
+// ============================================================================
+void StartInDarknessCallback(string a, string b, int s)
+{
+    SetInDarknessEffectsActive(true);
+    MakeSmallRocksFall("");
+}
+
 void MakeSmallRocksFall(string t)
 {
-    PlaySoundAtEntity("", "15_rock_break.snt", "IntroHoleArea", 0.0f, false);
-    for (int i = 1; i < 4; i++)
-        SetEntityActive("FallRock_" + i, true);
+    PlaySoundAtEntity("15_rock_break.snt", "IntroHoleArea");
+   
+    for (int i = 1; i <= 3; i++)
+    {
+        SetEntityActive($"FallRock_{i}", true);
+    }
 }
 
-void MonsterTouchDoorEvent(string entity)
+// ============================================================================
+// In the first corridor, where the player needs to crouch under
+// some blockade, a shuffle starts playing from behind the locked
+// door.
+// ============================================================================
+void DoorSound01Callback(string a, string b, int s)
 {
-    PlaySoundAtEntity("", "scare_scratch", "DoorSound01SoundArea", 0.0f, false);
+    PlaySoundAtEntity("scare_scratch.snt", "DoorSound01SoundArea");
 }
 
+// ============================================================================
+// After the player removes the barricade, the music stops.
+// ============================================================================
+void StopMusicCallback(string a, string b, int s)
+{
+    StopMusic(2.0f, 1);
+}
+
+// ============================================================================
+// When the player gets to the circular stairs, ambient music plays
+// and roses start falling from the ceiling.
+// ============================================================================
+void StairsEventCallback(string parent, string child, int state)
+{
+    PlayMusic("10_paper_daniel02.ogg");
+    StartPlayerLookAt("StairsWellArea", 0.5f, 1.0f, "");
+    
+    CreateParticleSystemAtEntity(
+        "rose",                     /* Particle Name */
+        "ps_rose_petals_loop.ps",   /* Particle File */
+        "StairsWellParticlesSpawn", /* Entity */
+        false                       /* Save */
+    );
+
+    AddTimer("", 5.0f, "StopRose");
+}
+
+void StopRose(string t)
+{
+    DestroyParticleSystem("rose");
+    StopPlayerLookAt();
+}
+
+// ============================================================================
+// When the player gets into the bottom floor, a Brute walks past
+// ============================================================================
+void BruteWalkPastCallback(string a, string b, int s)
+{
+    PlayMusic("04_event_stairs.ogg");
+    SetEntityActive("BruteWalkPast", true);
+    AddEnemyPatrolNode("BruteWalkPast", "BruteWalkPastTarget", 5.0f, "");
+    AddTimer("", 10.0f, "PoofBruteWalkPast");
+
+    CheckPoint(
+        "respawn",          /* Name */
+        "StairsRespawn",    /* Start position */
+        "OnStairsRespawn",  /* Callback */
+        "DeathHints",       /* Death Hint Category */
+        "Hint01"            /* Death Hint Entry */
+    );
+}
+
+void PoofBruteWalkPast(string t)
+{
+    FadeEnemyToSmoke("BruteWalkPast", false);
+    PlayMusicLoop("LitBlackout.ogg");
+    AddQuest("Enemy", "Enemy");
+}
+
+// ============================================================================
+// When the player turns a corner, they meed a Brute
+// ============================================================================
+void BruteCorridorEventCallback(string a, string b, int s)
+{
+    SetEntityActive("BruteCorridor", true);
+    AddEnemyPatrolNode("BruteCorridor", "PathNodeArea_19", 0.001f, "");
+    AddEnemyPatrolNode("BruteCorridor", "PathNodeArea_9", 0.001f, "");
+    AddEntityCollideCallback(
+        "BruteCorridor",            /* Parent */
+        "CorridorBruteDespawnArea", /* Child */
+        "DespawnCorridorBrute",     /* Callback */
+        true,                       /* Delete after trigger */
+        CollisionState::onlyEnter   /* State */
+    );
+}
+
+void CorridorBruteDespawnArea(string parent, string child, int state)
+{
+    FadeEnemyToSmoke("BruteCorridor", false);
+}
+
+// ============================================================================
+// Padlock functionality
+// ============================================================================
 void Padlock01Callback(string entity, string type)
 {
     if (type == "Break")
@@ -111,26 +174,11 @@ void Padlock02Callback(string entity, string type)
     }
 }
 
+// ============================================================================
+// Respawning in the last floor
+// ============================================================================
 void OnStairsRespawn(string name, int count)
 {
     StopMusic(0.0, 1);
-    PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
-}
-
-void PoofBruteWalkPast(string t)
-{
-    FadeEnemyToSmoke("BruteWalkPast", false);
-    PlayMusic("LitBlackout.ogg", false, 1.0f, 0.0f, 1, false);
-    AddQuest("Enemy", "Enemy");
-}
-
-void StopRose(string t)
-{
-    DestroyParticleSystem("rose");
-    StopPlayerLookAt();
-}
-
-void CorridorBruteDespawnArea(string parent, string child, int state)
-{
-    FadeEnemyToSmoke("BruteCorridor", false);
+    PlayMusicLoop("LitBlackout.ogg");
 }
