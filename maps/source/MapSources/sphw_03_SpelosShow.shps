@@ -25,6 +25,35 @@ void OnStart()
     ReflectorsOff("");
 
     AddEntityCollideCallback("Player", "StartShowArea", "StartShowCallback", true, 0);
+    AddEntityCollideCallback("Player", "Ghost01FadeArea", "FadeGhost01", true, 1);
+    AddEntityCollideCallback("Player", "Ghost02FadeArea", "FadeGhost02", true, 1);
+    AddEntityCollideCallback("Player", "FlybyArea", "Flyby", true, 1);
+    AddEntityCollideCallback("Player", "BackflipArea", "Backflip", true, 1);
+}
+
+void FadeGhost01(string parent, string child, int state)
+{
+    SetPropActiveAndFade("Ghost01", false, 0.5f);
+}
+
+void FadeGhost02(string parent, string child, int state)
+{
+    SetPropActiveAndFade("Ghost02", false, 0.5f);
+}
+
+void Flyby(string parent, string child, int state)
+{
+    PlayPropAnimation("Ghost03", "FlyBy", 0.0f, false, "");
+}
+
+void Backflip(string parent, string child, int state)
+{
+    PlayPropAnimation("Ghost04", "Backflip", 0.0f, false, "FadeAway");
+}
+
+void FadeAway(string prop)
+{
+    SetPropActiveAndFade(prop, false, 0.5f);
 }
 
 void OnEnter()
@@ -510,7 +539,7 @@ void StartTrolleyEvent(string parent, string child, int state)
 
 void ReadyForHunt()
 {
-    PlayPropAnimation("SkeletonSpelos", "Idle", 0.0f, true, "");
+    PlayPropAnimation("SkeletonSpelos", "Idle", 0.5f, true, "");
     SetEntityActive("PartsHuntBlockbox", false);
 }
 

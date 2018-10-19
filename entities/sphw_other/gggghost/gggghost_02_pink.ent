@@ -13,7 +13,7 @@
             <Billboard Active="true" BillboardColor="1 1 1 1" BillboardOffset="0" BillboardSize="1.5 2" BillboardType="Point" ConnectLight="PointLight_1" HaloSourceSize="0.3 0.3 0.3" ID="12" IsHalo="false" MaterialFile="C:/dev/Amnesia The Dark Descent/billboards/bb_white_halo.mat" Name="Billboard_1" Rotation="0 0 0" Tag="" WorldPos="0 0.25 0" />
             <PointLight Active="true" CastShadows="false" DiffuseColor="0.983 0.559 0.793 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" ID="13" Name="PointLight_1" Radius="1.25" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="0 0 0" />
         </Entities>
-        <Mesh Filename="entities/SPHW_Other/gggghost/gggghost_02.dae">
+        <Mesh Filename="custom_stories/spelos-spookfest/entities/sphw_other/gggghost/gggghost_02.dae">
             <SubMesh Active="true" ID="14" Material="" Name="Sphere" Rotation="0 0 0" Scale="1 1 1" SubMeshID="0" Tag="" WorldPos="0 0 0" />
         </Mesh>
         <Bones>
@@ -38,6 +38,9 @@
         <Joints />
         <Animations>
             <Animation File="/home/peter/.steam/steam/steamapps/common/Amnesia The Dark Descent/entities/SPHW_Other/gggghost/float.dae_ANIM" Name="Float" SpecialEventTime="4.59135e-041" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_other/gggghost/Animations/Backflip.dae_ANIM" Name="Backflip" SpecialEventTime="2.2038e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_other/gggghost/Animations/FlyBy.dae_ANIM" Name="FlyBy" SpecialEventTime="2.2038e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_other/gggghost/Animations/Round.dae_ANIM" Name="Round" SpecialEventTime="2.2038e-038" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">
