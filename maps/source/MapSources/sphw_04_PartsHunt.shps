@@ -64,6 +64,7 @@ void OnEnter()
 void OnLeave()
 {
     if(GetPlayerLampOil() < 10.0f) AddPlayerLampOil(10.0f);
+    StopMusic(0.5f, 0);
 }
 
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
