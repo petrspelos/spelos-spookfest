@@ -16,3 +16,13 @@ void UnlockLevelDoor(string item, string entity)
     SetLevelDoorLocked(entity, false);
     RemoveItem(item);
 }
+
+void SetKeyUnlocksLevelDoor(string key, string levelDoor)
+{
+    AddUseItemCallback("", key, levelDoor, "UnlockLevelDoor", true);
+}
+
+void SetKeyUnlocksSwingDoor(string key, string door)
+{
+    AddUseItemCallback("", key, door, "UnlockSwingDoor", true);
+}

@@ -28,7 +28,7 @@ void OnEnter()
     SetPlayerEntersEventOnce("BruteWalkPast");
     SetPlayerEntersEventOnce("BruteCorridorEvent");
 
-    AddUseItemCallback("", "DungeonDoorKey", "DungeonDoor", "UnlockLevelDoor", true);
+    SetKeyUnlocksLevelDoor("DungeonDoorKey", "DungeonDoor");
 }
 
 void StartInDarknessCallback(string a, string b, int s)
