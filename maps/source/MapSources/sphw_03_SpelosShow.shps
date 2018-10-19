@@ -1,5 +1,6 @@
 // Intellisense Help
 #include "AmnesiaSignatures.cpp"
+#include "PlaySoundAtEntityExtensions.ihps"
 
 const int reflectorCount = 14;
 
@@ -28,6 +29,7 @@ void OnStart()
 
 void OnEnter()
 {
+    StartAmbience("15_amb.snt");
     if(GetGlobalVarInt("HuntedForParts") == 1)
     {
         SetEntityActive("Rider", true);
@@ -487,4 +489,5 @@ void OnLeave()
 {
     SetEntityActive("PartsHuntBlockbox", true);
     SetEntityActive("BacktrackBlockbox", true);
+    StopAmbience();
 }
