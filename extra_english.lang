@@ -166,6 +166,9 @@ See you in hell.[br]
         <Entry Name="MorguePadlockInspect_0">The lock is rusty, but sturdy.</Entry>
         <Entry Name="MorguePadlockInspect_1">I won't be able to unlock this without a key.</Entry>
         <Entry Name="MorguePadlockInspect_2">A key is needed to unlock this padlock.</Entry>
+        <Entry Name="Run">RUN!!!</Entry>
+        <Entry Name="OnePartFound">I can see a saw there![br]It will be helpful for sure!</Entry>
+        <Entry Name="StillMissingParts">I could already proceed but I still have to find some parts.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="DeathHints">
