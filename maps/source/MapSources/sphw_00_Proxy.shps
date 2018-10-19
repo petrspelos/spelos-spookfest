@@ -1,10 +1,15 @@
 #include "AmnesiaSignatures.cpp"
+#include "ChangeMapExtensions.ihps"
+#include "LoadingScreenExtensions.ihps"
 
+// ============================================================================
 // All this map does is it sets the loading screen and transfers the player
 // to the actual first map of the Custom Story.
+// ============================================================================
+
 void OnEnter()
 {
     Preload();
-    SetupLoadScreen("Other", "Empty", 0, "menu_loading_screen_halloween.jpg");
-    ChangeMap("sphw_01_IntroSequence.map", "PlayerStartArea_1", "", "");
+    SetLoadingScreenImage("menu_loading_screen_halloween.jpg");
+    ChangeMap("sphw_01_IntroSequence.map");
 }

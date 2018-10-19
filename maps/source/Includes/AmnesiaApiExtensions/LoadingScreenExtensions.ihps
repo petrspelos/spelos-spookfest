@@ -1,0 +1,13 @@
+// ============================================================================
+// Amnesia API Overload methods to make the API cleaner
+// ============================================================================
+
+void SetLoadingScreenImage(string image)
+{
+    SetupLoadScreen(
+        "Other", /* Text Category */
+        "Empty", /* Text Entry */
+        0,       /* Random (0 = not random) */
+        image    /* Loading image */
+    );
+}
