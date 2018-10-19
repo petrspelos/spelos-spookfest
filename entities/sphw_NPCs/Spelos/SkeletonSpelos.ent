@@ -5,7 +5,7 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
-            <Viewport CameraPosition="0.328642 1.33566 -3.02862" CameraTarget="0.00203725 0.519791 0.356109" CameraZoom="2.66013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="0.328643 1.33566 -3.02862" CameraTarget="0.00203725 0.519791 0.356109" CameraZoom="2.66013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
     </EditorSession>
     <ModelData>
@@ -56,6 +56,9 @@
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/TalkToDevil.dae_ANIM" Name="TalkToDevil" SpecialEventTime="2.82797e-038" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/HoldGate.dae_ANIM" Name="HoldGate" SpecialEventTime="1.32218e-038" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/RideTrolley.dae_ANIM" Name="RideSit" SpecialEventTime="1.9099e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/IAmSpelos.dae_ANIM" Name="IAmSpelos" SpecialEventTime="3.48477e-039" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/Talk02.dae_ANIM" Name="Talk02" SpecialEventTime="5.1383e-039" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/Talk03.dae_ANIM" Name="Talk03" SpecialEventTime="2.20375e-038" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">
