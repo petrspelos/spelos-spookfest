@@ -26,7 +26,7 @@ void OnStart()
     PlayerEntityCollide("AreaShutDoor", "CollidePlayerAreaShutDoor", "EnterOnce");
     PlayerEntityCollide("AreaActiveBrute_1", "CollidePlayerAreaActiveBrute", "EnterOnce");
     PlayerEntityCollide("AreaBruteCheckCloset", "CollidePlayerAreaBruteCheckCloset", "EnterOnce");
-    PlayerEntityCollide("AreaBruteChase", "CollidePlayerAreaBruteChase", "EnterOnce");
+    PlayerEntityCollide("AreaBruteChase", "CollidePlayerAreaBruteChase", "Enter");
     AddEntityCollideCallback("brute_1", "AreaTriggerBrute_1", "CollideBruteAreaTriggerBrute", true, 1);
     AddEntityCollideCallback("brute_1", "AreaCheckBrute", "CollideBruteAreaCheckBrute", false, 0);
     AddEntityCollideCallback("brute_checkpoint_1", "AreaCheckBrute", "CollideBruteAreaCheckBrute", false, 0);
@@ -308,6 +308,7 @@ void CollidePlayerAreaBruteChase(string &in asParent, string &in asChild, int al
 {
     if(GetLocalVarInt("BruteInsideArea") == 0)
     {
+        SetEntityActive(asChild, false);
         PlayerLook("AreaTriggerBrute_1", "lookactive", 2.0f, 4.0f);
         PlayerReact("breath_slow", 0.5f);
         AddTimer("activebrutetrigger", 3.0f, "TimerChangeChaseBruteState");
