@@ -18,14 +18,14 @@ void OnStart()
     PlayerEntityCollide("AreaLookAtItem", "CollidePlayerAreaLookAtItem", "EnterOnce");
     PlayerEntityCollide("AreaNotReadyMessage_1", "CollidePlayerAreaNotReadyMessage", "Enter");
     PlayerEntityCollide("AreaNotReadyMessage_2", "CollidePlayerAreaNotReadyMessage", "Enter");
-    PlayerEntityCollide("SlowDownArea_1", "CollidePlayerSlowDownArea", "Both");
-    PlayerEntityCollide("SlowDownArea_2", "CollidePlayerSlowDownArea", "Both");
-    PlayerEntityCollide("SlowDownArea_3", "CollidePlayerSlowDownArea", "Both");
+    PlayerEntityCollide("SlowDownArea", "CollidePlayerSlowDownArea", "EnterOnce");
+    PlayerEntityCollide("SpeedUpArea", "CollidePlayerSpeedUpArea", "EnterOnce");
     PlayerEntityCollide("AreaActiveBruteSurprise_1", "CollidePlayerAreaActiveBrute", "EnterOnce");
     PlayerEntityCollide("AreaInActiveBruteSurprise_1", "CollidePlayerAreaInActiveBrute", "EnterOnce");
     PlayerEntityCollide("AreaTriggerBruteSurprise_1", "CollidePlayerAreaTriggerBrute", "EnterOnce");
     PlayerEntityCollide("AreaShutDoor", "CollidePlayerAreaShutDoor", "EnterOnce");
     PlayerEntityCollide("AreaActiveBrute_1", "CollidePlayerAreaActiveBrute", "EnterOnce");
+    PlayerEntityCollide("AreaBruteCheckCloset", "CollidePlayerAreaBruteCheckCloset", "EnterOnce");
     PlayerEntityCollide("AreaBruteChase", "CollidePlayerAreaBruteChase", "EnterOnce");
     AddEntityCollideCallback("brute_1", "AreaTriggerBrute_1", "CollideBruteAreaTriggerBrute", true, 1);
     AddEntityCollideCallback("brute_1", "AreaCheckBrute", "CollideBruteAreaCheckBrute", false, 0);
@@ -35,6 +35,8 @@ void OnStart()
     SetEntityCustomFocusCrossHair("AreaPickUpPart_1", "Pick");
     SetEntityCustomFocusCrossHair("AreaPickUpPart_2", "Pick");
     SetEntityCustomFocusCrossHair("AreaPickUpPart_3", "Pick");
+
+    SetEntityActive("BoxNotReady_2", true);
 
     for(int i=1; i<=16; i++) PlayerEntityCollide("AreaSpikes_" + i, "CollidePlayerAreaSpikes", "Enter");
 
@@ -71,7 +73,6 @@ void OnLeave()
 void PickedUpPart(string entity)
 {
     AddLocalVarInt("PartsTaken", 1);
-    GiveSanityBoostSmall();
     PlayGuiSound("pick_generic", 1.0f);
     if(entity == "AreaPickUpPart_1")
     {
@@ -92,6 +93,8 @@ void PickedUpPart(string entity)
     }
     if(GetLocalVarInt("PartsTaken") == 3)
     {
+        GiveSanityBoost();
+
         SetGlobalVarInt("HuntedForParts", 1);
 
         SetEntityActive("AreaBruteChase", true);
@@ -102,13 +105,13 @@ void PickedUpPart(string entity)
 
 void CollidePlayerAreaNotReadyMessage(string parent, string child, int state)
 {
-    SetMessage("", "", 5.0f);
+    SetMessage("Messages", "StillMissingParts", 5.0f);
 }
 
 void CollidePlayerAreaLookAtItem(string parent, string child, int state)
 {
     PlayerLook("item_part_1", "lookspeed", 2.5f, 2.5f);
-    SetMessage("", "", 5.0f);
+    SetMessage("Messages", "OnePartFound", 5.0f);
 }
 
 void CheckPointSlowDownArea(string name, int count)
@@ -125,8 +128,12 @@ void CheckPointSlowDownArea(string name, int count)
 
 void CollidePlayerSlowDownArea(string &in asParent, string &in asChild, int alState)
 {
-    if(alState == 1) PlayerSpeed("slow");
-    else if(alState == -1) PlayerSpeed("normal");
+    SetPlayerRunSpeedMul(0.0f);
+}
+
+void CollidePlayerSpeedUpArea(string parent, string child, int state)
+{
+    SetPlayerRunSpeedMul(1.0f);
 }
 
 void CollidePlayerAreaActiveBrute(string &in asParent, string &in asChild, int alState)
@@ -144,10 +151,28 @@ void CollidePlayerAreaActiveBrute(string &in asParent, string &in asChild, int a
         PlayerReact("pant", 1.0f);
         PlayerReact("breath_slow", 3.3f);
         PlayerReact("breath_slow", 5.5f);
-        PlayerLook("torch_static01_1", "lookspeed", 3.0f, 4.0f);
+        PlayerLook("torch_static01_1", "lookspeed", 3.0f, 5.0f);
+
+        PlaySoundAtEntity("scarewhine", "scare_whine_loop1.snt", "Player", 2.0f, false);
 
         ClearEnemyPatrolNodes("brute_1");
-        AddEnemyPatrolNode("brute_1", "PathNodeArea_2", RandFloat(4.0f, 6.0f), "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_2", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_25", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_26", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_27", RandFloat(3.5f, 5.5f), "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_26", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_25", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_2", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_36", RandFloat(2.5f, 4.5f), "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_38", RandFloat(2.5f, 4.5f), "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_36", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_48", RandFloat(2.5f, 4.5f), "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_55", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_56", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_59", RandFloat(3.5f, 5.5f), "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_68", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_69", 0.001f, "");
+        AddEnemyPatrolNode("brute_1", "PathNodeArea_4", RandFloat(2.5f, 4.5f), "");
         SetEntityActive("brute_1", true);
     }
 }
@@ -158,7 +183,17 @@ void CollidePlayerAreaInActiveBrute(string &in asParent, string &in asChild, int
     {
         SetEntityActive("brute_surprise_1", false);
         SetEntityActive("AreaTriggerBruteSurprise_1", false);
+        SetEntityActive("SpeedUpArea", true);
+
+        SetLampLit("CorridorCandles", false, false);
+        SetLightVisible("SpotLight_3", false);
     }
+}
+
+void LookAtDisappearBrute(string entity, int state)
+{
+    GiveSanityBoostSmall();
+    PlayerReact("breath", 1.5f);
 }
 
 void CollidePlayerAreaTriggerBrute(string &in asParent, string &in asChild, int alState)
@@ -178,7 +213,7 @@ void CollidePlayerAreaShutDoor(string parent, string child, int state)
     PlayerReact("breath", 3.3f);
     AddTimer("prison_7", 1.0f, "TimerShutDoor");
     CreateParticleSystemAtEntity("PSDustPush", "ps_dust_push_15.ps", "AreaParticleDustPush", false);
-    PlaySoundAtEntity("windsound", "general_wind_blow.snt", "prison_7", 0.0f, false);
+    PlayGuiSound("scare_wind", 1.0f);
     CheckPoint ("CPSecondFloor", "PlayerStartArea_3", "CheckPointSecondFloor", "DeathHints", "DoNotLetHimCatchYou");
 
     SetLightVisible("LightStairs_1", false);
@@ -188,20 +223,44 @@ void CollidePlayerAreaShutDoor(string parent, string child, int state)
 void CheckPointSecondFloor(string name, int count)
 {
     ClearEnemyPatrolNodes("brute_checkpoint_1");
-    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_3", RandFloat(4.0f, 6.0f), "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_3", RandFloat(3.5f, 5.5f), "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_5", 2.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_4", 1.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_81", 0.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_59", RandFloat(2.5f, 4.5f), "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_56", 0.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_55", 0.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_48", 2.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_50", RandFloat(2.5f, 4.5f), "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_36", 2.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_38", RandFloat(2.5f, 4.5f), "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_36", 0.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_2", 0.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_23", 0.001f, "");
+    AddEnemyPatrolNode("brute_checkpoint_1", "PathNodeArea_22", 0.001f, "");
     SetEntityActive("brute_checkpoint_1", true);
 
+    ResetProp("prison_5");
+    ResetProp("prison_7");
     ResetProp("prison_1");
     SetSwingDoorClosed("prison_1", true, false);
 
     SetLocalVarInt("BruteInsideArea", 0);
+
+    StopMusic(0.0f, 1);
+    PlayMusicRedux("12_amb.ogg", "AmbienceLoop");
 
     if(GetLocalVarInt("PartsTaken") == 3) SetEntityActive("AreaBruteChase", true);
 }
 
 void TimerShutDoor(string &in asTimer)
 {
-    if(asTimer == "prison_7") ChangeDoorState(asTimer, "doorlock");
+    if(asTimer == "prison_7")
+    {
+        ChangeDoorState(asTimer, "doorlock");
+
+        PlayMusicRedux("12_amb.ogg", "AmbienceLoop");
+    }
 }
 
 void CollidePlayerAreaSpikes(string &in asParent, string &in asChild, int alState)
@@ -225,6 +284,15 @@ void CollideBruteAreaTriggerBrute(string &in asParent, string &in asChild, int a
     PlayerReact("scarebreatheffect", 1.0f);
 }
 
+void CollidePlayerAreaBruteCheckCloset(string &in asParent, string &in asChild, int alState)
+{
+    if(GetLocalVarInt("BruteInsideArea") == 0)
+    {
+        AlertEnemyOfPlayerPresence("brute_1");
+        AlertEnemyOfPlayerPresence("brute_checkpoint_1");
+    }
+}
+
 void CollideWineAreaWineBrute(string parent, string child, int state)
 {
     if(state == -1)
@@ -243,13 +311,15 @@ void CollidePlayerAreaBruteChase(string &in asParent, string &in asChild, int al
         PlayerLook("AreaTriggerBrute_1", "lookactive", 2.0f, 4.0f);
         PlayerReact("breath_slow", 0.5f);
         AddTimer("activebrutetrigger", 3.0f, "TimerChangeChaseBruteState");
-        AddTimer("beginchase", 4.5f, "TimerChangeChaseBruteState");
+        AddTimer("beginchase", 5.0f, "TimerChangeChaseBruteState");
+
+        PlayMusicRedux("03_event_books.ogg", "Event");
 
         SetEntityActive("brute_1", false);
         SetEntityActive("brute_checkpoint_1", false);
 
         ClearEnemyPatrolNodes("brute_chase_1");
-        AddEnemyPatrolNode("brute_chase_1", "PathNodeArea_4", 10.0f, "");
+        AddEnemyPatrolNode("brute_chase_1", "PathNodeArea_4", 0, "");
         SetEntityActive("brute_chase_1", true);
     }
 }
@@ -261,7 +331,7 @@ void TimerChangeChaseBruteState(string &in asTimer)
     {
         ShowEnemyPlayerPosition("brute_chase_1");
         
-        SetMessage("", "", 5.0f);
+        SetMessage("Messages", "Run", 5.0f);
     }
 }
 
@@ -1112,6 +1182,8 @@ void OnCreepyChairMove(string a, string b, int state)
 {
     AddDebugMessage("Moved", false);
     SetLampLit("CreepyCandle", false, true);
+
+    PlayerReact("breath", 0.7f);
 
     AddPropForce(
         "CreepyChair", /* entity */
