@@ -1,0 +1,112 @@
+#require "PlayMusicExtensions.ihps"
+
+// ============================================================================
+// Introduction Cutscene
+// - Shows some of the credits and the custom story title
+// ============================================================================
+
+void StartIntroCutscene(string callback)
+{
+    SetLocalVarString("IntroCallbackFunc", callback);
+    AddTimer("", 4.0f, "PrologueTimer");
+}
+
+void PrologueTimer(string t)
+{
+    int stage = GetLocalVarInt("PrologueTimer");
+    AddLocalVarInt("PrologueTimer", 1);
+    float delay = 0.0f;
+
+    if(stage == 0)
+    {
+        SetMessage("PrologueText", "Line01", 5.0f);
+        delay = 6.0f;
+    }
+    else if(stage == 1)
+    {
+        SetMessage("PrologueText", "Line02", 5.0f);
+        delay = 6.0f;
+    }
+    else if(stage == 2)
+    {
+        SetMessage("PrologueText", "Line03", 8.0f);
+        delay = 9.0f;
+    }
+    else if(stage == 3)
+    {
+        SetMessage("PrologueText", "Line04", 6.0f);
+        delay = 14.0f;
+    }
+    else if(stage == 4)
+    {
+        SetMessage("PrologueText", "Line05", 5.0f);
+        delay = 6.0f;
+    }
+    else if(stage == 5)
+    {
+        SetMessage("PrologueText", "Line06", 5.0f);
+        delay = 9.0f;
+    }
+    else if(stage == 6)
+    {
+        SetMessage("PrologueText", "Line07", 4.0f);
+        delay = 7.0f;
+    }
+    else if(stage == 7)
+    {
+        SetMessage("PrologueText", "Line08", 4.0f);
+        delay = 8.0f;
+    }
+    else if(stage == 8)
+    {
+        FadeIn(2.0f);
+        delay = 7.0f;
+    }
+    else if(stage == 9)
+    {
+        FadeOut(2.0f);
+        delay = 3.0f;
+    }
+    else if(stage == 10)
+    {
+        TeleportPlayer("PlayerStartArea_2");
+        delay = 0.5f;
+    }
+    else if(stage == 11)
+    {
+        FadeIn(2.0f);
+        delay = 5.0f;
+    }
+    else if(stage == 12)
+    {
+        PlayMusic("skeletonJingle.ogg");
+        delay = 2.0f;
+    }
+    else if(stage == 13)
+    {
+        FadeOut(2.0f);
+        delay = 3.0f;
+    }
+    else if(stage == 14)
+    {
+        TeleportPlayer("PlayerStartArea_3");
+        delay = 2.0f;
+    }
+    else if(stage == 15)
+    {
+        FadeIn(2.0f);
+        delay = 8.0f;
+    }
+    else if(stage == 16)
+    {
+        FadeOut(2.0f);
+        delay = 3.0f;
+    }
+    else
+    {
+        AddTimer("", 0.0f, GetLocalVarString("IntroCallbackFunc"));
+        return;
+    }
+
+    AddTimer("", delay, "PrologueTimer");
+}

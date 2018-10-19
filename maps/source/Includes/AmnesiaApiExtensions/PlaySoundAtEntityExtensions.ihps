@@ -11,3 +11,13 @@ void PlaySoundAtEntity(string sound, float fadeTime)
 {
     PlaySoundAtEntity("", sound, "Player", fadeTime, false);
 }
+
+void StartAmbience(string soundFile)
+{
+    PlaySoundAtEntity("amb", soundFile, "Player", 3.0f, false);
+}
+
+void StopAmbience()
+{
+    StopSound("amb", 3.0f);
+}

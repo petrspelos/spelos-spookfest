@@ -1,0 +1,9 @@
+// ============================================================================
+// Abstracts some of the common player states
+// ============================================================================
+
+void SetPlayerNotAfraidOfDarkness()
+{
+    SetInDarknessEffectsActive(false);
+    SetSanityDrainDisabled(true);
+}
