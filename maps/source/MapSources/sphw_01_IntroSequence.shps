@@ -9,7 +9,7 @@ void OnEnter()
 {
     Preload();
     SetupPlayer();
-    StartAmbience("FallAmbience.snt")
+    StartAmbience("FallAmbience.snt");
     StartIntroCutscene("OnIntroFinished");
 }
 
