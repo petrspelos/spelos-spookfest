@@ -18,8 +18,6 @@ void OnStart()
     PlayerEntityCollide("AreaLookAtItem", "CollidePlayerAreaLookAtItem", "EnterOnce");
     PlayerEntityCollide("AreaNotReadyMessage_1", "CollidePlayerAreaNotReadyMessage", "Enter");
     PlayerEntityCollide("AreaNotReadyMessage_2", "CollidePlayerAreaNotReadyMessage", "Enter");
-    PlayerEntityCollide("SlowDownArea", "CollidePlayerSlowDownArea", "EnterOnce");
-    PlayerEntityCollide("SpeedUpArea", "CollidePlayerSpeedUpArea", "EnterOnce");
     PlayerEntityCollide("AreaActiveBruteSurprise_1", "CollidePlayerAreaActiveBrute", "EnterOnce");
     PlayerEntityCollide("AreaInActiveBruteSurprise_1", "CollidePlayerAreaInActiveBrute", "EnterOnce");
     PlayerEntityCollide("AreaTriggerBruteSurprise_1", "CollidePlayerAreaTriggerBrute", "EnterOnce");
@@ -39,11 +37,6 @@ void OnStart()
     SetEntityActive("BoxNotReady_2", true);
 
     for(int i=1; i<=16; i++) PlayerEntityCollide("AreaSpikes_" + i, "CollidePlayerAreaSpikes", "Enter");
-
-    if(ScriptDebugOn())
-    {
-        if(HasItem("lantern_1") == false) GiveItemFromFile("lantern_1", "lantern.ent");
-    }
 }
 
 void OnEnter()

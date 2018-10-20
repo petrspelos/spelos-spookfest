@@ -44,6 +44,7 @@ void StartTrip(string t)
     SetSanityBeatCorrectAfterSeconds(0.3f);
     SetSanityBeatRepeatInSeconds(0.75f);
     StartSanityBeat();
+    StartHeadRotation();
 
     AddTimer("", 0.5f, "SanityBeat");
     SetLightVisible("SpotLight_1", true);
@@ -54,8 +55,27 @@ void StartTrip(string t)
     SetSanityDrainDisabled(true);
 }
 
+void StartHeadRotation()
+{
+    HeadRotationLoop("");
+}
+
+void HeadRotationLoop(string t)
+{
+    if(GetLocalVarInt("StopRotation") == 1) return;
+    float rotation = RandFloat(-20.0f, 20.0f);
+    FadePlayerRollTo(rotation, 20.0f, 50.0f);
+    AddTimer("", RandFloat(0.5f, 1.5f), "HeadRotationLoop");
+}
+
+void OnLeave()
+{
+    FadePlayerRollTo(0.0f, 10.0f, 20.0f);
+}
+
 void EndTrip(string t)
 {
+    SetLocalVarInt("StopRotation", 1);
     FadeOut(1.5f);
     StopSound("elevator", 1.0f);
     StopSanityBeat();

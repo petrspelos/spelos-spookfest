@@ -14,7 +14,7 @@ void PreHellSequence(string t)
     {
         SetPlayerActive(false);
 
-        delay = 3.0f;
+        delay = 8.0f;
     }
     else if(stage == 1)
     {
@@ -63,6 +63,8 @@ void PreHellSequence(string t)
     else if(stage == 9)
     {
         StartEffectFlash(0.5f, 1.0f, 0.5f);
+        PlaySoundAtEntity("flash", "flashback_flash.snt", "Player", 0.0f, false);
+        PlaySoundAtEntity("amb", "AmbHell.snt", "Player", 0.5f, false);
         delay = 0.6f;
     }
     else if(stage == 10)
