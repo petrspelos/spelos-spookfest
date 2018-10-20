@@ -21,6 +21,7 @@ void HellConversationSequence(string t)
         LookAtSpelos();
         SetEffectVoiceOverCallback("HellConversationVoiceoverLoop");
         AddEffectVoice("inhell-02.ogg", "", "Subtitles", "InHell_02", true, "Spelos", 0.0f, 20.0f);
+        PlayPropAnimation("Spelos", "DevilInnit", 0.0f, false, "RandomTalkToDevil");
         return;
     }
     else if(stage == 2)
@@ -136,4 +137,17 @@ void LookAtDevil()
 void LookAtSpelos()
 {
     StartPlayerLookAt("Spelos", 3.0f, 4.5f, "");
+}
+
+void RandomTalkToDevil(string prop)
+{
+    int seed = RandInt(1, 2);
+    string animation = "TalkToDevil";
+
+    if(seed == 2)
+    {
+        animation = "TalkToDevil02";
+    }
+
+    PlayPropAnimation(prop, animation, 0.0f, false, "RandomTalkToDevil");
 }

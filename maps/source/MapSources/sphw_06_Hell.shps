@@ -12,6 +12,18 @@ void OnEnter()
     SetInDarknessEffectsActive(false);
     SetSanityDrainDisabled(true);
     PlayPreHellSequence("OnPreHellFinished");
+    AddEntityCollideCallback("Player", "LavaArea", "FellInLava", false, 1);
+}
+
+void FellInLava(string a, string b, int s)
+{
+    TeleportPlayer("PlayerStartArea_2");
+    AddTimer("", 1.0f, "HealPlayer");
+}
+
+void HealPlayer(string t)
+{
+    SetPlayerHealth(100.0f);
 }
 
 void SetupSkybox()

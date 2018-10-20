@@ -1,9 +1,18 @@
 void OnEnter()
 {
     Preload();
+    FadeOut(0.0f);
     PlayMusic("KeepGoing.ogg", true, 0.5f, 0.0f, 1, false);
     SetInDarknessEffectsActive(false);
     SetSanityDrainDisabled(true);
+    SetPlayerActive(false);
+    AddTimer("", 8.0f, "ShowEnding");
+}
+
+void ShowEnding(string t)
+{
+    SetPlayerActive(true);
+    FadeIn(0.5f);
 }
 
 void OnFinalNotePickup(string entity)

@@ -62,6 +62,8 @@
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_Idle02.dae_ANIM" Name="Idle02" SpecialEventTime="7.34174e-039" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_Idle03.dae_ANIM" Name="Idle03" SpecialEventTime="7.34174e-039" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_Listening.dae_ANIM" Name="Listen" SpecialEventTime="7.34174e-039" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelosTalkToDevil02.dae_ANIM" Name="TalkToDevil02" SpecialEventTime="2.01083e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_DevilInnit.dae_ANIM" Name="DevilInnit" SpecialEventTime="2.01083e-038" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">
