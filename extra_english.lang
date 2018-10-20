@@ -172,7 +172,7 @@ See you in hell.[br]
         <Entry Name="MorguePadlockInspect_0">The lock is rusty, but sturdy.</Entry>
         <Entry Name="MorguePadlockInspect_1">I won't be able to unlock this without a key.</Entry>
         <Entry Name="MorguePadlockInspect_2">A key is needed to unlock this padlock.</Entry>
-        <Entry Name="Run">RUN!!!</Entry>
+        <Entry Name="Run">It's time to leave!</Entry>
         <Entry Name="OnePartFound">I can see a saw there![br]It will be helpful for sure!</Entry>
         <Entry Name="StillMissingParts">I could already proceed but I still have to find some parts.</Entry>
     </CATEGORY>
@@ -303,7 +303,7 @@ See you in hell.[br]
     <CATEGORY Name="PrologueText">
         <Entry Name="Line01">Finally, it's October.</Entry>
         <Entry Name="Line02">I urge you to stop for a moment...</Entry>
-        <Entry Name="Line03">..and just listen to that atmosphere.</Entry>
+        <Entry Name="Line03">...and just listen to that atmosphere.</Entry>
         <Entry Name="Line04">Irreplaceable, isn't it?</Entry>
         <Entry Name="Line05">You've been invited to a party by a talking skeleton.</Entry>
         <Entry Name="Line06">Sorry for breaking the mood a little.</Entry>
