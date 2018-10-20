@@ -4,31 +4,33 @@
 
 const int reflectorCount = 14;
 
-//SkeletonsEquinoxEurobeat.ogg
-
 void OnStart()
 {
     Preload();
 
-    SetPlayerMoveSpeedMul(1.0f);
-    SetPlayerRunSpeedMul(1.0f);
-
-    //SetLightVisible("LeverHintLight", false);
-    FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f);
-
-    //SetInDarknessEffectsActive(false);
-    SetSanityDrainDisabled(true);
-    SetMoveObjectState("HorisontalGate", 7.0f);
-    GiveItemFromFile("Lantern", "lantern.ent");
-    
-    FocusReflectors("");
-    ReflectorsOff("");
+    SetupPlayer();
+    SetupShow();
 
     AddEntityCollideCallback("Player", "StartShowArea", "StartShowCallback", true, 0);
     AddEntityCollideCallback("Player", "Ghost01FadeArea", "FadeGhost01", true, 1);
     AddEntityCollideCallback("Player", "Ghost02FadeArea", "FadeGhost02", true, 1);
     AddEntityCollideCallback("Player", "FlybyArea", "Flyby", true, 1);
     AddEntityCollideCallback("Player", "BackflipArea", "Backflip", true, 1);
+}
+
+void SetupPlayer()
+{
+    SetSanityDrainDisabled(true);
+    SetPlayerMoveSpeedMul(1.0f);
+    SetPlayerRunSpeedMul(1.0f);
+}
+
+void SetupShow()
+{
+    FadeLightTo("LeverHintLight", 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f);
+    SetMoveObjectState("HorisontalGate", 7.0f);
+    FocusReflectors("");
+    ReflectorsOff("");
 }
 
 void FadeGhost01(string parent, string child, int state)
