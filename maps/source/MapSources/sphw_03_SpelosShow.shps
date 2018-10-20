@@ -191,6 +191,7 @@ void ShowStopper(string t)
     SetLocalVarInt("StopColorScheme", 1);
     PlaySoundAtEntity("", "20_pipe_stuck.snt", "StuckSoundArea", 0.0f, false);
     CreateParticleSystemAtEntity("Sparks", "ps_elevator_slow.ps", "SparksArea", false);
+    AddQuest("FixPerformence", "FixPerformence");
     AddTimer("", 0.6f, "StopSparks");
     AddTimer("", 2.5f, "StoppedSkeletalk");
 }
@@ -198,6 +199,7 @@ void ShowStopper(string t)
 void StopSparks(string t)
 {
     DestroyParticleSystem("Sparks");
+    CompleteQuest("FixPerformence", "FixPerformence");
 }
 
 void StoppedSkeletalk(string t)

@@ -74,6 +74,8 @@
     <CATEGORY Name="General">
         <Entry Name="Loading">Collecting Spooks...</Entry>
         <Entry Name="TheEnd">Happy Halloween 2018</Entry>
+        <Entry Name="NotGoingBack">I'm not going back there.</Entry>
+        <Entry Name="NotWithoutTools">I cannot leave without the missing parts.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Inventory">
@@ -114,6 +116,10 @@
 
         <Entry Name="ItemName_HighHeel">High Heel</Entry>
         <Entry Name="ItemDesc_HighHeel">One of Mistress' high heels.</Entry>
+
+        <Entry Name="ItemName_DungeonKey">Dungeon Key</Entry>
+        <Entry Name="ItemDesc_DungeonKey">This key must unlock a nearby door.</Entry>
+        
     </CATEGORY>
 
     <CATEGORY Name="Journal">
@@ -181,9 +187,12 @@ See you in hell.[br]
     <CATEGORY Name="Levels">
         <Entry Name="sphw_02_Dungeon">The Dungeon</Entry>
         <Entry Name="sphw_03_SpelosShow">Spelos Show</Entry>
-        <Entry Name="sphw_04_PartsHunt">Parts hunt</Entry>
+        <Entry Name="sphw_04_PartsHunt">Storage</Entry>
         <Entry Name="sphw_06_Hell">The Hell</Entry>
         <Entry Name="sphw_07_Final">The Ending</Entry>
+        <Entry Name="SpelosShowDoor">Exit</Entry>
+        <Entry Name="CellsDoor">Cells</Entry>
+        <Entry Name="StorageDoor">Storage</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Subtitles">
@@ -284,6 +293,7 @@ See you in hell.[br]
         
         <Entry Name="Quest_LitEscape_Text">I'm too hurt to climb out the hole.[br] - Look around for tools and supplies to help you escape.</Entry>
         <Entry Name="Quest_Enemy_Text">Something is in here with me. I cannot outrun it in this state.[br]- I need to make sure I always have somewhere to hide.</Entry>
+        <Entry Name="Quest_FixPerformence_Text">Find a way to fix the show.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Loading">

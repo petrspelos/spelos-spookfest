@@ -11,6 +11,7 @@
 
 void OnStart()
 {
+    SetPlayerLampOil(0.0f);
     StartDungeonIntro();
     SetupOneTimeEvents();
 }
@@ -163,6 +164,7 @@ void Padlock01Callback(string entity, string type)
     if (type == "Break")
     {
         SetSwingDoorLocked("prison_section_1", false, true);
+        GiveSanityBoostSmall();
     }
 }
 
