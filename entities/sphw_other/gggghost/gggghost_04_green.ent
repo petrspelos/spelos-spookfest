@@ -24,14 +24,14 @@
             <Bone ID="41" Name="Armature_Bone_003" />
             <Bone ID="42" Name="Armature_Bone_004" />
             <Bone ID="43" Name="Armature_Bone_005" />
-            <Bone ID="44" Name="Armature_Bone_006" />
-            <Bone ID="45" Name="Armature_Bone_007" />
-            <Bone ID="46" Name="Sphere">
+            <Bone ID="44" Name="Armature_Bone_006">
                 <Children>
                     <Child ID="13" />
                     <Child ID="12" />
                 </Children>
             </Bone>
+            <Bone ID="45" Name="Armature_Bone_007" />
+            <Bone ID="46" Name="Sphere" />
         </Bones>
         <Shapes />
         <Bodies />

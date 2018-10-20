@@ -328,7 +328,7 @@ void SpelosRandomTalk(string prop)
 void BeforeListening()
 {
     AddEffectVoice("Entrance_05.ogg", "", "Subtitles", "Entrance_05", true, "SkeletonSpelos", 0.0f, 20.0f);
-    PlayPropAnimation("SkeletonSpelos", "Idle", 0.5f, true, "");
+    PlayPropAnimation("SkeletonSpelos", "Listen", 0.5f, true, "");
     SetEffectVoiceOverCallback("Talk");
 }
 
@@ -336,7 +336,7 @@ void Talk()
 {
     AddEffectVoice("Entrance_06.ogg", "", "Subtitles", "Entrance_06", true, "SkeletonSpelos", 0.0f, 20.0f);
     SetEffectVoiceOverCallback("EndScene");
-    PlayPropAnimation("SkeletonSpelos", "Talk", 0.0f, false, "SpelosRandomTalk");
+    PlayPropAnimation("SkeletonSpelos", "Talk", 0.5f, false, "SpelosRandomTalk");
 }
 
 void EndScene()
@@ -504,7 +504,8 @@ void OnLastChristmasSceneEnd()
 {
     StopMusic(0.5f, 1);
     PlayMusic("PlayWithMe.ogg", true, 0.4f, 0.0f, 1, false);
-    PlaySoundAtEntity("", "sphw_poof.snt", "SkeletonSpelos", 0.0f, false);
+    PlaySoundAtEntity("sphw_poof.snt", "CloseToPlayer");
+    CreateParticleSystemAtEntity("", "ps_cloud_thing01.ps", "CloseToPlayer", false);
     AddTimer("", 0.5f, "SpelosFlyLoop");
     SetEntityPos("SkeletonSpelos", GetEntityPosX("SpelosTrolleyArea"), GetEntityPosY("SkeletonSpelos"), GetEntityPosZ("SpelosTrolleyArea") - 0.5f);
     AddEntityCollideCallback("Player", "TrolleyEventArea", "StartTrolleyEvent", true, 1);
@@ -520,13 +521,17 @@ void SpelosFlyLoop(string t)
         return;
     }
 
-    if(stage == 16)
+    if(stage == 19)
     {
         SetSwingDoorLocked("mansion_1", false, false);
         SetPropHealth("mansion_1", 0.0f);
     }
 
-    CreateParticleSystemAtEntity("", "blood.ps", "SpelosTrailArea_" + stage, false);
+    CreateParticleSystemAtEntity("", "blood.ps", $"SpelosTrailArea_{stage}", false);
+    if(stage % 2 == 0)
+    {
+        PlaySoundAtEntity("sphw_poof.snt", $"SpelosTrailArea_{stage}");
+    }
     AddTimer("", 0.5f, "SpelosFlyLoop");
 }
 

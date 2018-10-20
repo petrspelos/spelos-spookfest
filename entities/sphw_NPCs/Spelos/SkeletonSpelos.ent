@@ -59,6 +59,9 @@
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/IAmSpelos.dae_ANIM" Name="IAmSpelos" SpecialEventTime="3.48477e-039" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/Talk02.dae_ANIM" Name="Talk02" SpecialEventTime="5.1383e-039" Speed="1" />
             <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/Talk03.dae_ANIM" Name="Talk03" SpecialEventTime="2.20375e-038" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_Idle02.dae_ANIM" Name="Idle02" SpecialEventTime="7.34174e-039" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_Idle03.dae_ANIM" Name="Idle03" SpecialEventTime="7.34174e-039" Speed="1" />
+            <Animation File="C:/dev/Amnesia The Dark Descent/custom_stories/spelos-spookfest/entities/sphw_NPCs/Spelos/Animations/spelos_Listening.dae_ANIM" Name="Listen" SpecialEventTime="7.34174e-039" Speed="1" />
         </Animations>
     </ModelData>
     <UserDefinedVariables EntitySubType="Static" EntityType="Object">

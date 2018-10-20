@@ -5,7 +5,7 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
             <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
-            <Viewport CameraPosition="-1.27705 0.609425 0.526725" CameraTarget="0 0 0" CameraZoom="3.5" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
+            <Viewport CameraPosition="-0.988554 0.771945 0.541588" CameraTarget="0 0 0" CameraZoom="3.6" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="false" />
         </ViewportConfig>
     </EditorSession>
     <ModelData>
@@ -24,14 +24,14 @@
             <Bone ID="30" Name="Armature_Bone_003" />
             <Bone ID="31" Name="Armature_Bone_004" />
             <Bone ID="32" Name="Armature_Bone_005" />
-            <Bone ID="33" Name="Armature_Bone_006" />
-            <Bone ID="34" Name="Armature_Bone_007" />
-            <Bone ID="35" Name="Sphere">
+            <Bone ID="33" Name="Armature_Bone_006">
                 <Children>
                     <Child ID="13" />
                     <Child ID="12" />
                 </Children>
             </Bone>
+            <Bone ID="34" Name="Armature_Bone_007" />
+            <Bone ID="35" Name="Sphere" />
         </Bones>
         <Shapes />
         <Bodies />
