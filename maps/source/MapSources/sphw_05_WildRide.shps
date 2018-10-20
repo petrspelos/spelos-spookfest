@@ -30,7 +30,7 @@ void OnEnter()
         false             /* SaveSound */
     );
 
-    AddTimer("", 11.5f, "StartTrip");
+    AddTimer("", 10.0f, "StartTrip");
     AddTimer("", 59.0f, "EndTrip");
     AddTimer("", 65.0f, "Explode");
     AddTimer("", 70.0f, "NextMap");

@@ -4,5 +4,5 @@
   		<Sound File="AmbHell" />
   	</Main>
   </SOUNDS>
-  <PROPERTIES Volume="1" MinDistance="2" MaxDistance="40" Random="0" Interval="5" FadeEnd="False" FadeStart="False" Stream="False" Loop="True" Use3D="False" Blockable="False" BlockVolumeMul="0.5" Priority="0" />
+  <PROPERTIES Volume="0.4" MinDistance="2" MaxDistance="40" Random="0" Interval="5" FadeEnd="False" FadeStart="False" Stream="False" Loop="True" Use3D="False" Blockable="False" BlockVolumeMul="0.5" Priority="0" />
 </SOUNDENTITY>
