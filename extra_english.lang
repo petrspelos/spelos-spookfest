@@ -182,6 +182,7 @@ See you in hell.[br]
         <Entry Name="Run">It's time to leave!</Entry>
         <Entry Name="OnePartFound">I can see a saw there![br]It will be helpful for sure!</Entry>
         <Entry Name="StillMissingParts">I could already proceed but I still have to find some parts.</Entry>
+        <Entry Name="GotAllParts">I have all the parts needed to repair the trolley.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="DeathHints">
@@ -302,6 +303,7 @@ See you in hell.[br]
         <Entry Name="Quest_LitEscape_Text">I'm too hurt to climb out the hole.[br] - Look around for tools and supplies to help you escape.</Entry>
         <Entry Name="Quest_Enemy_Text">Something is in here with me. I cannot outrun it in this state.[br]- I need to make sure I always have somewhere to hide.</Entry>
         <Entry Name="Quest_FixPerformence_Text">Find a way to fix the show.</Entry>
+        <Entry Name="Quest_MissingParts_Text">Find 3 tools to fix the trolley.</Entry>
     </CATEGORY>
 
     <CATEGORY Name="Loading">

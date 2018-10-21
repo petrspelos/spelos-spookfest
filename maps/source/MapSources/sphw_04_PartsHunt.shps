@@ -10,6 +10,7 @@ void OnStart()
     MorgueUnlockingSetup();
     PuzzleRoomSetup();
     HighHeelsPuzzleSetup();
+    AddQuest("MissingParts", "MissingParts");
 
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 // XDJ5000 CODE
@@ -95,6 +96,9 @@ void PickedUpPart(string entity)
         SetEntityActive("AreaBruteChase", true);
         SetEntityActive("BoxNotReady_2", false);
         SetEntityActive("AreaNotReadyMessage_2", false);
+
+        CompleteQuest("MissingParts", "MissingParts");
+        SetMessage("Messages", "GotAllParts", 0.0f);
     }
 }
 
