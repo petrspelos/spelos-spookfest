@@ -32,7 +32,7 @@ void OnEnter()
 {
     Preload();
     SetPlayerNotAfraidOfDarkness();
-    SetMapDisplayNameEntry("sphw_02_Dungeon");
+    SetMapDisplayNameEntry("sphw02Dungeon");
 }
 
 void OnLeave()
@@ -130,7 +130,7 @@ void BruteWalkPastCallback(string a, string b, int s)
         "Hint01"            /* Death Hint Entry */
     );
 
-    SetMapDisplayNameEntry("sphw_02_Dungeon_Lower");
+    SetMapDisplayNameEntry("sphw02DungeonLower");
     AutoSave();
 }
 

@@ -1,7 +1,7 @@
 void OnEnter()
 {
     Preload();
-    SetMapDisplayNameEntry("sphw_07_Final");
+    SetMapDisplayNameEntry("sphw07Final");
     FadeOut(0.0f);
     PlayMusic("KeepGoing.ogg", true, 0.5f, 0.0f, 1, false);
     SetInDarknessEffectsActive(false);

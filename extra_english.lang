@@ -193,12 +193,12 @@ See you in hell.[br]
     </CATEGORY>
 
     <CATEGORY Name="Levels">
-        <Entry Name="sphw_02_Dungeon">The Dungeon</Entry>
-        <Entry Name="sphw_02_Dungeon_Lower">The lower Dungeon</Entry>
-        <Entry Name="sphw_03_SpelosShow">Spelos Show</Entry>
-        <Entry Name="sphw_04_PartsHunt">Storage</Entry>
-        <Entry Name="sphw_06_Hell">The Hell</Entry>
-        <Entry Name="sphw_07_Final">The Ending</Entry>
+        <Entry Name="sphw02Dungeon">The Dungeon</Entry>
+        <Entry Name="sphw02DungeonLower">The lower Dungeon</Entry>
+        <Entry Name="sphw03SpelosShow">Spelos Show</Entry>
+        <Entry Name="sphw04PartsHunt">Storage</Entry>
+        <Entry Name="sphw06Hell">The Hell</Entry>
+        <Entry Name="sphw07Final">The Ending</Entry>
         <Entry Name="SpelosShowDoor">Exit</Entry>
         <Entry Name="CellsDoor">Cells</Entry>
         <Entry Name="StorageDoor">Storage</Entry>

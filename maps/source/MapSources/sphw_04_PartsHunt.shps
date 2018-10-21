@@ -53,7 +53,7 @@ void OnEnter()
     );
 
     SetSanityDrainDisabled(true);
-    SetMapDisplayNameEntry("00_introduction");
+    SetMapDisplayNameEntry("sphw04PartsHunt");
 }
 
 void OnLeave()
