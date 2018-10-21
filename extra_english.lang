@@ -193,6 +193,7 @@ See you in hell.[br]
 
     <CATEGORY Name="Levels">
         <Entry Name="sphw_02_Dungeon">The Dungeon</Entry>
+        <Entry Name="sphw_02_Dungeon_Lower">The lower Dungeon</Entry>
         <Entry Name="sphw_03_SpelosShow">Spelos Show</Entry>
         <Entry Name="sphw_04_PartsHunt">Storage</Entry>
         <Entry Name="sphw_06_Hell">The Hell</Entry>

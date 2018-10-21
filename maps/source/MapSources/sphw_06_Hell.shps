@@ -13,6 +13,7 @@ void OnEnter()
     SetSanityDrainDisabled(true);
     PlayPreHellSequence("OnPreHellFinished");
     AddEntityCollideCallback("Player", "LavaArea", "FellInLava", false, 1);
+    AutoSave();
 }
 
 void FellInLava(string a, string b, int s)

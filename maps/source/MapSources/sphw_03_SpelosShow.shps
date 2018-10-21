@@ -16,6 +16,8 @@ void OnStart()
     AddEntityCollideCallback("Player", "Ghost02FadeArea", "FadeGhost02", true, 1);
     AddEntityCollideCallback("Player", "FlybyArea", "Flyby", true, 1);
     AddEntityCollideCallback("Player", "BackflipArea", "Backflip", true, 1);
+
+    AutoSave();
 }
 
 void SetupPlayer()
@@ -519,6 +521,7 @@ void OnLastChristmasSceneEnd()
     AddTimer("", 0.5f, "SpelosFlyLoop");
     SetEntityPos("SkeletonSpelos", GetEntityPosX("SpelosTrolleyArea"), GetEntityPosY("SkeletonSpelos"), GetEntityPosZ("SpelosTrolleyArea") - 0.5f);
     AddEntityCollideCallback("Player", "TrolleyEventArea", "StartTrolleyEvent", true, 1);
+    AutoSave();
 }
 
 void SpelosFlyLoop(string t)

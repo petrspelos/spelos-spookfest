@@ -37,6 +37,7 @@ void OnStart()
     SetEntityActive("BoxNotReady_2", true);
 
     for(int i=1; i<=16; i++) PlayerEntityCollide("AreaSpikes_" + i, "CollidePlayerAreaSpikes", "Enter");
+    AutoSave();
 }
 
 void OnEnter()
