@@ -18,6 +18,8 @@ void ShowEnding(string t)
 
 void OnFinalNotePickup(string entity)
 {
+    SetPlayerActive(false);
+    FadeOut(1.0f);
     AddTimer("", 2.0f, "EndGame");
 }
 
