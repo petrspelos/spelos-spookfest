@@ -47,6 +47,8 @@ void OnRunStarts(string t)
     
     StartSanityBeat();
 
+    SetMapDisplayNameEntry("sphw_06_Hell");
+
     AddEntityCollideCallback("Player", "FinalStandArea", "FinalStandCallback", true, 0);
     AddEntityCollideCallback("Player", "EscapeArea", "EscapeCallback", false, 0);
 }

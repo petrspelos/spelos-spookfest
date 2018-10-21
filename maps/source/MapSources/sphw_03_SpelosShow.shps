@@ -65,6 +65,7 @@ void Backflip(string parent, string child, int state)
 
 void OnEnter()
 {
+    SetMapDisplayNameEntry("sphw_03_SpelosShow");
     StartAmbience("15_amb.snt");
     if(GetGlobalVarInt("HuntedForParts") == 1)
     {
